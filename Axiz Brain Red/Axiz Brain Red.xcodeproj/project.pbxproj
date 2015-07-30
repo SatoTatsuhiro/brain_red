@@ -29,6 +29,11 @@
 		3B0198201B6A78550068CF76 /* reset@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B01981C1B6A78550068CF76 /* reset@2x.png */; };
 		3B0198211B6A78550068CF76 /* user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B01981D1B6A78550068CF76 /* user@2x.png */; };
 		3B0198231B6A7C2F0068CF76 /* backtomain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0198221B6A7C2F0068CF76 /* backtomain@2x.png */; };
+		3B0198281B6A97F30068CF76 /* button_km_hover_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0198241B6A97F30068CF76 /* button_km_hover_red.png */; };
+		3B0198291B6A97F30068CF76 /* button_km_hover.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0198251B6A97F30068CF76 /* button_km_hover.png */; };
+		3B01982A1B6A97F30068CF76 /* button_km_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0198261B6A97F30068CF76 /* button_km_red@2x.png */; };
+		3B01982B1B6A97F30068CF76 /* button_km.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0198271B6A97F30068CF76 /* button_km.png */; };
+		3B01982E1B6A993D0068CF76 /* AXZAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B01982D1B6A993D0068CF76 /* AXZAsset.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +76,12 @@
 		3B01981C1B6A78550068CF76 /* reset@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reset@2x.png"; path = "png/reset@2x.png"; sourceTree = "<group>"; };
 		3B01981D1B6A78550068CF76 /* user@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "user@2x.png"; path = "png/user@2x.png"; sourceTree = "<group>"; };
 		3B0198221B6A7C2F0068CF76 /* backtomain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backtomain@2x.png"; path = "png/backtomain@2x.png"; sourceTree = "<group>"; };
+		3B0198241B6A97F30068CF76 /* button_km_hover_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_km_hover_red.png; path = png/button_km_hover_red.png; sourceTree = "<group>"; };
+		3B0198251B6A97F30068CF76 /* button_km_hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_km_hover.png; path = png/button_km_hover.png; sourceTree = "<group>"; };
+		3B0198261B6A97F30068CF76 /* button_km_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button_km_red@2x.png"; path = "png/button_km_red@2x.png"; sourceTree = "<group>"; };
+		3B0198271B6A97F30068CF76 /* button_km.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_km.png; path = png/button_km.png; sourceTree = "<group>"; };
+		3B01982C1B6A993D0068CF76 /* AXZAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXZAsset.h; sourceTree = "<group>"; };
+		3B01982D1B6A993D0068CF76 /* AXZAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXZAsset.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +129,8 @@
 				3B0197E61B6A714A0068CF76 /* AXZHomeViewController.m */,
 				3B0198041B6A723C0068CF76 /* AXZMeterView.h */,
 				3B0198051B6A723C0068CF76 /* AXZMeterView.m */,
+				3B01982C1B6A993D0068CF76 /* AXZAsset.h */,
+				3B01982D1B6A993D0068CF76 /* AXZAsset.m */,
 				3B0198071B6A727A0068CF76 /* AXZMeterView.xib */,
 				3B0197E81B6A714A0068CF76 /* Main.storyboard */,
 				3B0197EB1B6A714A0068CF76 /* Images.xcassets */,
@@ -170,6 +183,10 @@
 				3B01980E1B6A760D0068CF76 /* inner_circle_km_red@2x.png */,
 				3B01980F1B6A760D0068CF76 /* inner_circle_mph_red@2x.png */,
 				3B0198101B6A760D0068CF76 /* red_background_4@2x.png */,
+				3B0198241B6A97F30068CF76 /* button_km_hover_red.png */,
+				3B0198251B6A97F30068CF76 /* button_km_hover.png */,
+				3B0198261B6A97F30068CF76 /* button_km_red@2x.png */,
+				3B0198271B6A97F30068CF76 /* button_km.png */,
 			);
 			name = png;
 			sourceTree = "<group>";
@@ -254,14 +271,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B0198281B6A97F30068CF76 /* button_km_hover_red.png in Resources */,
 				3B0198161B6A760D0068CF76 /* inner_circle_km_red@2x.png in Resources */,
 				3B0198201B6A78550068CF76 /* reset@2x.png in Resources */,
+				3B0198291B6A97F30068CF76 /* button_km_hover.png in Resources */,
 				3B0197EA1B6A714A0068CF76 /* Main.storyboard in Resources */,
 				3B0198121B6A760D0068CF76 /* button_km_red@2x.png in Resources */,
 				3B0198171B6A760D0068CF76 /* inner_circle_mph_red@2x.png in Resources */,
 				3B01981F1B6A78550068CF76 /* map@2x.png in Resources */,
 				3B0198181B6A760D0068CF76 /* red_background_4@2x.png in Resources */,
 				3B0198081B6A727A0068CF76 /* AXZMeterView.xib in Resources */,
+				3B01982A1B6A97F30068CF76 /* button_km_red@2x.png in Resources */,
 				3B0198111B6A760D0068CF76 /* button_km_hover_red.png in Resources */,
 				3B0198131B6A760D0068CF76 /* button_mph_hover_red@2x.png in Resources */,
 				3B0198211B6A78550068CF76 /* user@2x.png in Resources */,
@@ -270,6 +290,7 @@
 				3B0198151B6A760D0068CF76 /* default_blue_35_background@2x.png in Resources */,
 				3B0198231B6A7C2F0068CF76 /* backtomain@2x.png in Resources */,
 				3B01981E1B6A78550068CF76 /* info@2x.png in Resources */,
+				3B01982B1B6A97F30068CF76 /* button_km.png in Resources */,
 				3B0198141B6A760D0068CF76 /* button_mph_red@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B0198061B6A723C0068CF76 /* AXZMeterView.m in Sources */,
+				3B01982E1B6A993D0068CF76 /* AXZAsset.m in Sources */,
 				3B0197E71B6A714A0068CF76 /* AXZHomeViewController.m in Sources */,
 				3B0197E41B6A714A0068CF76 /* AppDelegate.m in Sources */,
 				3B0197E11B6A714A0068CF76 /* main.m in Sources */,
