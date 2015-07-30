@@ -28,4 +28,30 @@
     return kmButtonImages;
 }
 
+- (NSMutableArray *)kmButtonHoverImages
+{
+    NSMutableArray *kmButtonHoverImages = [[NSMutableArray alloc] init];
+    
+    [kmButtonHoverImages addObject:[UIImage imageNamed:@""]];
+    [kmButtonHoverImages addObject:[UIImage imageNamed:@""]];
+    [kmButtonHoverImages addObject:[UIImage imageNamed:@""]];
+    [kmButtonHoverImages addObject:[UIImage imageNamed:@""]];
+    [kmButtonHoverImages addObject:[UIImage imageNamed:@""]];
+    
+    return kmButtonHoverImages;
+}
+
+- (NSMutableArray *)innerCircleImages
+{
+    NSMutableArray *innerCircleImages = [[NSMutableArray alloc] init];
+    
+    [innerCircleImages addObject:[UIImage imageNamed:@""]];
+    [innerCircleImages addObject:[UIImage imageNamed:@""]];
+    [innerCircleImages addObject:[UIImage imageNamed:@""]];
+    [innerCircleImages addObject:[UIImage imageNamed:@""]];
+    [innerCircleImages addObject:[UIImage imageNamed:@""]];
+    
+    return innerCircleImages;
+}
+
 @end

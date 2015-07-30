@@ -6,5 +6,6 @@
 @property (nonatomic) NSMutableArray *backgroundImages;
 @property (nonatomic) NSMutableArray *kmButtonImages;
 @property (nonatomic) NSMutableArray *kmButtonHoverImages;
+@property (nonatomic) NSMutableArray *innerCircleImages;
 
 @end
