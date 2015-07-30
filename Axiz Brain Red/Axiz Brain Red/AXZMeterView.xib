@@ -13,12 +13,6 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red_background_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="CXO-W7-VMS">
                     <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SiA-6a-c0y">
-                    <rect key="frame" x="252" y="206" width="65" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcS-Ct-y1c">
                     <rect key="frame" x="10" y="10" width="40" height="40"/>
                     <state key="normal" image="reset.png">
@@ -37,6 +31,15 @@
                         <action selector="userButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="khe-TV-Sfc"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cR7-2m-h4S">
+                    <rect key="frame" x="518" y="10" width="40" height="40"/>
+                    <state key="normal" image="info.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="infoButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Noh-mh-x9V"/>
+                    </connections>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4G-OV-9Kf">
                     <rect key="frame" x="534" y="286" width="24" height="24"/>
                     <state key="normal" image="backtomain.png">
@@ -46,14 +49,14 @@
                         <action selector="homeButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="acD-PC-T83"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cR7-2m-h4S">
-                    <rect key="frame" x="518" y="10" width="40" height="40"/>
-                    <state key="normal" image="info.png">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="inner_circle_km_red.png" translatesAutoresizingMaskIntoConstraints="NO" id="2bw-Be-zyI">
+                    <rect key="frame" x="174" y="49" width="221" height="221"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrI-fL-g8F">
+                    <rect key="frame" x="251" y="243" width="66" height="30"/>
+                    <state key="normal" image="button_km.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <connections>
-                        <action selector="infoButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Noh-mh-x9V"/>
-                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -71,12 +74,16 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>
                 <outlet property="backgroundImageView" destination="CXO-W7-VMS" id="4s6-eI-2U3"/>
+                <outlet property="innerCircleImageView" destination="2bw-Be-zyI" id="obh-gy-eMZ"/>
+                <outlet property="kmButton" destination="qrI-fL-g8F" id="U69-jz-dIf"/>
             </connections>
         </view>
     </objects>
     <resources>
         <image name="backtomain.png" width="24" height="24"/>
+        <image name="button_km.png" width="121" height="61"/>
         <image name="info.png" width="15" height="26"/>
+        <image name="inner_circle_km_red.png" width="219" height="219"/>
         <image name="red_background_4.png" width="568" height="320"/>
         <image name="reset.png" width="27" height="27"/>
         <image name="user.png" width="27" height="27"/>

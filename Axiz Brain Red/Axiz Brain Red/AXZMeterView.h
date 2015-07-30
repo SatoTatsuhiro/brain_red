@@ -13,5 +13,7 @@
 
 @property (weak) id<AXZMeterViewDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *innerCircleImageView;
+@property (strong, nonatomic) IBOutlet UIButton *kmButton;
 
 @end

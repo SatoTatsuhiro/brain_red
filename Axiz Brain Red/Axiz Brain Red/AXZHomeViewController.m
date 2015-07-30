@@ -43,7 +43,12 @@
     for (int i = 0; i < PAGE_COUNT; i++) {
         UINib *nib = [UINib nibWithNibName:@"AXZMeterView" bundle:nil];
         AXZMeterView *meterView = [nib instantiateWithOwner:self options:nil][0];
+        
         meterView.backgroundImageView.image = self.asset.backgroundImages[i];
+        meterView.innerCircleImageView.image = self.asset.innerCircleImages[i];
+        [meterView.kmButton setImage:self.asset.kmButtonImages[i] forState:UIControlStateNormal];
+        [meterView.kmButton setImage:self.asset.kmButtonHoverImages[i] forState:UIControlStateHighlighted];
+        
         meterView.frame = CGRectMake(0, self.view.frame.size.height * i, self.view.frame.size.width, self.view.frame.size.height);
         [self.meterViews addObject:meterView];
     }
