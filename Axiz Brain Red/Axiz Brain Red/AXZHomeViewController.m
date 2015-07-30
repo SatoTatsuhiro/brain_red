@@ -9,6 +9,8 @@
 @property (nonatomic) AXZAsset *asset;
 @property (nonatomic) NSMutableArray *meterViews;
 
+@property (nonatomic) UIScrollView *scrollView;
+
 @end
 
 @implementation AXZHomeViewController
@@ -28,12 +30,14 @@
     self.asset = [[AXZAsset alloc] init];
     [self _prepareMeterViews];
     
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height * PAGE_COUNT);
-    [self.view addSubview:scrollView];
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.bounces = NO;
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height * PAGE_COUNT);
+    [self.view addSubview:self.scrollView];
     
     for (AXZMeterView *meterView in self.meterViews) {
-        [scrollView addSubview:meterView];
+        [self.scrollView addSubview:meterView];
     }
 }
 
@@ -43,7 +47,7 @@
     for (int i = 0; i < PAGE_COUNT; i++) {
         UINib *nib = [UINib nibWithNibName:@"AXZMeterView" bundle:nil];
         AXZMeterView *meterView = [nib instantiateWithOwner:self options:nil][0];
-        
+        meterView.delegate = self;
         meterView.backgroundImageView.image = self.asset.backgroundImages[i];
         meterView.innerCircleImageView.image = self.asset.innerCircleImages[i];
         [meterView.kmButton setImage:self.asset.kmButtonImages[i] forState:UIControlStateNormal];
@@ -75,7 +79,11 @@
 
 - (void)homeButtonDidtapped:(id)sender
 {
+    CGPoint offset;
+    offset.x = 0;
+    offset.y = 0;
     
+    [self.scrollView setContentOffset:offset animated:YES];
 }
 
 @end

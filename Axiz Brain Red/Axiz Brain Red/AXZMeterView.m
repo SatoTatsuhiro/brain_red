@@ -4,29 +4,29 @@
 
 - (IBAction)resetButtonAction:(id)sender
 {
-    if ([self respondsToSelector:@selector(resetButtonAction:)]) {
-        [self resetButtonAction:self];
+    if ([self respondsToSelector:@selector(resetButtonDidTapped:)]) {
+        [self.delegate resetButtonDidTapped:self];
     }
 }
 
 - (IBAction)userButtonAction:(id)sender
 {
-    if ([self respondsToSelector:@selector(userButtonAction:)]) {
-        [self resetButtonAction:self];
+    if ([self respondsToSelector:@selector(userButtonDidtapped:)]) {
+        [self.delegate userButtonDidtapped:self];
     }
 }
 
 - (IBAction)infoButtonAction:(id)sender
 {
-    if ([self respondsToSelector:@selector(infoButtonAction:)]) {
-        [self infoButtonAction:self];
+    if ([self.delegate respondsToSelector:@selector(infoButtonDidTapped:)]) {
+        [self.delegate infoButtonDidTapped:self];
     }
 }
 
 - (IBAction)homeButtonAction:(id)sender
 {
-    if ([self respondsToSelector:@selector(homeButtonAction:)]) {
-        [self homeButtonAction:self];
+    if ([self.delegate respondsToSelector:@selector(homeButtonDidtapped:)]) {
+        [self.delegate homeButtonDidtapped:self];
     }
 }
 
