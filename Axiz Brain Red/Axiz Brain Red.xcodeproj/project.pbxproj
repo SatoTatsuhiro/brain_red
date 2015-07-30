@@ -16,6 +16,14 @@
 		3B0197FB1B6A714A0068CF76 /* Axiz_Brain_RedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0197FA1B6A714A0068CF76 /* Axiz_Brain_RedTests.m */; };
 		3B0198061B6A723C0068CF76 /* AXZMeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0198051B6A723C0068CF76 /* AXZMeterView.m */; };
 		3B0198081B6A727A0068CF76 /* AXZHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0198071B6A727A0068CF76 /* AXZHomeViewController.xib */; };
+		3B0198111B6A760D0068CF76 /* button_km_hover_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0198091B6A760D0068CF76 /* button_km_hover_red.png */; };
+		3B0198121B6A760D0068CF76 /* button_km_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B01980A1B6A760D0068CF76 /* button_km_red.png */; };
+		3B0198131B6A760D0068CF76 /* button_mph_hover_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B01980B1B6A760D0068CF76 /* button_mph_hover_red.png */; };
+		3B0198141B6A760D0068CF76 /* button_mph_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B01980C1B6A760D0068CF76 /* button_mph_red.png */; };
+		3B0198151B6A760D0068CF76 /* default_blue_35_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B01980D1B6A760D0068CF76 /* default_blue_35_background.png */; };
+		3B0198161B6A760D0068CF76 /* inner_circle_km_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B01980E1B6A760D0068CF76 /* inner_circle_km_red.png */; };
+		3B0198171B6A760D0068CF76 /* inner_circle_mph_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B01980F1B6A760D0068CF76 /* inner_circle_mph_red.png */; };
+		3B0198181B6A760D0068CF76 /* red_background_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0198101B6A760D0068CF76 /* red_background_4.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +53,14 @@
 		3B0198041B6A723C0068CF76 /* AXZMeterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXZMeterView.h; sourceTree = "<group>"; };
 		3B0198051B6A723C0068CF76 /* AXZMeterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXZMeterView.m; sourceTree = "<group>"; };
 		3B0198071B6A727A0068CF76 /* AXZHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AXZHomeViewController.xib; sourceTree = "<group>"; };
+		3B0198091B6A760D0068CF76 /* button_km_hover_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_km_hover_red.png; path = png/button_km_hover_red.png; sourceTree = "<group>"; };
+		3B01980A1B6A760D0068CF76 /* button_km_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_km_red.png; path = png/button_km_red.png; sourceTree = "<group>"; };
+		3B01980B1B6A760D0068CF76 /* button_mph_hover_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_mph_hover_red.png; path = png/button_mph_hover_red.png; sourceTree = "<group>"; };
+		3B01980C1B6A760D0068CF76 /* button_mph_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_mph_red.png; path = png/button_mph_red.png; sourceTree = "<group>"; };
+		3B01980D1B6A760D0068CF76 /* default_blue_35_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default_blue_35_background.png; path = png/default_blue_35_background.png; sourceTree = "<group>"; };
+		3B01980E1B6A760D0068CF76 /* inner_circle_km_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = inner_circle_km_red.png; path = png/inner_circle_km_red.png; sourceTree = "<group>"; };
+		3B01980F1B6A760D0068CF76 /* inner_circle_mph_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = inner_circle_mph_red.png; path = png/inner_circle_mph_red.png; sourceTree = "<group>"; };
+		3B0198101B6A760D0068CF76 /* red_background_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red_background_4.png; path = png/red_background_4.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +112,8 @@
 				3B0197E81B6A714A0068CF76 /* Main.storyboard */,
 				3B0197EB1B6A714A0068CF76 /* Images.xcassets */,
 				3B0197ED1B6A714A0068CF76 /* LaunchScreen.xib */,
+				3B0198091B6A760D0068CF76 /* button_km_hover_red.png */,
+				3B0198191B6A76160068CF76 /* png */,
 				3B0197DE1B6A714A0068CF76 /* Supporting Files */,
 			);
 			path = "Axiz Brain Red";
@@ -125,6 +143,20 @@
 				3B0197F91B6A714A0068CF76 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B0198191B6A76160068CF76 /* png */ = {
+			isa = PBXGroup;
+			children = (
+				3B01980A1B6A760D0068CF76 /* button_km_red.png */,
+				3B01980B1B6A760D0068CF76 /* button_mph_hover_red.png */,
+				3B01980C1B6A760D0068CF76 /* button_mph_red.png */,
+				3B01980D1B6A760D0068CF76 /* default_blue_35_background.png */,
+				3B01980E1B6A760D0068CF76 /* inner_circle_km_red.png */,
+				3B01980F1B6A760D0068CF76 /* inner_circle_mph_red.png */,
+				3B0198101B6A760D0068CF76 /* red_background_4.png */,
+			);
+			name = png;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,10 +239,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B0198161B6A760D0068CF76 /* inner_circle_km_red.png in Resources */,
 				3B0197EA1B6A714A0068CF76 /* Main.storyboard in Resources */,
+				3B0198121B6A760D0068CF76 /* button_km_red.png in Resources */,
+				3B0198171B6A760D0068CF76 /* inner_circle_mph_red.png in Resources */,
+				3B0198181B6A760D0068CF76 /* red_background_4.png in Resources */,
 				3B0198081B6A727A0068CF76 /* AXZHomeViewController.xib in Resources */,
+				3B0198111B6A760D0068CF76 /* button_km_hover_red.png in Resources */,
+				3B0198131B6A760D0068CF76 /* button_mph_hover_red.png in Resources */,
 				3B0197EF1B6A714A0068CF76 /* LaunchScreen.xib in Resources */,
 				3B0197EC1B6A714A0068CF76 /* Images.xcassets in Resources */,
+				3B0198151B6A760D0068CF76 /* default_blue_35_background.png in Resources */,
+				3B0198141B6A760D0068CF76 /* button_mph_red.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
