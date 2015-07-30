@@ -1,13 +1,17 @@
-//
-//  AXZMeterView.h
-//  Axiz Brain Red
-//
-//  Created by tatsuleft on 2015/07/30.
-//  Copyright (c) 2015年 tatsuleft. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
+@protocol AXZMeterViewDelegate <NSObject>
+
+- (void)resetButtonDidTapped:(id)sender;
+- (void)infoButtonDidTapped:(id)sender;
+- (void)homeButtonDidtapped:(id)sender;
+- (void)userButtonDidtapped:(id)sender;
+
+@end
+
 @interface AXZMeterView : UIView
+
+@property (weak) id<AXZMeterViewDelegate> delegate;
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
 
 @end

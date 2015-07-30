@@ -15,7 +15,7 @@
 		3B0197EF1B6A714A0068CF76 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0197ED1B6A714A0068CF76 /* LaunchScreen.xib */; };
 		3B0197FB1B6A714A0068CF76 /* Axiz_Brain_RedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0197FA1B6A714A0068CF76 /* Axiz_Brain_RedTests.m */; };
 		3B0198061B6A723C0068CF76 /* AXZMeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0198051B6A723C0068CF76 /* AXZMeterView.m */; };
-		3B0198081B6A727A0068CF76 /* AXZHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0198071B6A727A0068CF76 /* AXZHomeViewController.xib */; };
+		3B0198081B6A727A0068CF76 /* AXZMeterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0198071B6A727A0068CF76 /* AXZMeterView.xib */; };
 		3B0198111B6A760D0068CF76 /* button_km_hover_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0198091B6A760D0068CF76 /* button_km_hover_red.png */; };
 		3B0198121B6A760D0068CF76 /* button_km_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B01980A1B6A760D0068CF76 /* button_km_red@2x.png */; };
 		3B0198131B6A760D0068CF76 /* button_mph_hover_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B01980B1B6A760D0068CF76 /* button_mph_hover_red@2x.png */; };
@@ -57,7 +57,7 @@
 		3B0197FA1B6A714A0068CF76 /* Axiz_Brain_RedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Axiz_Brain_RedTests.m; sourceTree = "<group>"; };
 		3B0198041B6A723C0068CF76 /* AXZMeterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXZMeterView.h; sourceTree = "<group>"; };
 		3B0198051B6A723C0068CF76 /* AXZMeterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXZMeterView.m; sourceTree = "<group>"; };
-		3B0198071B6A727A0068CF76 /* AXZHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AXZHomeViewController.xib; sourceTree = "<group>"; };
+		3B0198071B6A727A0068CF76 /* AXZMeterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AXZMeterView.xib; sourceTree = "<group>"; };
 		3B0198091B6A760D0068CF76 /* button_km_hover_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_km_hover_red.png; path = png/button_km_hover_red.png; sourceTree = "<group>"; };
 		3B01980A1B6A760D0068CF76 /* button_km_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button_km_red@2x.png"; path = "png/button_km_red@2x.png"; sourceTree = "<group>"; };
 		3B01980B1B6A760D0068CF76 /* button_mph_hover_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button_mph_hover_red@2x.png"; path = "png/button_mph_hover_red@2x.png"; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 				3B0197E61B6A714A0068CF76 /* AXZHomeViewController.m */,
 				3B0198041B6A723C0068CF76 /* AXZMeterView.h */,
 				3B0198051B6A723C0068CF76 /* AXZMeterView.m */,
-				3B0198071B6A727A0068CF76 /* AXZHomeViewController.xib */,
+				3B0198071B6A727A0068CF76 /* AXZMeterView.xib */,
 				3B0197E81B6A714A0068CF76 /* Main.storyboard */,
 				3B0197EB1B6A714A0068CF76 /* Images.xcassets */,
 				3B0197ED1B6A714A0068CF76 /* LaunchScreen.xib */,
@@ -261,7 +261,7 @@
 				3B0198171B6A760D0068CF76 /* inner_circle_mph_red@2x.png in Resources */,
 				3B01981F1B6A78550068CF76 /* map@2x.png in Resources */,
 				3B0198181B6A760D0068CF76 /* red_background_4@2x.png in Resources */,
-				3B0198081B6A727A0068CF76 /* AXZHomeViewController.xib in Resources */,
+				3B0198081B6A727A0068CF76 /* AXZMeterView.xib in Resources */,
 				3B0198111B6A760D0068CF76 /* button_km_hover_red.png in Resources */,
 				3B0198131B6A760D0068CF76 /* button_mph_hover_red@2x.png in Resources */,
 				3B0198211B6A78550068CF76 /* user@2x.png in Resources */,
