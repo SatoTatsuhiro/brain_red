@@ -24,6 +24,10 @@
 		3B0198161B6A760D0068CF76 /* inner_circle_km_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B01980E1B6A760D0068CF76 /* inner_circle_km_red.png */; };
 		3B0198171B6A760D0068CF76 /* inner_circle_mph_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B01980F1B6A760D0068CF76 /* inner_circle_mph_red.png */; };
 		3B0198181B6A760D0068CF76 /* red_background_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0198101B6A760D0068CF76 /* red_background_4.png */; };
+		3B01981E1B6A78550068CF76 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B01981A1B6A78550068CF76 /* info.png */; };
+		3B01981F1B6A78550068CF76 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B01981B1B6A78550068CF76 /* map.png */; };
+		3B0198201B6A78550068CF76 /* reset.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B01981C1B6A78550068CF76 /* reset.png */; };
+		3B0198211B6A78550068CF76 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B01981D1B6A78550068CF76 /* user.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		3B01980E1B6A760D0068CF76 /* inner_circle_km_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = inner_circle_km_red.png; path = png/inner_circle_km_red.png; sourceTree = "<group>"; };
 		3B01980F1B6A760D0068CF76 /* inner_circle_mph_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = inner_circle_mph_red.png; path = png/inner_circle_mph_red.png; sourceTree = "<group>"; };
 		3B0198101B6A760D0068CF76 /* red_background_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red_background_4.png; path = png/red_background_4.png; sourceTree = "<group>"; };
+		3B01981A1B6A78550068CF76 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info.png; path = png/info.png; sourceTree = "<group>"; };
+		3B01981B1B6A78550068CF76 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map.png; path = png/map.png; sourceTree = "<group>"; };
+		3B01981C1B6A78550068CF76 /* reset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reset.png; path = png/reset.png; sourceTree = "<group>"; };
+		3B01981D1B6A78550068CF76 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = user.png; path = png/user.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +156,10 @@
 		3B0198191B6A76160068CF76 /* png */ = {
 			isa = PBXGroup;
 			children = (
+				3B01981A1B6A78550068CF76 /* info.png */,
+				3B01981B1B6A78550068CF76 /* map.png */,
+				3B01981C1B6A78550068CF76 /* reset.png */,
+				3B01981D1B6A78550068CF76 /* user.png */,
 				3B01980A1B6A760D0068CF76 /* button_km_red.png */,
 				3B01980B1B6A760D0068CF76 /* button_mph_hover_red.png */,
 				3B01980C1B6A760D0068CF76 /* button_mph_red.png */,
@@ -240,16 +252,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B0198161B6A760D0068CF76 /* inner_circle_km_red.png in Resources */,
+				3B0198201B6A78550068CF76 /* reset.png in Resources */,
 				3B0197EA1B6A714A0068CF76 /* Main.storyboard in Resources */,
 				3B0198121B6A760D0068CF76 /* button_km_red.png in Resources */,
 				3B0198171B6A760D0068CF76 /* inner_circle_mph_red.png in Resources */,
+				3B01981F1B6A78550068CF76 /* map.png in Resources */,
 				3B0198181B6A760D0068CF76 /* red_background_4.png in Resources */,
 				3B0198081B6A727A0068CF76 /* AXZHomeViewController.xib in Resources */,
 				3B0198111B6A760D0068CF76 /* button_km_hover_red.png in Resources */,
 				3B0198131B6A760D0068CF76 /* button_mph_hover_red.png in Resources */,
+				3B0198211B6A78550068CF76 /* user.png in Resources */,
 				3B0197EF1B6A714A0068CF76 /* LaunchScreen.xib in Resources */,
 				3B0197EC1B6A714A0068CF76 /* Images.xcassets in Resources */,
 				3B0198151B6A760D0068CF76 /* default_blue_35_background.png in Resources */,
+				3B01981E1B6A78550068CF76 /* info.png in Resources */,
 				3B0198141B6A760D0068CF76 /* button_mph_red.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
