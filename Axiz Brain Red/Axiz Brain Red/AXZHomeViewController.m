@@ -1,6 +1,8 @@
 #import "AXZHomeViewController.h"
 #import "AXZMeterView.h"
 #import "AXZAsset.h"
+#import <CoreMotion/CoreMotion.h>
+#import <CoreLocation/CoreLocation.h>
 
 #define PAGE_COUNT 5
 
@@ -8,8 +10,11 @@
 
 @property (nonatomic) AXZAsset *asset;
 @property (nonatomic) NSMutableArray *meterViews;
-
 @property (nonatomic) UIScrollView *scrollView;
+
+@property (nonatomic) float reviseBank;
+@property (nonatomic) float reviseSlope;
+@property (nonatomic) CMAttitude *currentAttitude;
 
 @end
 
@@ -21,6 +26,10 @@
     [self _initialize];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self startGetAngle];
+}
 //=============================================================
 #pragma initialize
 //=============================================================
@@ -64,7 +73,8 @@
 
 - (void)resetButtonDidTapped:(id)sender
 {
-    
+    self.reviseBank = self.currentAttitude.pitch;
+    self.reviseSlope = self.currentAttitude.roll;
 }
 
 - (void)infoButtonDidTapped:(id)sender
@@ -84,6 +94,29 @@
     offset.y = 0;
     
     [self.scrollView setContentOffset:offset animated:YES];
+}
+
+//=============================================================
+#pragma Angle
+//=============================================================
+
+- (void)startGetAngle
+{
+    
+}
+
+//=============================================================
+#pragma Error
+//=============================================================
+
+- (void)showError
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"モーションエラー" message:@"モーションの取得に失敗しました." preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"はい" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [alert dismissViewControllerAnimated:YES completion:nil];
+    }]];
+    
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 @end

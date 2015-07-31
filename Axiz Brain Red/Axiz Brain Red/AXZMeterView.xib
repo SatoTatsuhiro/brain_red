@@ -58,6 +58,18 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRz-6A-2gS">
+                    <rect key="frame" x="82" y="197" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRT-Td-MGn">
+                    <rect key="frame" x="446" y="196" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -74,8 +86,10 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>
                 <outlet property="backgroundImageView" destination="CXO-W7-VMS" id="4s6-eI-2U3"/>
+                <outlet property="bankLabel" destination="zRz-6A-2gS" id="7Iq-ff-rbL"/>
                 <outlet property="innerCircleImageView" destination="2bw-Be-zyI" id="obh-gy-eMZ"/>
                 <outlet property="kmButton" destination="qrI-fL-g8F" id="U69-jz-dIf"/>
+                <outlet property="slopeLabel" destination="KRT-Td-MGn" id="SpP-CG-nyO"/>
             </connections>
         </view>
     </objects>
