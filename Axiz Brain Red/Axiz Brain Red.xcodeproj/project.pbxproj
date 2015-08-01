@@ -35,6 +35,8 @@
 		3B01982B1B6A97F30068CF76 /* button_km.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0198271B6A97F30068CF76 /* button_km.png */; };
 		3B01982E1B6A993D0068CF76 /* AXZAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B01982D1B6A993D0068CF76 /* AXZAsset.m */; };
 		3BEB5B371B6B885D004C3647 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEB5B361B6B885C004C3647 /* CoreMotion.framework */; };
+		3BEB5B3A1B6CEFC1004C3647 /* AXZWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB5B391B6CEFC1004C3647 /* AXZWebViewController.m */; };
+		3BEB5B3C1B6CEFFA004C3647 /* AXZWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB5B3B1B6CEFFA004C3647 /* AXZWebViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,9 @@
 		3B01982C1B6A993D0068CF76 /* AXZAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXZAsset.h; sourceTree = "<group>"; };
 		3B01982D1B6A993D0068CF76 /* AXZAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXZAsset.m; sourceTree = "<group>"; };
 		3BEB5B361B6B885C004C3647 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		3BEB5B381B6CEFC1004C3647 /* AXZWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXZWebViewController.h; sourceTree = "<group>"; };
+		3BEB5B391B6CEFC1004C3647 /* AXZWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXZWebViewController.m; sourceTree = "<group>"; };
+		3BEB5B3B1B6CEFFA004C3647 /* AXZWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AXZWebViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +141,9 @@
 				3B0197E61B6A714A0068CF76 /* AXZHomeViewController.m */,
 				3B01982C1B6A993D0068CF76 /* AXZAsset.h */,
 				3B01982D1B6A993D0068CF76 /* AXZAsset.m */,
+				3BEB5B381B6CEFC1004C3647 /* AXZWebViewController.h */,
+				3BEB5B391B6CEFC1004C3647 /* AXZWebViewController.m */,
+				3BEB5B3B1B6CEFFA004C3647 /* AXZWebViewController.xib */,
 				3B0197E81B6A714A0068CF76 /* Main.storyboard */,
 				3B0197EB1B6A714A0068CF76 /* Images.xcassets */,
 				3B0197ED1B6A714A0068CF76 /* LaunchScreen.xib */,
@@ -294,6 +302,7 @@
 				3B0198151B6A760D0068CF76 /* default_blue_35_background@2x.png in Resources */,
 				3B0198231B6A7C2F0068CF76 /* backtomain@2x.png in Resources */,
 				3B01981E1B6A78550068CF76 /* info@2x.png in Resources */,
+				3BEB5B3C1B6CEFFA004C3647 /* AXZWebViewController.xib in Resources */,
 				3B01982B1B6A97F30068CF76 /* button_km.png in Resources */,
 				3B0198141B6A760D0068CF76 /* button_mph_red@2x.png in Resources */,
 			);
@@ -316,6 +325,7 @@
 				3B0198061B6A723C0068CF76 /* AXZMeterView.m in Sources */,
 				3B01982E1B6A993D0068CF76 /* AXZAsset.m in Sources */,
 				3B0197E71B6A714A0068CF76 /* AXZHomeViewController.m in Sources */,
+				3BEB5B3A1B6CEFC1004C3647 /* AXZWebViewController.m in Sources */,
 				3B0197E41B6A714A0068CF76 /* AppDelegate.m in Sources */,
 				3B0197E11B6A714A0068CF76 /* main.m in Sources */,
 			);

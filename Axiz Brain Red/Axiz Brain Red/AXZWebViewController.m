@@ -6,15 +6,15 @@
 //  Copyright (c) 2014年 Tatsuhiro Sato. All rights reserved.
 //
 
-#import "webViewController.h"
+#import "AXZWebViewController.h"
 
-@interface webViewController ()
+@interface AXZWebViewController ()
 @property (strong, nonatomic) IBOutlet UIWebView *WebView;
 - (IBAction)closeWebViewAction:(id)sender;
 
 @end
 
-@implementation webViewController
+@implementation AXZWebViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
