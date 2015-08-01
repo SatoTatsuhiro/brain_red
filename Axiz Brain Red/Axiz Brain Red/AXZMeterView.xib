@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -57,6 +57,9 @@
                     <state key="normal" image="button_km.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="SpeedButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="DGO-ds-Ku1"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRz-6A-2gS">
                     <rect key="frame" x="82" y="197" width="42" height="21"/>
@@ -88,8 +91,8 @@
                 <outlet property="backgroundImageView" destination="CXO-W7-VMS" id="4s6-eI-2U3"/>
                 <outlet property="bankLabel" destination="zRz-6A-2gS" id="7Iq-ff-rbL"/>
                 <outlet property="innerCircleImageView" destination="2bw-Be-zyI" id="obh-gy-eMZ"/>
-                <outlet property="kmButton" destination="qrI-fL-g8F" id="U69-jz-dIf"/>
                 <outlet property="slopeLabel" destination="KRT-Td-MGn" id="SpP-CG-nyO"/>
+                <outlet property="speedButton" destination="qrI-fL-g8F" id="EMO-VV-gYF"/>
             </connections>
         </view>
     </objects>

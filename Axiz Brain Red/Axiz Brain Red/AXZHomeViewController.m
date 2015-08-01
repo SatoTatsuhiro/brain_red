@@ -59,12 +59,9 @@
         UINib *nib = [UINib nibWithNibName:@"AXZMeterView" bundle:nil];
         AXZMeterView *meterView = [nib instantiateWithOwner:self options:nil][0];
         meterView.delegate = self;
-        meterView.backgroundImageView.image = self.asset.backgroundImages[i];
-        meterView.innerCircleImageView.image = self.asset.innerCircleImages[i];
-        [meterView.kmButton setImage:self.asset.kmButtonImages[i] forState:UIControlStateNormal];
-        [meterView.kmButton setImage:self.asset.kmButtonHoverImages[i] forState:UIControlStateHighlighted];
-        
+        meterView.index = i;
         meterView.frame = CGRectMake(0, self.view.frame.size.height * i, self.view.frame.size.width, self.view.frame.size.height);
+        [meterView index];
         [self.meterViews addObject:meterView];
     }
 }

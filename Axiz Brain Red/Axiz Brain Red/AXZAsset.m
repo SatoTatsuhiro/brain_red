@@ -32,11 +32,11 @@
 {
     NSMutableArray *kmButtonHoverImages = [[NSMutableArray alloc] init];
     
-    [kmButtonHoverImages addObject:[UIImage imageNamed:@"button_mph_hover_red"]];
-    [kmButtonHoverImages addObject:[UIImage imageNamed:@"button_mph_hover_red"]];
-    [kmButtonHoverImages addObject:[UIImage imageNamed:@"button_mph_hover_red"]];
-    [kmButtonHoverImages addObject:[UIImage imageNamed:@"button_mph_hover_red"]];
-    [kmButtonHoverImages addObject:[UIImage imageNamed:@"button_mph_hover_red"]];
+    [kmButtonHoverImages addObject:[UIImage imageNamed:@"button_km_hover_red"]];
+    [kmButtonHoverImages addObject:[UIImage imageNamed:@"button_km_hover_red"]];
+    [kmButtonHoverImages addObject:[UIImage imageNamed:@"button_km_hover_red"]];
+    [kmButtonHoverImages addObject:[UIImage imageNamed:@"button_km_hover_red"]];
+    [kmButtonHoverImages addObject:[UIImage imageNamed:@"button_km_hover_red"]];
 
     return kmButtonHoverImages;
 }
@@ -52,6 +52,32 @@
     [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_km_red"]];
     
     return innerCircleImages;
+}
+
+- (NSMutableArray *)mphButtonImages
+{
+    NSMutableArray *mphButtonImages = [[NSMutableArray alloc] init];
+    
+    [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red"]];
+    [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red@2x"]];
+    [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red@2x"]];
+    [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red@2x"]];
+    [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red@2x"]];
+
+    return mphButtonImages;
+}
+
+- (NSMutableArray *)mphButtonHoverImages
+{
+    NSMutableArray *mphButtonHoverImages = [[NSMutableArray alloc] init];
+    
+    [mphButtonHoverImages addObject:[UIImage imageNamed:@"button_mph_hover_red"]];
+    [mphButtonHoverImages addObject:[UIImage imageNamed:@"button_mph_hover_red"]];
+    [mphButtonHoverImages addObject:[UIImage imageNamed:@"button_mph_hover_red"]];
+    [mphButtonHoverImages addObject:[UIImage imageNamed:@"button_mph_hover_red"]];
+    [mphButtonHoverImages addObject:[UIImage imageNamed:@"button_mph_hover_red"]];
+    
+    return mphButtonHoverImages;
 }
 
 @end
