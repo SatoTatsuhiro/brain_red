@@ -7,7 +7,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AXZWebViewController">
             <connections>
                 <outlet property="WebView" destination="qFf-2g-0Iy" id="sqR-7j-vGm"/>
-                <outlet property="closeWindowButton" destination="5fd-D2-5gZ" id="vNp-iI-FwP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,12 +20,12 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </webView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fd-D2-5gZ">
-                    <rect key="frame" x="512" y="277" width="40" height="40"/>
+                    <rect key="frame" x="523" y="277" width="40" height="40"/>
                     <state key="normal" image="backtomain.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="closeWebViewAction:" destination="-1" eventType="touchUpInside" id="ExY-Mq-zDd"/>
+                        <action selector="closeWebViewAction:" destination="-1" eventType="touchUpInside" id="8F8-Cc-ZqB"/>
                     </connections>
                 </button>
             </subviews>

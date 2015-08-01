@@ -3,6 +3,7 @@
 #import "AXZAsset.h"
 #import <CoreMotion/CoreMotion.h>
 #import <CoreLocation/CoreLocation.h>
+#import "AXZWebViewController.h"
 
 #define PAGE_COUNT 5
 
@@ -79,7 +80,8 @@
 
 - (void)infoButtonDidTapped:(id)sender
 {
-    
+    AXZWebViewController *axzWebView = [[AXZWebViewController alloc] initWithNibName:@"AXZWebViewController" bundle:nil];
+    [self presentViewController:axzWebView animated:YES completion:nil];
 }
 
 - (void)userButtonDidtapped:(id)sender
