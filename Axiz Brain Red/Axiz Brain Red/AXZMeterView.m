@@ -4,14 +4,14 @@
 
 - (IBAction)resetButtonAction:(id)sender
 {
-    if ([self respondsToSelector:@selector(resetButtonDidTapped:)]) {
+    if ([self.delegate respondsToSelector:@selector(resetButtonDidTapped:)]) {
         [self.delegate resetButtonDidTapped:self];
     }
 }
 
 - (IBAction)userButtonAction:(id)sender
 {
-    if ([self respondsToSelector:@selector(userButtonDidtapped:)]) {
+    if ([self.delegate respondsToSelector:@selector(userButtonDidtapped:)]) {
         [self.delegate userButtonDidtapped:self];
     }
 }

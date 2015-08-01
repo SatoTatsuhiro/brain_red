@@ -102,29 +102,18 @@ CGRect windowSize;
     [self.subView addSubview:closeButton];
     [self.view addSubview:self.subView];
     [self.subView addSubview:userImageView];
-    
-   
-    
 }
-
-
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(void)keyboardWiiShow:(NSNotification*)notification{
     NSDictionary *dic = [notification userInfo];
     
-    //アニメーション終了時のキーボードのCGRect
     CGRect keyboardRect         = [[dic objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    
-    //アニメーションにかかる時間
     NSTimeInterval duration     = [[dic objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    
-    //アニメーションのタイプ
     UIViewAnimationCurve curve  = [[dic objectForKey:UIKeyboardAnimationCurveUserInfoKey] integerValue];
     void (^animations)(void);
     animations = ^(void) {
@@ -136,7 +125,6 @@ CGRect windowSize;
                                           self.machineTextField.frame.origin.y - keyboardRect.size.width+58,
                                           self.machineTextField.frame.size.width,
                                           self.machineTextField.frame.size.height);
-
     };
     
     [UIView animateWithDuration:duration
@@ -150,14 +138,8 @@ CGRect windowSize;
 -(void)keyboardDismissMode:(NSNotification*)notification
 {
     NSDictionary *dic = [notification userInfo];
-    
-    //アニメーション終了時のキーボードのCGRect
     CGRect keyboardRect         = [[dic objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    
-    //アニメーションにかかる時間
     NSTimeInterval duration     = [[dic objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    
-    //アニメーションのタイプ
     UIViewAnimationCurve curve  = [[dic objectForKey:UIKeyboardAnimationCurveUserInfoKey] integerValue];
     void (^animations)(void);
     animations = ^(void) {
@@ -169,7 +151,6 @@ CGRect windowSize;
                                                  self.machineTextField.frame.origin.y + keyboardRect.size.width-58,
                                                  self.machineTextField.frame.size.width,
                                                  self.machineTextField.frame.size.height);
-        
     };
     
     [UIView animateWithDuration:duration
@@ -198,9 +179,7 @@ CGRect windowSize;
     
 }
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
-    // オリジナル画像
 	UIImage *originalImage = (UIImage *)[info objectForKey:UIImagePickerControllerOriginalImage];
-	// 編集画像
 	UIImage *editedImage = (UIImage *)[info objectForKey:UIImagePickerControllerEditedImage];
 	UIImage *saveImage;
 	
@@ -212,9 +191,6 @@ CGRect windowSize;
 	{
 		saveImage = originalImage;
 	}
-	
-	// UIImageViewに画像を設定
-    
     
     self.userImageView = saveImage;
     [self.userImage setImage:self.userImageView forState:UIControlStateNormal];
@@ -321,6 +297,5 @@ CGRect windowSize;
          name:UIKeyboardWillHideNotification
          object:nil];
 }
-
 
 @end

@@ -4,6 +4,7 @@
 #import <CoreMotion/CoreMotion.h>
 #import <CoreLocation/CoreLocation.h>
 #import "AXZWebViewController.h"
+#import "AXZSettingViewController.h"
 
 #define PAGE_COUNT 5
 
@@ -86,7 +87,8 @@
 
 - (void)userButtonDidtapped:(id)sender
 {
-    
+    AXZSettingViewController *settingViewController = [[AXZSettingViewController alloc] initWithNibName:@"AXZSettingViewController" bundle:nil];
+    [self presentViewController:settingViewController animated:YES completion:nil];
 }
 
 - (void)homeButtonDidtapped:(id)sender
