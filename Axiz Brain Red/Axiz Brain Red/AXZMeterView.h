@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *speedButton;
 @property (strong, nonatomic) IBOutlet UILabel *bankLabel;
 @property (strong, nonatomic) IBOutlet UILabel *slopeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *speedLabel;
 
 @property (nonatomic) NSInteger index;
 

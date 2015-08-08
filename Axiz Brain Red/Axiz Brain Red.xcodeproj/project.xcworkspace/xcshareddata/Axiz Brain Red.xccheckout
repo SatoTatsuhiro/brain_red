@@ -22,7 +22,7 @@
 		<key>0C4A2F770414156679E3E0D0FE286FF4D16022DD</key>
 		<string>../../..</string>
 		<key>271316BCFF642E10E4B216B23E7FE7217B526E8E</key>
-		<string>../../../../../brain</string>
+		<string>../../../../brain</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:SatoTatsuhiro/brain_red.git</string>

@@ -8,7 +8,7 @@
 
 #define PAGE_COUNT 5
 
-@interface AXZHomeViewController () <AXZMeterViewDelegate>
+@interface AXZHomeViewController () <AXZMeterViewDelegate, CLLocationManagerDelegate>
 
 @property (nonatomic) AXZAsset *asset;
 @property (nonatomic) NSMutableArray *meterViews;
@@ -17,6 +17,8 @@
 @property (nonatomic) float reviseBank;
 @property (nonatomic) float reviseSlope;
 @property (nonatomic) CMAttitude *currentAttitude;
+@property (nonatomic) CMMotionManager *motionManager;
+@property (nonatomic) CLLocationManager *locationManager;
 
 @end
 
@@ -47,6 +49,8 @@
     self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height * PAGE_COUNT);
     [self.view addSubview:self.scrollView];
     
+    [self _prepareLocationManager];
+
     for (AXZMeterView *meterView in self.meterViews) {
         [self.scrollView addSubview:meterView];
     }
@@ -64,6 +68,65 @@
         [meterView index];
         [self.meterViews addObject:meterView];
     }
+}
+
+- (void)_prepareLocationManager
+{
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    self.locationManager.distanceFilter = kCLDistanceFilterNone;
+    [self.locationManager startUpdatingLocation];
+    [self.locationManager requestWhenInUseAuthorization];
+}
+
+
+
+//=============================================================
+#pragma Angle
+//=============================================================
+
+- (void)startGetAngle
+{
+    self.motionManager = [[CMMotionManager alloc] init];
+    self.motionManager.deviceMotionUpdateInterval = 0.1;
+    
+    if (self.motionManager.isGyroActive) {
+        NSOperationQueue *queue = [NSOperationQueue mainQueue];
+        [self.motionManager startDeviceMotionUpdatesToQueue:queue withHandler:^(CMDeviceMotion *motion, NSError *error) {
+        }];
+    }
+}
+
+//=============================================================
+#pragma Speed
+//=============================================================
+
+- (void)updateSpeedLabel:(float)speed
+{
+    for (AXZMeterView *meterView in self.meterViews) {
+        meterView.speedLabel.text = [NSString stringWithFormat:@"%.0f",speed];
+    }
+}
+
+- (void)updateSpeedPin
+{
+
+}
+
+//=============================================================
+#pragma CLLocationManagerDelegate
+//=============================================================
+
+- (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
+{
+    
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    CLLocation *newLocation = locations[locations.count - 1];
+    [self updateSpeedLabel:newLocation.speed];
 }
 
 //=============================================================
@@ -95,15 +158,6 @@
     offset.y = 0;
     
     [self.scrollView setContentOffset:offset animated:YES];
-}
-
-//=============================================================
-#pragma Angle
-//=============================================================
-
-- (void)startGetAngle
-{
-    
 }
 
 //=============================================================
