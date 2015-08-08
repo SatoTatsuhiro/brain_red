@@ -10,6 +10,7 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
 
 @property (nonatomic) AXZAsset *asset;
 @property (nonatomic) NSInteger speedButtonType;
+@property (strong, nonatomic) IBOutlet UILabel *speedLabel;
 
 @end
 
@@ -27,6 +28,15 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
     self.innerCircleImageView.image = self.asset.innerCircleImages[self.index];
     [self.speedButton setImage:self.asset.kmButtonImages[self.index] forState:UIControlStateNormal];
     [self.speedButton setImage:self.asset.kmButtonHoverImages[self.index] forState:UIControlStateHighlighted];
+}
+
+- (void)updateSpeedLabelWithSpeed:(float)speed
+{
+    if (self.speedButtonType == AXZSpeedButtonTypeKm) {
+        self.speedLabel.text = [NSString stringWithFormat:@"%.0f",speed * 3.6];
+    } else {
+        self.speedLabel.text = [NSString stringWithFormat:@"%.0f",speed];
+    }
 }
 
 //=============================================================

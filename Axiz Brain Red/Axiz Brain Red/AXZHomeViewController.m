@@ -102,13 +102,6 @@
 #pragma Speed
 //=============================================================
 
-- (void)updateSpeedLabel:(float)speed
-{
-    for (AXZMeterView *meterView in self.meterViews) {
-        meterView.speedLabel.text = [NSString stringWithFormat:@"%.0f",speed];
-    }
-}
-
 - (void)updateSpeedPin
 {
 
@@ -126,7 +119,10 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     CLLocation *newLocation = locations[locations.count - 1];
-    [self updateSpeedLabel:newLocation.speed];
+    
+    for (AXZMeterView *meterView in self.meterViews) {
+        [meterView updateSpeedLabelWithSpeed:newLocation.speed];
+    }
 }
 
 //=============================================================
