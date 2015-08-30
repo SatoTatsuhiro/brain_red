@@ -80,8 +80,6 @@
     [self.locationManager requestWhenInUseAuthorization];
 }
 
-
-
 //=============================================================
 #pragma Angle
 //=============================================================
@@ -96,15 +94,6 @@
         [self.motionManager startDeviceMotionUpdatesToQueue:queue withHandler:^(CMDeviceMotion *motion, NSError *error) {
         }];
     }
-}
-
-//=============================================================
-#pragma Speed
-//=============================================================
-
-- (void)updateSpeedPin
-{
-
 }
 
 //=============================================================
