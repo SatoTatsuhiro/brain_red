@@ -14,6 +14,8 @@
 - (void)setImages;
 
 - (void)updateSpeedLabelWithSpeed:(float)speed;
+- (void)updateBankLabelWithBank:(float)bank;
+- (void)updateSlopeLabelWithSpeed:(float)slope;
 
 @property (weak) id<AXZMeterViewDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;

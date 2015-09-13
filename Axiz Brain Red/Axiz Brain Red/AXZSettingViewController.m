@@ -208,14 +208,12 @@ CGRect windowSize;
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
     switch (buttonIndex) {
         case 0:
-            NSLog(@"画像を表示するメソッドを書く");
             [self showUserImageView];
             self.subView.hidden = NO;
             
             
             break;
         case 1:
-            NSLog(@"画像を変更するメソッドを書く");
             if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary])
             {
                 UIImagePickerController *imagePickerController = [[UIImagePickerController alloc]init];

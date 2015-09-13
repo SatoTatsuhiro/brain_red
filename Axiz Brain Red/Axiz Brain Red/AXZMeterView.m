@@ -39,8 +39,17 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
     }
 }
 
+- (void)updateBankLabelWithBank:(float)bank
+{
+    self.bankLabel.text = [NSString stringWithFormat:@"%.0f°",bank];
+}
+
+- (void)updateSlopeLabelWithSpeed:(float)slope
+{
+    self.slopeLabel.text = [NSString stringWithFormat:@"%.0f°",slope];
+}
 //=============================================================
-#pragma Action
+#pragma UIAction
 //=============================================================
 
 - (IBAction)resetButtonAction:(id)sender

@@ -28,12 +28,9 @@
 {
     [super viewDidLoad];
     [self _initialize];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
     [self startGetAngle];
 }
+
 //=============================================================
 #pragma initialize
 //=============================================================
@@ -42,6 +39,9 @@
 {
     self.asset = [[AXZAsset alloc] init];
     [self _prepareMeterViews];
+    
+    self.reviseBank = 0;
+    self.reviseSlope = 0;
     
     self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     self.scrollView.pagingEnabled = YES;
@@ -87,13 +87,20 @@
 - (void)startGetAngle
 {
     self.motionManager = [[CMMotionManager alloc] init];
-    self.motionManager.deviceMotionUpdateInterval = 0.1;
+    self.motionManager.deviceMotionUpdateInterval = 1.0/60.0;
     
-    if (self.motionManager.isGyroActive) {
-        NSOperationQueue *queue = [NSOperationQueue mainQueue];
-        [self.motionManager startDeviceMotionUpdatesToQueue:queue withHandler:^(CMDeviceMotion *motion, NSError *error) {
-        }];
-    }
+    NSOperationQueue * queue = [NSOperationQueue mainQueue];
+    [self.motionManager startDeviceMotionUpdatesToQueue:queue withHandler:^(CMDeviceMotion *motion, NSError *error)
+    {
+        self.currentAttitude = motion.attitude;
+        int bankDegree = round(180 * (self.currentAttitude.pitch - self.reviseBank) / M_PI);
+        int slopeDgree = round(180 * (self.currentAttitude.roll - self.reviseSlope) / M_PI);
+        
+        for (AXZMeterView *meterView in self.meterViews) {
+            [meterView updateBankLabelWithBank:bankDegree];
+            [meterView updateSlopeLabelWithSpeed:slopeDgree];
+        }
+    }];
 }
 
 //=============================================================
