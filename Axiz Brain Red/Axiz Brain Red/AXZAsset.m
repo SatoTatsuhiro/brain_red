@@ -41,7 +41,7 @@
     return kmButtonHoverImages;
 }
 
-- (NSMutableArray *)innerCircleImages
+- (NSMutableArray *)kmInnerCircleImages
 {
     NSMutableArray *innerCircleImages = [[NSMutableArray alloc] init];
     
@@ -51,6 +51,19 @@
     [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_km_red"]];
     [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_km_red"]];
     
+    return innerCircleImages;
+}
+
+- (NSMutableArray *)mphInnerCircleImages
+{
+    NSMutableArray *innerCircleImages = [[NSMutableArray alloc] init];
+
+    [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_mph_red"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_mph_red"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_mph_red"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_mph_red"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_mph_red"]];
+
     return innerCircleImages;
 }
 

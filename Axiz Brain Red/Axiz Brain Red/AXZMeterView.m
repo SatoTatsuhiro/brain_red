@@ -25,7 +25,7 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
 - (void)setImages
 {
     self.backgroundImageView.image = self.asset.backgroundImages[self.index];
-    self.innerCircleImageView.image = self.asset.innerCircleImages[self.index];
+    self.innerCircleImageView.image = self.asset.kmInnerCircleImages[self.index];
     [self.speedButton setImage:self.asset.kmButtonImages[self.index] forState:UIControlStateNormal];
     [self.speedButton setImage:self.asset.kmButtonHoverImages[self.index] forState:UIControlStateHighlighted];
 }
@@ -84,10 +84,12 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
     if (self.speedButtonType == AXZSpeedButtonTypeKm) {
         [self.speedButton setImage:self.asset.mphButtonImages[self.index] forState:UIControlStateNormal];
         [self.speedButton setImage:self.asset.mphButtonHoverImages[self.index] forState:UIControlStateHighlighted];
+        [self.innerCircleImageView setImage:self.asset.mphInnerCircleImages[self.index]];
         self.speedButtonType = AXZSpeedButtonTypeMph;
     } else {
         [self.speedButton setImage:self.asset.kmButtonImages[self.index] forState:UIControlStateNormal];
         [self.speedButton setImage:self.asset.kmButtonHoverImages[self.index] forState:UIControlStateHighlighted];
+        [self.innerCircleImageView setImage:self.asset.kmInnerCircleImages[self.index]];
         self.speedButtonType = AXZSpeedButtonTypeKm;
     }
 }
