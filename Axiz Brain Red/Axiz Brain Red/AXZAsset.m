@@ -1,17 +1,61 @@
 #import "AXZAsset.h"
 
+@interface AXZAsset ()
+
+@property (nonatomic) CGRect screenRect;
+
+@end
+
 @implementation AXZAsset
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.screenRect = [[UIScreen mainScreen] bounds];
+    }
+    return self;
+}
 
 - (NSMutableArray *)backgroundImages
 {
+    //TODO: 画像を設定する.
     NSMutableArray *backgroundImages = [[NSMutableArray alloc] init];
-    
-    [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
-    [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
-    [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
-    [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
-    [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
-    
+
+    if (self.screenRect.size.width == 350) {
+
+        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
+        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
+        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
+        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
+        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
+
+    } else if (self.screenRect.size.width == 480) {
+
+        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
+        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
+        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
+        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
+        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
+
+    } else if (self.screenRect.size.width == 667) {
+
+        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
+        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
+        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
+        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
+        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
+
+    } else if (self.screenRect.size.width == 736) {
+
+        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
+        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
+        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
+        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
+        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
+
+    }
+
     return backgroundImages;
 }
 

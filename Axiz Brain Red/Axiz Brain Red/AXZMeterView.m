@@ -79,6 +79,7 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
         [self.delegate homeButtonDidtapped:self];
     }
 }
+
 - (IBAction)SpeedButtonAction:(id)sender
 {
     if (self.speedButtonType == AXZSpeedButtonTypeKm) {
@@ -93,5 +94,7 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
         self.speedButtonType = AXZSpeedButtonTypeKm;
     }
 }
+
+
 
 @end
