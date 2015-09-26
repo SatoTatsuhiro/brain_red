@@ -1,5 +1,6 @@
 #import "AXZSettingViewController.h"
 #import "AXZBlueToothViewController.h"
+#import "AXZAsset.h"
 
 @interface AXZSettingViewController ()<UINavigationControllerDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UITextFieldDelegate>
 
@@ -17,27 +18,26 @@
 @property (strong,nonatomic) NSUserDefaults* textMachineDef;
 @property (strong,nonatomic) UIImagePickerController *imagePicker;
 @property (strong, nonatomic) IBOutlet UITextField *machineTextField;
-@property (strong, nonatomic) IBOutlet UIImageView *backgraundImage;
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (strong, nonatomic) IBOutlet UIButton *bluetoothButton;
+@property (strong, nonatomic) AXZAsset *asset;
+@property (nonatomic) CGRect windowSize;
 
 @end
 
-CGRect windowSize;
-
 @implementation AXZSettingViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (void)awakeFromNib
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-
-    }
-    return self;
+    [super awakeFromNib];
+    self.backgroundImageView.image = self.asset.settingBackgroundImage;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    self.asset = [AXZAsset new];
    
     NSNotificationCenter *notification = [NSNotificationCenter defaultCenter];
     [notification addObserver:self selector:@selector(keyboardWiiShow:) name:UIKeyboardWillShowNotification object:nil];
@@ -60,24 +60,17 @@ CGRect windowSize;
     UIImageView* userImageView = [[UIImageView alloc]initWithFrame:CGRectMake(120, 0, 320, 300)];
     [self.view addSubview:self.subView];
     
-    windowSize = [[UIScreen mainScreen]bounds];
-    if (windowSize.size.height == 480) {
-        self.backgraundImage.image = [UIImage imageNamed:@"user_3_5"];
-        self.backgraundImage.frame = CGRectMake(0, 0, 480, 320);
+    self.windowSize = [[UIScreen mainScreen]bounds];
+
+    if (self.windowSize.size.height == 480) {
         self.subView.frame = CGRectMake(0, 0, 480, 320);
-        closeButton.frame = CGRectMake(0, 0, 320, 568);
         userImageView.frame = CGRectMake(120, 0, 320, 256);
         self.textField.frame = CGRectMake(322, 202, 186, 30);
         self.machineTextField.frame = CGRectMake(322, 228, 186, 30);
         self.userImage.frame = CGRectMake(56, 58, 200, 200);
-        self.bluetoothButton.frame = CGRectMake(424, 20, 30, 30);
-        
     }
-    
 
-    
     if (userNameStr != NULL) {
-        
         self.textField.text = userNameStr;
     } else {
         self.textField.text = @"NoName";
@@ -88,6 +81,7 @@ CGRect windowSize;
     } else {
         self.machineTextField.text = @"NoName";
     }
+
     if (userImageData != NULL) {
         UIImage* userimage = [UIImage imageWithData:userImageData];
         [self.userImage setImage:userimage forState:UIControlStateNormal];
@@ -104,12 +98,8 @@ CGRect windowSize;
     [self.subView addSubview:userImageView];
 }
 
-- (void)didReceiveMemoryWarning
+-(void)keyboardWiiShow:(NSNotification*)notification
 {
-    [super didReceiveMemoryWarning];
-}
-
--(void)keyboardWiiShow:(NSNotification*)notification{
     NSDictionary *dic = [notification userInfo];
     
     CGRect keyboardRect         = [[dic objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
@@ -174,21 +164,20 @@ CGRect windowSize;
 }
 
 
--(IBAction)textfieldDoneEditing:(id)sender{
+-(IBAction)textfieldDoneEditing:(id)sender
+{
     [sender resignFirstResponder];
     
 }
--(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
 	UIImage *originalImage = (UIImage *)[info objectForKey:UIImagePickerControllerOriginalImage];
 	UIImage *editedImage = (UIImage *)[info objectForKey:UIImagePickerControllerEditedImage];
 	UIImage *saveImage;
 	
-	if(editedImage)
-	{
+	if(editedImage) {
 		saveImage = editedImage;
-	}
-	else
-	{
+	} else {
 		saveImage = originalImage;
 	}
     
@@ -205,13 +194,12 @@ CGRect windowSize;
     UIImageWriteToSavedPhotosAlbum(saveImage, nil, nil, nil);
     [self dismissViewControllerAnimated:YES completion:nil];
 }
--(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
     switch (buttonIndex) {
         case 0:
-            [self showUserImageView];
             self.subView.hidden = NO;
-            
-            
             break;
         case 1:
             if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary])
@@ -234,13 +222,12 @@ CGRect windowSize;
     }
 }
 
-- (IBAction)userImageChange:(id)sender {
+- (IBAction)userImageChange:(id)sender
+{
     UIActionSheet* actionSheet = [[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Display profile image",@"Register profile image", nil];
     [actionSheet showInView:[[[[UIApplication sharedApplication] keyWindow] subviews] lastObject]];
 }
--(void)showUserImageView{
-    
-}
+
 - (IBAction)closeView:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
     
@@ -257,17 +244,13 @@ CGRect windowSize;
     [self presentViewController:bluetoothView animated:YES completion:nil];
 }
 
-- (IBAction)infoButtonAction:(id)sender
-{
-    
-}
-
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
 }
 
--(BOOL)shouldAutorotate{
+-(BOOL)shouldAutorotate
+{
     return YES;
 }
 
@@ -283,7 +266,8 @@ CGRect windowSize;
     
 }
 
--(void)viewWillDisappear:(BOOL)animated{
+-(void)viewWillDisappear:(BOOL)animated
+{
         NSNotificationCenter *center;
         center = [NSNotificationCenter defaultCenter];
         [center

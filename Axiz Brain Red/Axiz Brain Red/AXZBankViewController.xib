@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bank_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="W3l-Nt-Nq5">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="bank_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="W3l-Nt-Nq5">
                     <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0S-4G-fzB">
@@ -80,8 +80,8 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSS-me-XcX">
-                    <rect key="frame" x="516" y="142" width="40" height="40"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSS-me-XcX">
+                    <rect key="frame" x="518" y="140" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Nrf-fh-337"/>
                         <constraint firstAttribute="width" constant="40" id="XbQ-eg-XEE"/>
@@ -104,7 +104,7 @@
                 <constraint firstItem="9BW-R5-wwn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="LSW-lG-cO2"/>
                 <constraint firstAttribute="centerX" secondItem="Enf-0H-gID" secondAttribute="centerX" id="OBc-mU-adX"/>
                 <constraint firstItem="sK5-Ot-x8y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="ObK-s8-fG1"/>
-                <constraint firstAttribute="trailing" secondItem="WSS-me-XcX" secondAttribute="trailing" constant="12" id="Uke-UA-28f"/>
+                <constraint firstAttribute="trailing" secondItem="WSS-me-XcX" secondAttribute="trailing" constant="10" id="Uke-UA-28f"/>
                 <constraint firstAttribute="bottom" secondItem="W3l-Nt-Nq5" secondAttribute="bottom" id="Uo5-u9-ucL"/>
                 <constraint firstAttribute="trailing" secondItem="W3l-Nt-Nq5" secondAttribute="trailing" id="XWF-2m-fIM"/>
                 <constraint firstItem="W3l-Nt-Nq5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fFp-cF-zNo"/>

@@ -13,6 +13,6 @@
 
 @property (nonatomic) UIImageView *bankBackgroundImageView;
 @property (nonatomic) UIImageView *slopeBackgroundImageView;
-@property (nonatomic) UIImageView *settingBackgroundImageView;
+@property (nonatomic) UIImage *settingBackgroundImage;
 
 @end

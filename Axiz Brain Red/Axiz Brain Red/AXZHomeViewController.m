@@ -12,7 +12,6 @@
 
 @interface AXZHomeViewController () <AXZMeterViewDelegate, CLLocationManagerDelegate>
 
-@property (nonatomic) AXZAsset *asset;
 @property (nonatomic) NSMutableArray *meterViews;
 @property (nonatomic) UIScrollView *scrollView;
 
@@ -39,7 +38,6 @@
 
 - (void)initialize
 {
-    self.asset = [[AXZAsset alloc] init];
     [self _prepareMeterViews];
     
     self.reviseBank = 0;

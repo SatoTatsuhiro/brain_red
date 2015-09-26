@@ -18,7 +18,8 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
 
 - (void)awakeFromNib
 {
-    self.asset = [[AXZAsset alloc] init];
+    self.asset = [AXZAsset new];
+    [self setImages];
     self.speedButtonType = AXZSpeedButtonTypeKm;
 }
 
