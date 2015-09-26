@@ -22,7 +22,7 @@
     //TODO: 画像を設定する.
     NSMutableArray *backgroundImages = [[NSMutableArray alloc] init];
 
-    if (self.screenRect.size.width == 350) {
+    if (self.screenRect.size.width == 320) {
 
         [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
         [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
@@ -116,10 +116,10 @@
     NSMutableArray *mphButtonImages = [[NSMutableArray alloc] init];
     
     [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red"]];
-    [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red@2x"]];
-    [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red@2x"]];
-    [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red@2x"]];
-    [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red@2x"]];
+    [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red"]];
+    [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red"]];
+    [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red"]];
+    [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red"]];
 
     return mphButtonImages;
 }
@@ -137,4 +137,36 @@
     return mphButtonHoverImages;
 }
 
+- (UIImageView *)bankBackgroundImageView
+{
+    if (self.screenRect.size.width == 320) {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bank_35_background"]];
+    } else if (self.screenRect.size.width == 480) {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bank_background"]];
+    } else if (self.screenRect.size.width == 667) {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bank_background"]];
+    } else if (self.screenRect.size.width == 736) {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bank_background"]];
+    }
+    return nil;
+}
+
+- (UIImageView *)slopeBackgroundImageView
+{
+    if (self.screenRect.size.width == 320) {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"slope_35_background"]];
+    } else if (self.screenRect.size.width == 480) {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"slope_background"]];
+    } else if (self.screenRect.size.width == 667) {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"slope_background"]];
+    } else if (self.screenRect.size.width == 736) {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"slope_background"]];
+    }
+    return nil;
+}
+
+- (UIImageView *)settingBackgroundImageView
+{
+    return nil;
+}
 @end

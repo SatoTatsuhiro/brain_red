@@ -10,7 +10,7 @@
             <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red_background_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="CXO-W7-VMS">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_background_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="CXO-W7-VMS">
                     <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcS-Ct-y1c">
@@ -73,31 +73,40 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2W-zW-FJi">
-                    <rect key="frame" x="263" y="199" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ec5-Oj-l3G">
                     <rect key="frame" x="10" y="140" width="40" height="40"/>
                     <state key="normal" image="arrow_left.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="arrowLeftAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="PoW-ea-E5s"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBh-Z9-JaL">
                     <rect key="frame" x="518" y="140" width="40" height="40"/>
                     <state key="normal" image="arrow_right.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="arrowRightAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Mdo-bB-DVg"/>
+                    </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2W-zW-FJi">
+                    <rect key="frame" x="263" y="204" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="cR7-2m-h4S" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="0OY-PD-DzP"/>
                 <constraint firstItem="jcS-Ct-y1c" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="8EF-Qt-YuB"/>
+                <constraint firstItem="CXO-W7-VMS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Biq-HF-7hX"/>
                 <constraint firstItem="ec5-Oj-l3G" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="LyR-I4-V8M"/>
                 <constraint firstAttribute="bottom" secondItem="EZH-s3-y5U" secondAttribute="bottom" constant="10" id="MXa-p0-iOB"/>
+                <constraint firstAttribute="bottom" secondItem="CXO-W7-VMS" secondAttribute="bottom" id="Rqk-QL-1QB"/>
+                <constraint firstItem="CXO-W7-VMS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="SRD-7O-dG4"/>
                 <constraint firstAttribute="trailing" secondItem="KBh-Z9-JaL" secondAttribute="trailing" constant="10" id="Tg6-Xd-4Dj"/>
                 <constraint firstAttribute="centerY" secondItem="ec5-Oj-l3G" secondAttribute="centerY" id="XTX-8N-6ZX"/>
                 <constraint firstAttribute="centerX" secondItem="2bw-Be-zyI" secondAttribute="centerX" id="dZ2-V7-n5b"/>
@@ -106,6 +115,7 @@
                 <constraint firstAttribute="centerY" secondItem="KBh-Z9-JaL" secondAttribute="centerY" id="sKl-Iu-DNj"/>
                 <constraint firstItem="jcS-Ct-y1c" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="tC8-NF-deK"/>
                 <constraint firstAttribute="trailing" secondItem="cR7-2m-h4S" secondAttribute="trailing" constant="10" id="u90-A3-97X"/>
+                <constraint firstAttribute="trailing" secondItem="CXO-W7-VMS" secondAttribute="trailing" id="uVk-eN-U8k"/>
                 <constraint firstAttribute="trailing" secondItem="S4G-OV-9Kf" secondAttribute="trailing" constant="10" id="wGb-yO-K1y"/>
                 <constraint firstItem="EZH-s3-y5U" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="wj7-fq-Go4"/>
             </constraints>

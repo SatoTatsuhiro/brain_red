@@ -29,7 +29,6 @@
 		3B0198201B6A78550068CF76 /* reset@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B01981C1B6A78550068CF76 /* reset@2x.png */; };
 		3B0198211B6A78550068CF76 /* user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B01981D1B6A78550068CF76 /* user@2x.png */; };
 		3B0198231B6A7C2F0068CF76 /* backtomain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0198221B6A7C2F0068CF76 /* backtomain@2x.png */; };
-		3B01982A1B6A97F30068CF76 /* button_km_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0198261B6A97F30068CF76 /* button_km_red@2x.png */; };
 		3B01982B1B6A97F30068CF76 /* button_km.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0198271B6A97F30068CF76 /* button_km.png */; };
 		3B01982E1B6A993D0068CF76 /* AXZAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B01982D1B6A993D0068CF76 /* AXZAsset.m */; };
 		3BEB5B371B6B885D004C3647 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEB5B361B6B885C004C3647 /* CoreMotion.framework */; };
@@ -44,6 +43,16 @@
 		3BEB5B531B6CF8CA004C3647 /* user_red_35_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB5B521B6CF8CA004C3647 /* user_red_35_background@2x.png */; };
 		3BEB5B551B6CFA18004C3647 /* bluetooth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB5B541B6CFA18004C3647 /* bluetooth@2x.png */; };
 		3BEB5B571B6CFAB6004C3647 /* bluetooth_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB5B561B6CFAB6004C3647 /* bluetooth_background@2x.png */; };
+		9D06848F1BB61BFC0046A74A /* AXZSlopeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D06848B1BB61BFC0046A74A /* AXZSlopeViewController.m */; };
+		9D0684901BB61BFC0046A74A /* AXZSlopeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D06848C1BB61BFC0046A74A /* AXZSlopeViewController.xib */; };
+		9D0684941BB6256A0046A74A /* rider_slope@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D0684911BB6256A0046A74A /* rider_slope@2x.png */; };
+		9D0684951BB6256A0046A74A /* slope_35_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D0684921BB6256A0046A74A /* slope_35_background@2x.png */; };
+		9D0684961BB6256A0046A74A /* slope_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D0684931BB6256A0046A74A /* slope_background@2x.png */; };
+		9D06849A1BB62A290046A74A /* AXZBankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0684981BB62A290046A74A /* AXZBankViewController.m */; };
+		9D06849D1BB62AF70046A74A /* AXZBankViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D06849C1BB62AF70046A74A /* AXZBankViewController.xib */; };
+		9D0684A01BB62F7E0046A74A /* bank_35_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D06849E1BB62F7E0046A74A /* bank_35_background@2x.png */; };
+		9D0684A11BB62F7E0046A74A /* bank_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D06849F1BB62F7E0046A74A /* bank_background@2x.png */; };
+		9D0684A31BB62FE50046A74A /* rider_bank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D0684A21BB62FE50046A74A /* rider_bank@2x.png */; };
 		9D46F4F81BB5812A00C1DB69 /* arrow_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D46F4F61BB5812A00C1DB69 /* arrow_left@2x.png */; };
 		9D46F4F91BB5812A00C1DB69 /* arrow_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D46F4F71BB5812A00C1DB69 /* arrow_right@2x.png */; };
 /* End PBXBuildFile section */
@@ -88,7 +97,6 @@
 		3B01981C1B6A78550068CF76 /* reset@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reset@2x.png"; path = "png/reset@2x.png"; sourceTree = "<group>"; };
 		3B01981D1B6A78550068CF76 /* user@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "user@2x.png"; path = "png/user@2x.png"; sourceTree = "<group>"; };
 		3B0198221B6A7C2F0068CF76 /* backtomain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backtomain@2x.png"; path = "png/backtomain@2x.png"; sourceTree = "<group>"; };
-		3B0198261B6A97F30068CF76 /* button_km_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button_km_red@2x.png"; path = "png/button_km_red@2x.png"; sourceTree = "<group>"; };
 		3B0198271B6A97F30068CF76 /* button_km.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_km.png; path = png/button_km.png; sourceTree = "<group>"; };
 		3B01982C1B6A993D0068CF76 /* AXZAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXZAsset.h; sourceTree = "<group>"; };
 		3B01982D1B6A993D0068CF76 /* AXZAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXZAsset.m; sourceTree = "<group>"; };
@@ -107,6 +115,18 @@
 		3BEB5B521B6CF8CA004C3647 /* user_red_35_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "user_red_35_background@2x.png"; path = "png/user_red_35_background@2x.png"; sourceTree = "<group>"; };
 		3BEB5B541B6CFA18004C3647 /* bluetooth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bluetooth@2x.png"; path = "png/bluetooth@2x.png"; sourceTree = "<group>"; };
 		3BEB5B561B6CFAB6004C3647 /* bluetooth_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bluetooth_background@2x.png"; path = "png/bluetooth_background@2x.png"; sourceTree = "<group>"; };
+		9D06848A1BB61BFC0046A74A /* AXZSlopeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXZSlopeViewController.h; sourceTree = "<group>"; };
+		9D06848B1BB61BFC0046A74A /* AXZSlopeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXZSlopeViewController.m; sourceTree = "<group>"; };
+		9D06848C1BB61BFC0046A74A /* AXZSlopeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AXZSlopeViewController.xib; sourceTree = "<group>"; };
+		9D0684911BB6256A0046A74A /* rider_slope@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rider_slope@2x.png"; path = "png/rider_slope@2x.png"; sourceTree = "<group>"; };
+		9D0684921BB6256A0046A74A /* slope_35_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "slope_35_background@2x.png"; path = "png/slope_35_background@2x.png"; sourceTree = "<group>"; };
+		9D0684931BB6256A0046A74A /* slope_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "slope_background@2x.png"; path = "png/slope_background@2x.png"; sourceTree = "<group>"; };
+		9D0684971BB62A290046A74A /* AXZBankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXZBankViewController.h; sourceTree = "<group>"; };
+		9D0684981BB62A290046A74A /* AXZBankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXZBankViewController.m; sourceTree = "<group>"; };
+		9D06849C1BB62AF70046A74A /* AXZBankViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AXZBankViewController.xib; sourceTree = "<group>"; };
+		9D06849E1BB62F7E0046A74A /* bank_35_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bank_35_background@2x.png"; path = "png/bank_35_background@2x.png"; sourceTree = "<group>"; };
+		9D06849F1BB62F7E0046A74A /* bank_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bank_background@2x.png"; path = "png/bank_background@2x.png"; sourceTree = "<group>"; };
+		9D0684A21BB62FE50046A74A /* rider_bank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rider_bank@2x.png"; path = "png/rider_bank@2x.png"; sourceTree = "<group>"; };
 		9D46F4F61BB5812A00C1DB69 /* arrow_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow_left@2x.png"; path = "png/arrow_left@2x.png"; sourceTree = "<group>"; };
 		9D46F4F71BB5812A00C1DB69 /* arrow_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow_right@2x.png"; path = "png/arrow_right@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +188,12 @@
 				3BEB5B3E1B6CF272004C3647 /* AXZSettingViewController.m */,
 				3BEB5B3F1B6CF272004C3647 /* AXZSettingViewController.xib */,
 				3B0197E81B6A714A0068CF76 /* Main.storyboard */,
+				9D06848A1BB61BFC0046A74A /* AXZSlopeViewController.h */,
+				9D06848B1BB61BFC0046A74A /* AXZSlopeViewController.m */,
+				9D06848C1BB61BFC0046A74A /* AXZSlopeViewController.xib */,
+				9D0684971BB62A290046A74A /* AXZBankViewController.h */,
+				9D0684981BB62A290046A74A /* AXZBankViewController.m */,
+				9D06849C1BB62AF70046A74A /* AXZBankViewController.xib */,
 				3B0197EB1B6A714A0068CF76 /* Images.xcassets */,
 				3BEB5B471B6CF50C004C3647 /* AXZBlueToothViewController.h */,
 				3BEB5B481B6CF50C004C3647 /* AXZBlueToothViewController.m */,
@@ -209,8 +235,14 @@
 		3B0198191B6A76160068CF76 /* png */ = {
 			isa = PBXGroup;
 			children = (
+				9D0684A21BB62FE50046A74A /* rider_bank@2x.png */,
+				9D06849E1BB62F7E0046A74A /* bank_35_background@2x.png */,
+				9D06849F1BB62F7E0046A74A /* bank_background@2x.png */,
 				9D46F4F61BB5812A00C1DB69 /* arrow_left@2x.png */,
 				9D46F4F71BB5812A00C1DB69 /* arrow_right@2x.png */,
+				9D0684911BB6256A0046A74A /* rider_slope@2x.png */,
+				9D0684921BB6256A0046A74A /* slope_35_background@2x.png */,
+				9D0684931BB6256A0046A74A /* slope_background@2x.png */,
 				3BEB5B561B6CFAB6004C3647 /* bluetooth_background@2x.png */,
 				3BEB5B541B6CFA18004C3647 /* bluetooth@2x.png */,
 				3BEB5B4C1B6CF742004C3647 /* noimage@2x.png */,
@@ -228,7 +260,6 @@
 				3B01980E1B6A760D0068CF76 /* inner_circle_km_red@2x.png */,
 				3B01980F1B6A760D0068CF76 /* inner_circle_mph_red@2x.png */,
 				3B0198101B6A760D0068CF76 /* red_background_4@2x.png */,
-				3B0198261B6A97F30068CF76 /* button_km_red@2x.png */,
 				3B0198271B6A97F30068CF76 /* button_km.png */,
 			);
 			name = png;
@@ -320,12 +351,15 @@
 				3B0197EA1B6A714A0068CF76 /* Main.storyboard in Resources */,
 				3B0198121B6A760D0068CF76 /* button_km_red@2x.png in Resources */,
 				3B0198171B6A760D0068CF76 /* inner_circle_mph_red@2x.png in Resources */,
+				9D0684A31BB62FE50046A74A /* rider_bank@2x.png in Resources */,
+				9D0684951BB6256A0046A74A /* slope_35_background@2x.png in Resources */,
 				3B01981F1B6A78550068CF76 /* map@2x.png in Resources */,
+				9D0684A01BB62F7E0046A74A /* bank_35_background@2x.png in Resources */,
 				3B0198181B6A760D0068CF76 /* red_background_4@2x.png in Resources */,
 				3B0198081B6A727A0068CF76 /* AXZMeterView.xib in Resources */,
 				3BEB5B4F1B6CF742004C3647 /* user_red_background@2x.png in Resources */,
 				3BEB5B4E1B6CF742004C3647 /* noimage@2x.png in Resources */,
-				3B01982A1B6A97F30068CF76 /* button_km_red@2x.png in Resources */,
+				9D0684941BB6256A0046A74A /* rider_slope@2x.png in Resources */,
 				3B0198111B6A760D0068CF76 /* button_km_hover_red@2x.png in Resources */,
 				3B0198131B6A760D0068CF76 /* button_mph_hover_red@2x.png in Resources */,
 				3BEB5B411B6CF272004C3647 /* AXZSettingViewController.xib in Resources */,
@@ -335,11 +369,15 @@
 				3BEB5B551B6CFA18004C3647 /* bluetooth@2x.png in Resources */,
 				3B0197EC1B6A714A0068CF76 /* Images.xcassets in Resources */,
 				3BEB5B4B1B6CF50C004C3647 /* AXZBlueToothViewController.xib in Resources */,
+				9D06849D1BB62AF70046A74A /* AXZBankViewController.xib in Resources */,
+				9D0684961BB6256A0046A74A /* slope_background@2x.png in Resources */,
 				3B0198151B6A760D0068CF76 /* default_blue_35_background@2x.png in Resources */,
 				3B0198231B6A7C2F0068CF76 /* backtomain@2x.png in Resources */,
 				3BEB5B571B6CFAB6004C3647 /* bluetooth_background@2x.png in Resources */,
+				9D0684901BB61BFC0046A74A /* AXZSlopeViewController.xib in Resources */,
 				3B01981E1B6A78550068CF76 /* info@2x.png in Resources */,
 				3BEB5B3C1B6CEFFA004C3647 /* AXZWebViewController.xib in Resources */,
+				9D0684A11BB62F7E0046A74A /* bank_background@2x.png in Resources */,
 				3B01982B1B6A97F30068CF76 /* button_km.png in Resources */,
 				3B0198141B6A760D0068CF76 /* button_mph_red@2x.png in Resources */,
 				9D46F4F81BB5812A00C1DB69 /* arrow_left@2x.png in Resources */,
@@ -364,8 +402,10 @@
 				3BEB5B4A1B6CF50C004C3647 /* AXZBlueToothViewController.m in Sources */,
 				3BEB5B401B6CF272004C3647 /* AXZSettingViewController.m in Sources */,
 				3B01982E1B6A993D0068CF76 /* AXZAsset.m in Sources */,
+				9D06849A1BB62A290046A74A /* AXZBankViewController.m in Sources */,
 				3B0197E71B6A714A0068CF76 /* AXZHomeViewController.m in Sources */,
 				3BEB5B3A1B6CEFC1004C3647 /* AXZWebViewController.m in Sources */,
+				9D06848F1BB61BFC0046A74A /* AXZSlopeViewController.m in Sources */,
 				3B0197E41B6A714A0068CF76 /* AppDelegate.m in Sources */,
 				3B0197E11B6A714A0068CF76 /* main.m in Sources */,
 			);

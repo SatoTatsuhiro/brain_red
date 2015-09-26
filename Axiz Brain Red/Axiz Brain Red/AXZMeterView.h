@@ -6,6 +6,8 @@
 - (void)infoButtonDidTapped:(id)sender;
 - (void)homeButtonDidtapped:(id)sender;
 - (void)userButtonDidtapped:(id)sender;
+- (void)arrowLeftButtonDidTapped:(id)sender;
+- (void)arrowRightButtonDidTapped:(id)sender;
 
 @end
 

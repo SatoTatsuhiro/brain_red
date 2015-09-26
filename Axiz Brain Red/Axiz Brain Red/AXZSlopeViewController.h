@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreMotion/CoreMotion.h>
 
-@interface SlopeViewController : UIViewController
+@interface AXZSlopeViewController : UIViewController
 
 @property CMMotionManager *SlopeRiderManager;
 

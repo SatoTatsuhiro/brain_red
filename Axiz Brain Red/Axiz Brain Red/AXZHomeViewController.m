@@ -5,6 +5,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import "AXZWebViewController.h"
 #import "AXZSettingViewController.h"
+#import "AXZSlopeViewController.h"
+#import "AXZBankViewController.h"
 
 #define PAGE_COUNT 5
 
@@ -27,7 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self _initialize];
+    [self initialize];
     [self startGetAngle];
 }
 
@@ -35,7 +37,7 @@
 #pragma initialize
 //=============================================================
 
-- (void)_initialize
+- (void)initialize
 {
     self.asset = [[AXZAsset alloc] init];
     [self _prepareMeterViews];
@@ -107,11 +109,6 @@
 #pragma CLLocationManagerDelegate
 //=============================================================
 
-- (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
-{
-    
-}
-
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     CLLocation *newLocation = locations[locations.count - 1];
@@ -150,6 +147,20 @@
     offset.y = 0;
     
     [self.scrollView setContentOffset:offset animated:YES];
+}
+
+- (void)arrowLeftButtonDidTapped:(id)sender
+{
+    AXZBankViewController *bankViewController = [[AXZBankViewController alloc] initWithNibName:NSStringFromClass([AXZBankViewController class]) bundle:nil];
+    bankViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:bankViewController animated:YES completion:nil];
+}
+
+- (void)arrowRightButtonDidTapped:(id)sender
+{
+    AXZSlopeViewController *slopeViewController = [[AXZSlopeViewController alloc] initWithNibName:NSStringFromClass([AXZSlopeViewController class]) bundle:nil];
+    slopeViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:slopeViewController animated:YES completion:nil];
 }
 
 //=============================================================

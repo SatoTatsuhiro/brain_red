@@ -52,6 +52,20 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
 #pragma UIAction
 //=============================================================
 
+- (IBAction)arrowLeftAction:(id)sender
+{
+    if ([self.delegate respondsToSelector:@selector(arrowLeftButtonDidTapped:)]) {
+        [self.delegate arrowLeftButtonDidTapped:self];
+    }
+}
+
+- (IBAction)arrowRightAction:(id)sender
+{
+    if ([self.delegate respondsToSelector:@selector(arrowRightButtonDidTapped:)]) {
+        [self.delegate arrowRightButtonDidTapped:self];
+    }
+}
+
 - (IBAction)resetButtonAction:(id)sender
 {
     if ([self.delegate respondsToSelector:@selector(resetButtonDidTapped:)]) {

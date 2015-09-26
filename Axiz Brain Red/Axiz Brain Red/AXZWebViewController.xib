@@ -15,12 +15,8 @@
             <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qFf-2g-0Iy">
-                    <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </webView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fd-D2-5gZ">
-                    <rect key="frame" x="523" y="277" width="40" height="40"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fd-D2-5gZ">
+                    <rect key="frame" x="518" y="270" width="40" height="40"/>
                     <state key="normal" image="backtomain.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -28,8 +24,20 @@
                         <action selector="closeWebViewAction:" destination="-1" eventType="touchUpInside" id="8F8-Cc-ZqB"/>
                     </connections>
                 </button>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qFf-2g-0Iy">
+                    <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </webView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="qFf-2g-0Iy" secondAttribute="trailing" id="QLe-Xc-897"/>
+                <constraint firstItem="qFf-2g-0Iy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SvA-8N-n6e"/>
+                <constraint firstItem="qFf-2g-0Iy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ZuW-Bd-hMg"/>
+                <constraint firstAttribute="trailing" secondItem="5fd-D2-5gZ" secondAttribute="trailing" constant="10" id="qP3-Mi-W12"/>
+                <constraint firstAttribute="bottom" secondItem="5fd-D2-5gZ" secondAttribute="bottom" constant="10" id="vcx-om-eTZ"/>
+                <constraint firstAttribute="bottom" secondItem="qFf-2g-0Iy" secondAttribute="bottom" id="zOA-FL-n3C"/>
+            </constraints>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
         </view>
     </objects>

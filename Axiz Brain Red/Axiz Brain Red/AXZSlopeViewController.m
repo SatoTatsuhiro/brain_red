@@ -1,16 +1,8 @@
-//
-//  SlopeViewController.m
-//  Axiz Brain Red
-//
-//  Created by 左藤樹洋 on 2014/08/05.
-//  Copyright (c) 2014年 Tatsuhiro Sato. All rights reserved.
-//
+#import "AXZSlopeViewController.h"
+#import "AXZSettingViewController.h"
+#import "AXZWebViewController.h"
 
-#import "SlopeViewController.h"
-#import "settingViewController.h"
-#import "webViewController.h"
-
-@interface SlopeViewController ()
+@interface AXZSlopeViewController ()
 - (IBAction)resetButton:(id)sender;
 - (IBAction)userAction:(id)sender;
 - (IBAction)infoButtonAction:(id)sender;
@@ -19,92 +11,76 @@
 @property (strong, nonatomic) IBOutlet UILabel *slopeLabel;
 @property (strong,nonatomic) CMAttitude *currentAttitude;
 
-
 @end
+
 float ReviseSlope;
 
-@implementation SlopeViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@implementation AXZSlopeViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self startSlopeRider];
-	// Do any additional setup after loading the view.
     ReviseSlope = 0;
-    
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)startSlopeRider
 {
     self.SlopeRiderManager = [[CMMotionManager alloc] init];
-    self.SlopeRiderManager.deviceMotionUpdateInterval = 1.0/60.0; //0.16秒間隔で更新
-    
+    self.SlopeRiderManager.deviceMotionUpdateInterval = 1.0/60.0;
+
     NSOperationQueue * queue = [NSOperationQueue mainQueue];
-    [self.SlopeRiderManager startDeviceMotionUpdatesToQueue:queue withHandler:^(CMDeviceMotion *motion, NSError *error) {
-        
+    [self.SlopeRiderManager startDeviceMotionUpdatesToQueue:queue withHandler:^(CMDeviceMotion *motion, NSError *error)
+    {
         self.currentAttitude = motion.attitude;
-        
-        //角度の基準を決める（？）
-        //[currentAttitude multiplyByInverseOfAttitude:self.motionManager.deviceMotion.attitude];
-        
-        //数値の取得と丸め
+
         float Slope = self.currentAttitude.roll - ReviseSlope;
         int SlopeDgree = round(180 * (self.currentAttitude.roll - ReviseSlope) / M_PI);
-        
-        
-        //角度アニメーション
+
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:0.1];
         _SlopeRider.transform = CGAffineTransformMakeRotation(-Slope);
         [UIView commitAnimations];
+
+        if (SlopeDgree >= 45 || SlopeDgree <= -45) {
+            self.slopeLabel.textColor = [UIColor redColor];
+        } else {
+            self.slopeLabel.textColor = [UIColor whiteColor];
+        }
         self.slopeLabel.text = [NSString stringWithFormat:@"%d°",SlopeDgree];
-        
-        
     }];
-    
 }
 
-
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    //文字を白くする
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
     return UIStatusBarStyleLightContent;
 }
-- (IBAction)resetButton:(id)sender {
+
+- (IBAction)resetButton:(id)sender
+{
     ReviseSlope = self.currentAttitude.roll;
-    
 }
 
-- (IBAction)userAction:(id)sender {
-    settingViewController *settingViewCtl = [[settingViewController alloc] init];
+- (IBAction)userAction:(id)sender
+{
+    AXZSettingViewController *settingViewCtl = [[AXZSettingViewController alloc] init];
     [self presentViewController:settingViewCtl animated:YES completion:nil];
-
-    
 }
 
-- (IBAction)infoButtonAction:(id)sender {
-    webViewController* webViewCtl = [[webViewController alloc]init];
+- (IBAction)infoButtonAction:(id)sender
+{
+    AXZWebViewController* webViewCtl = [[AXZWebViewController alloc]init];
     [self presentViewController:webViewCtl animated:YES completion:nil];
-
 }
 
-- (IBAction)backToMainButton:(id)sender {
+- (IBAction)backToMainButton:(id)sender
+{
     [self dismissViewControllerAnimated:YES completion:nil];
-    
+}
+
+- (IBAction)arrowLeftAction:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
 
