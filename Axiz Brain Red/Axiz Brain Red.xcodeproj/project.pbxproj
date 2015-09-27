@@ -53,6 +53,9 @@
 		9D0684A01BB62F7E0046A74A /* bank_35_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D06849E1BB62F7E0046A74A /* bank_35_background@2x.png */; };
 		9D0684A11BB62F7E0046A74A /* bank_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D06849F1BB62F7E0046A74A /* bank_background@2x.png */; };
 		9D0684A31BB62FE50046A74A /* rider_bank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D0684A21BB62FE50046A74A /* rider_bank@2x.png */; };
+		9D0684A51BB840100046A74A /* default_red_35_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D0684A41BB840100046A74A /* default_red_35_background@2x.png */; };
+		9D0684AE1BB850140046A74A /* UIView+AXZUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0684AD1BB850140046A74A /* UIView+AXZUI.m */; };
+		9D0684B11BB85B9B0046A74A /* UILabel+AXZUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0684B01BB85B9B0046A74A /* UILabel+AXZUI.m */; };
 		9D46F4F81BB5812A00C1DB69 /* arrow_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D46F4F61BB5812A00C1DB69 /* arrow_left@2x.png */; };
 		9D46F4F91BB5812A00C1DB69 /* arrow_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D46F4F71BB5812A00C1DB69 /* arrow_right@2x.png */; };
 /* End PBXBuildFile section */
@@ -127,6 +130,11 @@
 		9D06849E1BB62F7E0046A74A /* bank_35_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bank_35_background@2x.png"; path = "png/bank_35_background@2x.png"; sourceTree = "<group>"; };
 		9D06849F1BB62F7E0046A74A /* bank_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bank_background@2x.png"; path = "png/bank_background@2x.png"; sourceTree = "<group>"; };
 		9D0684A21BB62FE50046A74A /* rider_bank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rider_bank@2x.png"; path = "png/rider_bank@2x.png"; sourceTree = "<group>"; };
+		9D0684A41BB840100046A74A /* default_red_35_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "default_red_35_background@2x.png"; path = "../../../../../Downloads/default_red_35_background@2x.png"; sourceTree = "<group>"; };
+		9D0684AC1BB850140046A74A /* UIView+AXZUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AXZUI.h"; sourceTree = "<group>"; };
+		9D0684AD1BB850140046A74A /* UIView+AXZUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AXZUI.m"; sourceTree = "<group>"; };
+		9D0684AF1BB85B9B0046A74A /* UILabel+AXZUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+AXZUI.h"; sourceTree = "<group>"; };
+		9D0684B01BB85B9B0046A74A /* UILabel+AXZUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+AXZUI.m"; sourceTree = "<group>"; };
 		9D46F4F61BB5812A00C1DB69 /* arrow_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow_left@2x.png"; path = "png/arrow_left@2x.png"; sourceTree = "<group>"; };
 		9D46F4F71BB5812A00C1DB69 /* arrow_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow_right@2x.png"; path = "png/arrow_right@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,6 +189,10 @@
 				3B0197E61B6A714A0068CF76 /* AXZHomeViewController.m */,
 				3B01982C1B6A993D0068CF76 /* AXZAsset.h */,
 				3B01982D1B6A993D0068CF76 /* AXZAsset.m */,
+				9D0684AC1BB850140046A74A /* UIView+AXZUI.h */,
+				9D0684AD1BB850140046A74A /* UIView+AXZUI.m */,
+				9D0684AF1BB85B9B0046A74A /* UILabel+AXZUI.h */,
+				9D0684B01BB85B9B0046A74A /* UILabel+AXZUI.m */,
 				3BEB5B381B6CEFC1004C3647 /* AXZWebViewController.h */,
 				3BEB5B391B6CEFC1004C3647 /* AXZWebViewController.m */,
 				3BEB5B3B1B6CEFFA004C3647 /* AXZWebViewController.xib */,
@@ -235,6 +247,7 @@
 		3B0198191B6A76160068CF76 /* png */ = {
 			isa = PBXGroup;
 			children = (
+				9D0684A41BB840100046A74A /* default_red_35_background@2x.png */,
 				9D0684A21BB62FE50046A74A /* rider_bank@2x.png */,
 				9D06849E1BB62F7E0046A74A /* bank_35_background@2x.png */,
 				9D06849F1BB62F7E0046A74A /* bank_background@2x.png */,
@@ -374,6 +387,7 @@
 				3B0198151B6A760D0068CF76 /* default_blue_35_background@2x.png in Resources */,
 				3B0198231B6A7C2F0068CF76 /* backtomain@2x.png in Resources */,
 				3BEB5B571B6CFAB6004C3647 /* bluetooth_background@2x.png in Resources */,
+				9D0684A51BB840100046A74A /* default_red_35_background@2x.png in Resources */,
 				9D0684901BB61BFC0046A74A /* AXZSlopeViewController.xib in Resources */,
 				3B01981E1B6A78550068CF76 /* info@2x.png in Resources */,
 				3BEB5B3C1B6CEFFA004C3647 /* AXZWebViewController.xib in Resources */,
@@ -402,10 +416,12 @@
 				3BEB5B4A1B6CF50C004C3647 /* AXZBlueToothViewController.m in Sources */,
 				3BEB5B401B6CF272004C3647 /* AXZSettingViewController.m in Sources */,
 				3B01982E1B6A993D0068CF76 /* AXZAsset.m in Sources */,
+				9D0684B11BB85B9B0046A74A /* UILabel+AXZUI.m in Sources */,
 				9D06849A1BB62A290046A74A /* AXZBankViewController.m in Sources */,
 				3B0197E71B6A714A0068CF76 /* AXZHomeViewController.m in Sources */,
 				3BEB5B3A1B6CEFC1004C3647 /* AXZWebViewController.m in Sources */,
 				9D06848F1BB61BFC0046A74A /* AXZSlopeViewController.m in Sources */,
+				9D0684AE1BB850140046A74A /* UIView+AXZUI.m in Sources */,
 				3B0197E41B6A714A0068CF76 /* AppDelegate.m in Sources */,
 				3B0197E11B6A714A0068CF76 /* main.m in Sources */,
 			);

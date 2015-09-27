@@ -1,21 +1,54 @@
-//
-//  UILabel+AXZUI.m
-//  Axiz Brain Red
-//
-//  Created by tatsuhiro-sato on 2015/09/28.
-//  Copyright (c) 2015年 tatsuleft. All rights reserved.
-//
-
 #import "UILabel+AXZUI.h"
 
-@implementation UILabel_AXZUI
+@implementation UILabel (UILabel_AXZUI)
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
++ (UIFont *)mainLabelFont
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+
+    if (screenRect.size.width == 480 && screenRect.size.height == 320) {
+        return [UIFont systemFontOfSize:14];
+    } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
+        return [UIFont systemFontOfSize:14];
+    } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
+        return [UIFont systemFontOfSize:14];
+    } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
+        return [UIFont systemFontOfSize:14];
+    }
+    return nil;
 }
-*/
+
++ (UIFont *)bankLabelFont
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+
+    if (screenRect.size.width == 480 && screenRect.size.height == 320) {
+        return [UIFont systemFontOfSize:14];
+    } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
+        return [UIFont systemFontOfSize:14];
+    } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
+        return [UIFont systemFontOfSize:14];
+    } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
+        return [UIFont systemFontOfSize:14];
+    }
+    return nil;
+}
+
++ (UIFont *)slopeLabelFont
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+
+    if (screenRect.size.width == 480 && screenRect.size.height == 320) {
+        return [UIFont systemFontOfSize:14];
+    } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
+        return [UIFont systemFontOfSize:14];
+    } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
+        return [UIFont systemFontOfSize:14];
+    } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
+        return [UIFont systemFontOfSize:14];
+    }
+    return nil;
+}
+
 
 @end

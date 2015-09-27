@@ -1,13 +1,12 @@
-//
-//  UIView+AXZUI.h
-//  Axiz Brain Red
-//
-//  Created by tatsuhiro-sato on 2015/09/28.
-//  Copyright (c) 2015年 tatsuleft. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
+#import "UIView+AXZUI.h"
 
-@interface UIView_AXZUI : UIView
+@interface UIView (UIView_AXZUI)
+
++ (CGRect)mainSpeedTypeButtonRect;
++ (CGRect)mainInnerCircleImageViewRect;
++ (CGRect)mainSpeedLabelRect;
++ (CGRect)mainBankLabelRect;
++ (CGRect)mainSlopeLabelRect;
 
 @end

@@ -1,5 +1,6 @@
 #import "AXZMeterView.h"
 #import "AXZAsset.h"
+#import "UIView+AXZUI.h"
 
 typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
     AXZSpeedButtonTypeKm,
@@ -10,7 +11,7 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
 
 @property (nonatomic) AXZAsset *asset;
 @property (nonatomic) NSInteger speedButtonType;
-@property (strong, nonatomic) IBOutlet UILabel *speedLabel;
+@property (weak, nonatomic) IBOutlet UILabel *speedLabel;
 
 @end
 
@@ -30,6 +31,47 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
     [self.speedButton setImage:self.asset.kmButtonImages[self.index] forState:UIControlStateNormal];
     [self.speedButton setImage:self.asset.kmButtonHoverImages[self.index] forState:UIControlStateHighlighted];
 }
+
+- (void)layoutSubviews
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+
+    self.speedButton.translatesAutoresizingMaskIntoConstraints = YES;
+    self.innerCircleImageView.translatesAutoresizingMaskIntoConstraints = YES;
+
+    if (screenRect.size.width == 480 && screenRect.size.height == 320) {
+
+        self.speedLabel.frame = CGRectMake(82, 196, 42, 21);
+        self.innerCircleImageView.frame = CGRectMake(130, 49, 221, 221);
+
+    } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
+
+        self.speedLabel.frame = CGRectMake(82, 196, 42, 21);
+        self.speedButton.frame = CGRectMake(254, 242, 60, 30);
+        self.innerCircleImageView.frame = CGRectMake(174, 49, 221, 221);
+
+    } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
+
+        self.speedButton.frame = CGRectMake(298, 287, 70, 35);
+        self.innerCircleImageView.frame = CGRectMake(203, 58, 260, 260);
+
+    } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
+
+        self.slopeLabel.frame = CGRectMake(0, 0, 0, 0);
+        self.bankLabel.frame = CGRectMake(0, 0, 0, 0);
+        self.speedLabel.frame = CGRectMake(82, 196, 42, 21);
+        self.speedButton.frame = CGRectMake(329, 315, 78, 39);
+        self.innerCircleImageView.frame = CGRectMake(227, 65, 283, 283);
+        
+    }
+
+    self.speedButton.frame = [UIView mainSpeedTypeButtonRect];
+
+}
+
+//=============================================================
+#pragma UpdateLabels
+//=============================================================
 
 - (void)updateSpeedLabelWithSpeed:(float)speed
 {
@@ -109,7 +151,5 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
         self.speedButtonType = AXZSpeedButtonTypeKm;
     }
 }
-
-
 
 @end
