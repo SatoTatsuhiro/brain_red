@@ -8,5 +8,10 @@
 + (CGRect)mainSpeedLabelRect;
 + (CGRect)mainBankLabelRect;
 + (CGRect)mainSlopeLabelRect;
++ (CGRect)bankLabelRect;
++ (CGRect)slopeLabelRect;
++ (CGRect)settingUserImageRect;
++ (CGRect)settingUserNameLabelRect;
++ (CGRect)settingUserMachineNameLabelRect;
 
 @end

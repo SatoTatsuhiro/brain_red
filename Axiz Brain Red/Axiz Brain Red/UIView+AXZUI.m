@@ -82,4 +82,83 @@
     return CGRectMake(0, 0, 0, 0);
 }
 
++ (CGRect)bankLabelRect
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+
+    if (screenRect.size.width == 480 && screenRect.size.height == 320) {
+        return CGRectMake(130, 49, 221, 221);
+    } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
+        return CGRectMake(174, 49, 221, 221);
+    } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
+        return CGRectMake(203, 58, 260, 260);
+    } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
+        return CGRectMake(227, 65, 283, 283);
+    }
+    return CGRectMake(0, 0, 0, 0);
+}
+
++ (CGRect)slopeLabelRect
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+
+    if (screenRect.size.width == 480 && screenRect.size.height == 320) {
+        return CGRectMake(130, 49, 221, 221);
+    } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
+        return CGRectMake(174, 49, 221, 221);
+    } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
+        return CGRectMake(203, 58, 260, 260);
+    } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
+        return CGRectMake(227, 65, 283, 283);
+    }
+    return CGRectMake(0, 0, 0, 0);
+}
+
++ (CGRect)settingUserImageRect
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+
+    if (screenRect.size.width == 480 && screenRect.size.height == 320) {
+        return CGRectMake(130, 49, 221, 221);
+    } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
+        return CGRectMake(174, 49, 221, 221);
+    } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
+        return CGRectMake(203, 58, 260, 260);
+    } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
+        return CGRectMake(227, 65, 283, 283);
+    }
+    return CGRectMake(0, 0, 0, 0);
+}
+
++ (CGRect)settingUserNameLabelRect
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+
+    if (screenRect.size.width == 480 && screenRect.size.height == 320) {
+        return CGRectMake(130, 49, 221, 221);
+    } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
+        return CGRectMake(174, 49, 221, 221);
+    } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
+        return CGRectMake(203, 58, 260, 260);
+    } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
+        return CGRectMake(227, 65, 283, 283);
+    }
+    return CGRectMake(0, 0, 0, 0);
+}
+
++ (CGRect)settingUserMachineNameLabelRect
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+
+    if (screenRect.size.width == 480 && screenRect.size.height == 320) {
+        return CGRectMake(130, 49, 221, 221);
+    } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
+        return CGRectMake(174, 49, 221, 221);
+    } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
+        return CGRectMake(203, 58, 260, 260);
+    } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
+        return CGRectMake(227, 65, 283, 283);
+    }
+    return CGRectMake(0, 0, 0, 0);
+}
 @end

@@ -1,6 +1,9 @@
 #import "AXZSlopeViewController.h"
 #import "AXZSettingViewController.h"
 #import "AXZWebViewController.h"
+#import "AXZAsset.h"
+#import "UIView+AXZUI.h"
+#import "UILabel+AXZUI.h"
 
 @interface AXZSlopeViewController ()
 - (IBAction)resetButton:(id)sender;
@@ -10,6 +13,8 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *slopeLabel;
 @property (strong,nonatomic) CMAttitude *currentAttitude;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property (nonatomic) AXZAsset *asset;
 
 @end
 
@@ -22,6 +27,11 @@ float ReviseSlope;
     [super viewDidLoad];
     [self startSlopeRider];
     ReviseSlope = 0;
+
+    self.asset = [AXZAsset new];
+    self.backgroundImageView = self.asset.slopeBackgroundImageView;
+    self.slopeLabel.frame = [UIView slopeLabelRect];
+    self.slopeLabel.font = [UILabel slopeLabelFont];
 }
 
 - (void)startSlopeRider

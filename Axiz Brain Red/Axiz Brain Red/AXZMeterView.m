@@ -1,6 +1,7 @@
 #import "AXZMeterView.h"
 #import "AXZAsset.h"
 #import "UIView+AXZUI.h"
+#import "UILabel+AXZUI.h"
 
 typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
     AXZSpeedButtonTypeKm,
@@ -22,6 +23,9 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
     self.asset = [AXZAsset new];
     [self setImages];
     self.speedButtonType = AXZSpeedButtonTypeKm;
+    self.speedLabel.font = [UILabel mainLabelFont];
+    self.bankLabel.font = [UILabel mainLabelFont];
+    self.slopeLabel.font = [UILabel mainLabelFont];
 }
 
 - (void)setImages
@@ -34,39 +38,11 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
 
 - (void)layoutSubviews
 {
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-
-    self.speedButton.translatesAutoresizingMaskIntoConstraints = YES;
-    self.innerCircleImageView.translatesAutoresizingMaskIntoConstraints = YES;
-
-    if (screenRect.size.width == 480 && screenRect.size.height == 320) {
-
-        self.speedLabel.frame = CGRectMake(82, 196, 42, 21);
-        self.innerCircleImageView.frame = CGRectMake(130, 49, 221, 221);
-
-    } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
-
-        self.speedLabel.frame = CGRectMake(82, 196, 42, 21);
-        self.speedButton.frame = CGRectMake(254, 242, 60, 30);
-        self.innerCircleImageView.frame = CGRectMake(174, 49, 221, 221);
-
-    } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
-
-        self.speedButton.frame = CGRectMake(298, 287, 70, 35);
-        self.innerCircleImageView.frame = CGRectMake(203, 58, 260, 260);
-
-    } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
-
-        self.slopeLabel.frame = CGRectMake(0, 0, 0, 0);
-        self.bankLabel.frame = CGRectMake(0, 0, 0, 0);
-        self.speedLabel.frame = CGRectMake(82, 196, 42, 21);
-        self.speedButton.frame = CGRectMake(329, 315, 78, 39);
-        self.innerCircleImageView.frame = CGRectMake(227, 65, 283, 283);
-        
-    }
-
+    self.innerCircleImageView.frame = [UIView mainInnerCircleImageViewRect];
+    self.speedLabel.frame = [UIView mainSpeedTypeButtonRect];
+    self.bankLabel.frame = [UIView mainBankLabelRect];
+    self.slopeLabel.frame = [UIView mainSlopeLabelRect];
     self.speedButton.frame = [UIView mainSpeedTypeButtonRect];
-
 }
 
 //=============================================================

@@ -5,5 +5,7 @@
 + (UIFont *)mainLabelFont;
 + (UIFont *)bankLabelFont;
 + (UIFont *)slopeLabelFont;
++ (UIFont *)settingUserNameTextFieldFont;
++ (UIFont *)settingUserMachineTextFieldFont;
 
 @end

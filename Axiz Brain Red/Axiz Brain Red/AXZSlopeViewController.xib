@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AXZSlopeViewController">
             <connections>
                 <outlet property="SlopeRider" destination="9eW-cD-0zk" id="fHp-ZZ-3cP"/>
+                <outlet property="backgroundImageView" destination="d8F-Cg-0Sg" id="m4k-uM-3mW"/>
                 <outlet property="slopeLabel" destination="mtO-3U-ZNn" id="qvn-ez-QZX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

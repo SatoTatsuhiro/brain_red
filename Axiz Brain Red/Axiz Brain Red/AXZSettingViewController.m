@@ -1,6 +1,8 @@
 #import "AXZSettingViewController.h"
 #import "AXZBlueToothViewController.h"
 #import "AXZAsset.h"
+#import "UIView+AXZUI.h"
+#import "UILabel+AXZUI.h"
 
 @interface AXZSettingViewController ()<UINavigationControllerDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UITextFieldDelegate>
 
@@ -59,16 +61,10 @@
     [closeButton addTarget:self action:@selector(closeAction) forControlEvents:UIControlEventTouchUpInside];
     UIImageView* userImageView = [[UIImageView alloc]initWithFrame:CGRectMake(120, 0, 320, 300)];
     [self.view addSubview:self.subView];
-    
-    self.windowSize = [[UIScreen mainScreen]bounds];
 
-    if (self.windowSize.size.height == 480) {
-        self.subView.frame = CGRectMake(0, 0, 480, 320);
-        userImageView.frame = CGRectMake(120, 0, 320, 256);
-        self.textField.frame = CGRectMake(322, 202, 186, 30);
-        self.machineTextField.frame = CGRectMake(322, 228, 186, 30);
-        self.userImage.frame = CGRectMake(56, 58, 200, 200);
-    }
+    self.userImage.frame = [UIView settingUserImageRect];
+    self.textField.frame = [UIView settingUserNameLabelRect];
+    self.machineTextField.frame = [UIView settingUserMachineNameLabelRect];
 
     if (userNameStr != NULL) {
         self.textField.text = userNameStr;

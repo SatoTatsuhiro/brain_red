@@ -1,6 +1,9 @@
 #import "AXZBankViewController.h"
 #import "AXZWebViewController.h"
 #import "AXZSettingViewController.h"
+#import "AXZAsset.h"
+#import "UIView+AXZUI.h"
+#import "UILabel+AXZUI.h"
 
 @interface AXZBankViewController ()
 
@@ -17,6 +20,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *backToMainButton;
 @property (nonatomic) float revisebank;
 @property (weak, nonatomic) IBOutlet UIImageView *BankRider;
+@property (nonatomic) AXZAsset *asset;
 
 @end
 
@@ -28,13 +32,12 @@
     [self startBankRider];
     
     self.self.revisebank = 0;
-    
-    CGRect windowSize = [[UIScreen mainScreen]bounds];
-    
-    if (windowSize.size.height == 480) {
-        self.backGraundImage.image = [UIImage imageNamed:@"3,5インチ版のバンクを入れる"];
-        self.backGraundImage.frame = CGRectMake(0, 0, 480, 320);
-    }
+
+    self.asset = [AXZAsset new];
+
+    self.backGraundImage = self.asset.bankBackgroundImageView;
+    self.bankLabel.frame = [UIView bankLabelRect];
+    self.bankLabel.font = [UILabel bankLabelFont];
 }
 
 - (void)startBankRider
