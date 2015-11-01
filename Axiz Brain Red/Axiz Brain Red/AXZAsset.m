@@ -22,21 +22,18 @@
     //TODO: 画像を設定する.
     NSMutableArray *backgroundImages = [[NSMutableArray alloc] init];
 
-    if (self.screenRect.size.width == 480 && self.screenRect.size.height == 320) {
-
-        [backgroundImages addObject:[UIImage imageNamed:@"default_red_35_background"]];
-        [backgroundImages addObject:[UIImage imageNamed:@"default_red_35_background"]];
-        [backgroundImages addObject:[UIImage imageNamed:@"default_red_35_background"]];
-        [backgroundImages addObject:[UIImage imageNamed:@"default_red_35_background"]];
-        [backgroundImages addObject:[UIImage imageNamed:@"default_red_35_background"]];
-
-    } else if (self.screenRect.size.width == 736 && self.screenRect.size.height == 414) {
-
+    if (self.screenRect.size.width == 736 && self.screenRect.size.height == 414) {
         [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
         [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
         [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
         [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
         [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
+    } else {
+        [backgroundImages addObject:[UIImage imageNamed:@"default_red_35_background"]];
+        [backgroundImages addObject:[UIImage imageNamed:@"default_red_35_background"]];
+        [backgroundImages addObject:[UIImage imageNamed:@"default_red_35_background"]];
+        [backgroundImages addObject:[UIImage imageNamed:@"default_red_35_background"]];
+        [backgroundImages addObject:[UIImage imageNamed:@"default_red_35_background"]];
     }
 
     return backgroundImages;

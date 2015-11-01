@@ -13,7 +13,7 @@
     } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
         return [UIFont systemFontOfSize:14];
     } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
-        return [UIFont systemFontOfSize:14];
+        return [UIFont systemFontOfSize:24];
     }
     return nil;
 }
@@ -29,7 +29,7 @@
     } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
         return [UIFont systemFontOfSize:14];
     } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
-        return [UIFont systemFontOfSize:14];
+        return [UIFont systemFontOfSize:40];
     }
     return nil;
 }
@@ -45,7 +45,7 @@
     } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
         return [UIFont systemFontOfSize:14];
     } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
-        return [UIFont systemFontOfSize:14];
+        return [UIFont systemFontOfSize:40];
     }
     return nil;
 }
