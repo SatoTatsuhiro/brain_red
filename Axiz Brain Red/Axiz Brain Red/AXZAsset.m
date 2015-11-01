@@ -30,22 +30,6 @@
         [backgroundImages addObject:[UIImage imageNamed:@"default_red_35_background"]];
         [backgroundImages addObject:[UIImage imageNamed:@"default_red_35_background"]];
 
-    } else if (self.screenRect.size.width == 568 && self.screenRect.size.height == 320) {
-
-        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
-        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
-        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
-        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
-        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
-
-    } else if (self.screenRect.size.width == 667 && self.screenRect.size.height == 375) {
-
-        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
-        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
-        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
-        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
-        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
-
     } else if (self.screenRect.size.width == 736 && self.screenRect.size.height == 414) {
 
         [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
@@ -53,7 +37,6 @@
         [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
         [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
         [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
-
     }
 
     return backgroundImages;
