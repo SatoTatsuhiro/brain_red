@@ -36,6 +36,7 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
     self.innerCircleImageView.image = self.asset.kmInnerCircleImages[self.index];
     [self.speedButton setImage:self.asset.kmButtonImages[self.index] forState:UIControlStateNormal];
     [self.speedButton setImage:self.asset.kmButtonHoverImages[self.index] forState:UIControlStateHighlighted];
+    [self.interfaceImageView setImage:self.asset.meterInterfaceImages[self.index]];
 }
 
 - (void)layoutSubviews

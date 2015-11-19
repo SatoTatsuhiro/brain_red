@@ -10,6 +10,7 @@
 @property (nonatomic) NSMutableArray *mphButtonHoverImages;
 @property (nonatomic) NSMutableArray *kmInnerCircleImages;
 @property (nonatomic) NSMutableArray *mphInnerCircleImages;
+@property (nonatomic) NSMutableArray *meterInterfaceImages;
 
 @property (nonatomic) UIImageView *bankBackgroundImageView;
 @property (nonatomic) UIImageView *slopeBackgroundImageView;

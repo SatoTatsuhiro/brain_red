@@ -19,24 +19,39 @@
 
 - (NSMutableArray *)backgroundImages
 {
-    //TODO: 画像を設定する.
     NSMutableArray *backgroundImages = [[NSMutableArray alloc] init];
 
-    if (self.screenRect.size.width == 736 && self.screenRect.size.height == 414) {
-        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
-        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
-        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
-        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
-        [backgroundImages addObject:[UIImage imageNamed:@"red_background_4"]];
-    } else {
-        [backgroundImages addObject:[UIImage imageNamed:@"default_red_35_background"]];
-        [backgroundImages addObject:[UIImage imageNamed:@"default_red_35_background"]];
-        [backgroundImages addObject:[UIImage imageNamed:@"default_red_35_background"]];
-        [backgroundImages addObject:[UIImage imageNamed:@"default_red_35_background"]];
-        [backgroundImages addObject:[UIImage imageNamed:@"default_red_35_background"]];
-    }
+    [backgroundImages addObject:[UIImage imageNamed:@"df_bk_bg"]];
+    [backgroundImages addObject:[UIImage imageNamed:@"xspeed_bg"]];
+    [backgroundImages addObject:[UIImage imageNamed:@"bikers_bg"]];
+    [backgroundImages addObject:[UIImage imageNamed:@"kkk_bg"]];
+    [backgroundImages addObject:[UIImage imageNamed:@"motomoto_bg"]];
+    [backgroundImages addObject:[UIImage imageNamed:@"motochamp_bg"]];
 
     return backgroundImages;
+}
+
+- (NSMutableArray *)meterInterfaceImages    
+{
+    NSMutableArray *meterInterfaceImages = [[NSMutableArray alloc] init];
+
+    if (self.screenRect.size.width == 736 && self.screenRect.size.height == 414) {
+        [meterInterfaceImages addObject:[UIImage imageNamed:@"df_red_if"]];
+        [meterInterfaceImages addObject:[UIImage imageNamed:@"xspeed_if"]];
+        [meterInterfaceImages addObject:[UIImage imageNamed:@"bikers_if"]];
+        [meterInterfaceImages addObject:[UIImage imageNamed:@"kkk_if"]];
+        [meterInterfaceImages addObject:[UIImage imageNamed:@"mmw_if"]];
+        [meterInterfaceImages addObject:[UIImage imageNamed:@"mmw_if"]];
+    } else {
+        [meterInterfaceImages addObject:[UIImage imageNamed:@"df_red_if_55"]];
+        [meterInterfaceImages addObject:[UIImage imageNamed:@"xspeed_if_55"]];
+        [meterInterfaceImages addObject:[UIImage imageNamed:@"bikers_if_55"]];
+        [meterInterfaceImages addObject:[UIImage imageNamed:@"kkk_if_55"]];
+        [meterInterfaceImages addObject:[UIImage imageNamed:@"mmw_if"]];
+        [meterInterfaceImages addObject:[UIImage imageNamed:@"mmw_if"]];
+    }
+
+    return meterInterfaceImages;
 }
 
 - (NSMutableArray *)kmButtonImages
@@ -48,7 +63,8 @@
     [kmButtonImages addObject:[UIImage imageNamed:@"button_km_red"]];
     [kmButtonImages addObject:[UIImage imageNamed:@"button_km_red"]];
     [kmButtonImages addObject:[UIImage imageNamed:@"button_km_red"]];
-    
+    [kmButtonImages addObject:[UIImage imageNamed:@"button_km_red"]];
+
     return kmButtonImages;
 }
 
@@ -56,6 +72,7 @@
 {
     NSMutableArray *kmButtonHoverImages = [[NSMutableArray alloc] init];
     
+    [kmButtonHoverImages addObject:[UIImage imageNamed:@"button_km_hover_red"]];
     [kmButtonHoverImages addObject:[UIImage imageNamed:@"button_km_hover_red"]];
     [kmButtonHoverImages addObject:[UIImage imageNamed:@"button_km_hover_red"]];
     [kmButtonHoverImages addObject:[UIImage imageNamed:@"button_km_hover_red"]];
@@ -74,7 +91,8 @@
     [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_km_red"]];
     [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_km_red"]];
     [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_km_red"]];
-    
+    [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_km_red"]];
+
     return innerCircleImages;
 }
 
@@ -82,6 +100,7 @@
 {
     NSMutableArray *innerCircleImages = [[NSMutableArray alloc] init];
 
+    [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_mph_red"]];
     [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_mph_red"]];
     [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_mph_red"]];
     [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_mph_red"]];
@@ -100,6 +119,7 @@
     [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red"]];
     [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red"]];
     [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red"]];
+    [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red"]];
 
     return mphButtonImages;
 }
@@ -113,7 +133,8 @@
     [mphButtonHoverImages addObject:[UIImage imageNamed:@"button_mph_hover_red"]];
     [mphButtonHoverImages addObject:[UIImage imageNamed:@"button_mph_hover_red"]];
     [mphButtonHoverImages addObject:[UIImage imageNamed:@"button_mph_hover_red"]];
-    
+    [mphButtonHoverImages addObject:[UIImage imageNamed:@"button_mph_hover_red"]];
+
     return mphButtonHoverImages;
 }
 

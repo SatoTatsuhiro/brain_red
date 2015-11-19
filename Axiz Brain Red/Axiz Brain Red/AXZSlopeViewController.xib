@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AXZSlopeViewController">
@@ -118,16 +119,11 @@
     </objects>
     <resources>
         <image name="arrow_left.png" width="24" height="24"/>
-        <image name="backtomain.png" width="24" height="24"/>
-        <image name="info.png" width="15" height="26"/>
-        <image name="reset.png" width="27" height="27"/>
+        <image name="backtomain.png" width="48" height="48"/>
+        <image name="info.png" width="30" height="52"/>
+        <image name="reset.png" width="55" height="55"/>
         <image name="rider_slope.png" width="485" height="485"/>
         <image name="slope_background.png" width="568" height="320"/>
-        <image name="user.png" width="27" height="27"/>
+        <image name="user.png" width="55" height="55"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

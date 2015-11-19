@@ -8,7 +8,7 @@
 #import "AXZSlopeViewController.h"
 #import "AXZBankViewController.h"
 
-#define PAGE_COUNT 5
+#define PAGE_COUNT 6
 
 @interface AXZHomeViewController () <AXZMeterViewDelegate, CLLocationManagerDelegate>
 
@@ -64,8 +64,8 @@
         AXZMeterView *meterView = [nib instantiateWithOwner:self options:nil][0];
         meterView.delegate = self;
         meterView.index = i;
+        [meterView setImages];
         meterView.frame = CGRectMake(0, self.view.frame.size.height * i, self.view.frame.size.width, self.view.frame.size.height);
-        [meterView index];
         [self.meterViews addObject:meterView];
     }
 }

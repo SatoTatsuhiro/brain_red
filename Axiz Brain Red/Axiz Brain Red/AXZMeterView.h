@@ -25,6 +25,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *speedButton;
 @property (strong, nonatomic) IBOutlet UILabel *bankLabel;
 @property (strong, nonatomic) IBOutlet UILabel *slopeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *interfaceImageView;
 
 @property (nonatomic) NSInteger index;
 
