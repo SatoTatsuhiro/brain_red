@@ -22,6 +22,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *machineTextField;
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (strong, nonatomic) IBOutlet UIButton *bluetoothButton;
+@property (weak, nonatomic) IBOutlet UIImageView *settingInterfaceImage;
 @property (strong, nonatomic) AXZAsset *asset;
 @property (nonatomic) CGRect windowSize;
 
@@ -32,7 +33,7 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    self.backgroundImageView.image = self.asset.settingBackgroundImage;
+    self.settingInterfaceImage = self.asset.settingInterfaceImageView;
 }
 
 - (void)viewDidLoad
@@ -248,10 +249,6 @@
 -(BOOL)shouldAutorotate
 {
     return YES;
-}
-
-- (NSUInteger)supportedInterfaceOrientations{
-    return UIInterfaceOrientationMaskLandscapeLeft;
 }
 
 -(void)closeAction{

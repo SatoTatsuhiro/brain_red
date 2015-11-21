@@ -166,16 +166,12 @@
     return nil;
 }
 
-- (UIImage *)settingBackgroundImage
+- (UIImageView *)settingInterfaceImageView
 {
-    if (self.screenRect.size.width == 480 && self.screenRect.size.height == 320) {
-        return [UIImage imageNamed:@"user_red_background"];
-    } else if (self.screenRect.size.width == 568 && self.screenRect.size.height == 320) {
-        return [UIImage imageNamed:@"user_red_background"];
-    } else if (self.screenRect.size.width == 667 && self.screenRect.size.height == 375) {
-        return [UIImage imageNamed:@"user_red_background"];
-    } else if (self.screenRect.size.width == 736 && self.screenRect.size.height == 414) {
-        return [UIImage imageNamed:@"user_red_background"];
+    if (self.screenRect.size.width == 736 && self.screenRect.size.height == 414) {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"user_red_if"]];
+    } else {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"user_red_if_55"]];
     }
     return nil;
 }
