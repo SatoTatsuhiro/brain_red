@@ -13,7 +13,7 @@
     } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
         return CGRectMake(299, 268, 70, 35);
     } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
-        return CGRectMake(329, 285, 78, 39);
+        return CGRectMake(329, 313, 80, 40);
     }
     return CGRectMake(0, 0, 0, 0);
 }

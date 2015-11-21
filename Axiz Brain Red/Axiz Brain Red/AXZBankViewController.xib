@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AXZBankViewController">
             <connections>
-                <outlet property="BankRider" destination="Enf-0H-gID" id="2fi-Qv-8j6"/>
                 <outlet property="backGraundImage" destination="W3l-Nt-Nq5" id="4wi-t3-AVk"/>
                 <outlet property="backToMainButton" destination="niS-Nf-xdm" id="xvN-YQ-H9n"/>
                 <outlet property="bankLabel" destination="gOH-q7-Ia7" id="BVx-Fu-JsC"/>
@@ -19,7 +19,10 @@
             <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="bank_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="W3l-Nt-Nq5">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="df_bk_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="W3l-Nt-Nq5">
+                    <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bank_if.png" translatesAutoresizingMaskIntoConstraints="NO" id="JIK-JV-s4W">
                     <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0S-4G-fzB">
@@ -93,16 +96,18 @@
                         <action selector="arrowRightAction:" destination="-1" eventType="touchUpInside" id="8mz-kC-Qda"/>
                     </connections>
                 </button>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" image="rider_bank.png" translatesAutoresizingMaskIntoConstraints="NO" id="Enf-0H-gID">
-                    <rect key="frame" x="42" y="20" width="485" height="468"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rider_bank.png" translatesAutoresizingMaskIntoConstraints="NO" id="wvm-zR-wdm">
+                    <rect key="frame" x="0.0" y="0.0" width="568" height="571"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="W3l-Nt-Nq5" secondAttribute="trailing" id="I7V-ui-qVx"/>
+                <constraint firstItem="W3l-Nt-Nq5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IVh-Ep-2y5"/>
                 <constraint firstAttribute="trailing" secondItem="9BW-R5-wwn" secondAttribute="trailing" constant="10" id="Ieu-2M-MDg"/>
                 <constraint firstItem="c0S-4G-fzB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="Jdu-Fh-CkR"/>
                 <constraint firstItem="9BW-R5-wwn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="LSW-lG-cO2"/>
-                <constraint firstAttribute="centerX" secondItem="Enf-0H-gID" secondAttribute="centerX" id="OBc-mU-adX"/>
+                <constraint firstItem="W3l-Nt-Nq5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="MGF-hk-EAU"/>
                 <constraint firstItem="sK5-Ot-x8y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="ObK-s8-fG1"/>
                 <constraint firstAttribute="trailing" secondItem="WSS-me-XcX" secondAttribute="trailing" constant="10" id="Uke-UA-28f"/>
                 <constraint firstAttribute="bottom" secondItem="W3l-Nt-Nq5" secondAttribute="bottom" id="Uo5-u9-ucL"/>
@@ -112,6 +117,7 @@
                 <constraint firstAttribute="centerY" secondItem="WSS-me-XcX" secondAttribute="centerY" id="gFr-Di-cFY"/>
                 <constraint firstItem="W3l-Nt-Nq5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="h6x-bi-YOu"/>
                 <constraint firstItem="c0S-4G-fzB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="ilg-iM-lye"/>
+                <constraint firstAttribute="bottom" secondItem="W3l-Nt-Nq5" secondAttribute="bottom" id="m87-kl-Nyh"/>
                 <constraint firstAttribute="trailing" secondItem="niS-Nf-xdm" secondAttribute="trailing" constant="10" id="sOY-ef-eFX"/>
                 <constraint firstAttribute="bottom" secondItem="sK5-Ot-x8y" secondAttribute="bottom" constant="10" id="t2f-Ls-Oax"/>
             </constraints>
@@ -120,16 +126,12 @@
     </objects>
     <resources>
         <image name="arrow_right.png" width="24" height="24"/>
-        <image name="backtomain.png" width="24" height="24"/>
-        <image name="bank_background.png" width="568" height="320"/>
-        <image name="info.png" width="15" height="26"/>
-        <image name="reset.png" width="27" height="27"/>
-        <image name="rider_bank.png" width="485" height="485"/>
-        <image name="user.png" width="27" height="27"/>
+        <image name="backtomain.png" width="48" height="48"/>
+        <image name="bank_if.png" width="1136" height="640"/>
+        <image name="df_bk_bg.png" width="1136" height="640"/>
+        <image name="info.png" width="30" height="52"/>
+        <image name="reset.png" width="55" height="55"/>
+        <image name="rider_bank.png" width="970" height="970"/>
+        <image name="user.png" width="55" height="55"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

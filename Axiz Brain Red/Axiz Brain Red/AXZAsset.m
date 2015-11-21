@@ -194,4 +194,14 @@
     return nil;
 }
 
+- (UIImageView *)blueToothImageView
+{
+    if (self.screenRect.size.width == 736 && self.screenRect.size.height == 414) {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bluetooth_if"]];
+    } else {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bluetooth_if_55"]];
+    }
+    return nil;
+}
+
 @end
