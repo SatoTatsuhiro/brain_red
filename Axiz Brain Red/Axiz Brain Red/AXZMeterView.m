@@ -26,7 +26,8 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
     self.speedLabel.font = [UILabel mainLabelFont];
     self.bankLabel.font = [UILabel mainLabelFont];
     self.slopeLabel.font = [UILabel mainLabelFont];
-    
+
+    self.innerCircleImageView.translatesAutoresizingMaskIntoConstraints = YES;
     self.speedButton.translatesAutoresizingMaskIntoConstraints = YES;
 }
 
