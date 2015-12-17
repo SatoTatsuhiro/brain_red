@@ -29,11 +29,12 @@ float ReviseSlope;
     ReviseSlope = 0;
 
     self.asset = [AXZAsset new];
-    self.backgroundImageView = self.asset.slopeBackgroundImageView;
+    self.backgroundImageView = self.asset.slopeInterfaceImageView;
     self.slopeLabel.frame = [UIView slopeLabelRect];
     self.slopeLabel.translatesAutoresizingMaskIntoConstraints = YES;
     self.slopeLabel.font = [UILabel slopeLabelFont];
 
+    self.SlopeRider.translatesAutoresizingMaskIntoConstraints = YES;
     self.SlopeRider.frame = [UIView slopeRiderImageViewRect];
     self.SlopeRider = self.asset.bankRiderImageView;
 }

@@ -13,6 +13,7 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
 @property (nonatomic) AXZAsset *asset;
 @property (nonatomic) NSInteger speedButtonType;
 @property (weak, nonatomic) IBOutlet UILabel *speedLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *speedPinImageView;
 
 @end
 
@@ -73,6 +74,15 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
 - (void)updateSlopeLabelWithSpeed:(float)slope
 {
     self.slopeLabel.text = [NSString stringWithFormat:@"%.0f°",slope];
+}
+
+//=============================================================
+#pragma UpdateSpeedPin
+//=============================================================
+
+- (void)updateSpeedPinWithSpeed:(float)speed
+{
+    
 }
 //=============================================================
 #pragma UIAction

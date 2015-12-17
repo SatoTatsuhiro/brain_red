@@ -58,6 +58,7 @@
 		9D9625CF1C00AD290057DCE8 /* slope_if.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9625C71C00AD290057DCE8 /* slope_if.png */; };
 		9D9625D01C00AD290057DCE8 /* slope_if_55.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9625C81C00AD290057DCE8 /* slope_if_55.png */; };
 		9DDBBC141C22C36A000B9A21 /* rider_slope.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DDBBC131C22C36A000B9A21 /* rider_slope.png */; };
+		9DDBBC161C22D1E0000B9A21 /* hari-center.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DDBBC151C22D1E0000B9A21 /* hari-center.png */; };
 		9DE5456A1BFADE1B00400819 /* bikers_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DE545041BFADE1B00400819 /* bikers_bg.png */; };
 		9DE5456B1BFADE1B00400819 /* bikers_if.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DE545051BFADE1B00400819 /* bikers_if.png */; };
 		9DE5456C1BFADE1B00400819 /* bikers_if_55.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DE545061BFADE1B00400819 /* bikers_if_55.png */; };
@@ -224,6 +225,7 @@
 		9D9625C71C00AD290057DCE8 /* slope_if.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slope_if.png; sourceTree = "<group>"; };
 		9D9625C81C00AD290057DCE8 /* slope_if_55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slope_if_55.png; sourceTree = "<group>"; };
 		9DDBBC131C22C36A000B9A21 /* rider_slope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rider_slope.png; path = "Axiz Brain Red/png/rider_slope.png"; sourceTree = SOURCE_ROOT; };
+		9DDBBC151C22D1E0000B9A21 /* hari-center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hari-center.png"; path = "png/hari-center.png"; sourceTree = "<group>"; };
 		9DE545041BFADE1B00400819 /* bikers_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bikers_bg.png; sourceTree = "<group>"; };
 		9DE545051BFADE1B00400819 /* bikers_if.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bikers_if.png; sourceTree = "<group>"; };
 		9DE545061BFADE1B00400819 /* bikers_if_55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bikers_if_55.png; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 				3B01980F1B6A760D0068CF76 /* inner_circle_mph_red@2x.png */,
 				3B0198271B6A97F30068CF76 /* button_km.png */,
 				9DE545C51BFAE2D800400819 /* df_bk_bg.png */,
+				9DDBBC151C22D1E0000B9A21 /* hari-center.png */,
 			);
 			name = png;
 			sourceTree = "<group>";
@@ -804,6 +807,7 @@
 				3B0198211B6A78550068CF76 /* user@2x.png in Resources */,
 				9DE545BC1BFADE1B00400819 /* user_blue_if.png in Resources */,
 				3B0197EF1B6A714A0068CF76 /* LaunchScreen.xib in Resources */,
+				9DDBBC161C22D1E0000B9A21 /* hari-center.png in Resources */,
 				9DE5458A1BFADE1B00400819 /* km_hover_type2.png in Resources */,
 				9DE545A01BFADE1B00400819 /* km_type3_55.png in Resources */,
 				3BEB5B551B6CFA18004C3647 /* bluetooth@2x.png in Resources */,

@@ -14,9 +14,6 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xspeed_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="CXO-W7-VMS">
                     <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="df_red_if.png" translatesAutoresizingMaskIntoConstraints="NO" id="yoC-7J-Ps3">
-                    <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcS-Ct-y1c">
                     <rect key="frame" x="10" y="10" width="40" height="40"/>
                     <constraints>
@@ -125,6 +122,12 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="df_red_if.png" translatesAutoresizingMaskIntoConstraints="NO" id="yoC-7J-Ps3">
+                    <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                </imageView>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="hari-center.png" translatesAutoresizingMaskIntoConstraints="NO" id="shh-pz-dKf">
+                    <rect key="frame" x="173" y="49" width="222" height="222"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -159,6 +162,7 @@
                 <outlet property="slopeLabel" destination="KRT-Td-MGn" id="SpP-CG-nyO"/>
                 <outlet property="speedButton" destination="5Pl-Zd-kJA" id="hq2-CM-MJ9"/>
                 <outlet property="speedLabel" destination="y2W-zW-FJi" id="9lF-YA-EK0"/>
+                <outlet property="speedPinImageView" destination="shh-pz-dKf" id="t3N-EU-GFP"/>
             </connections>
             <point key="canvasLocation" x="226" y="304"/>
         </view>
@@ -169,6 +173,7 @@
         <image name="backtomain.png" width="48" height="48"/>
         <image name="button_km.png" width="121" height="61"/>
         <image name="df_red_if.png" width="1136" height="640"/>
+        <image name="hari-center.png" width="445" height="445"/>
         <image name="info.png" width="30" height="52"/>
         <image name="inner_circle_km_red.png" width="219" height="219"/>
         <image name="reset.png" width="55" height="55"/>

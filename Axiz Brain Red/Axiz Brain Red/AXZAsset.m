@@ -152,16 +152,12 @@
     return nil;
 }
 
-- (UIImageView *)slopeBackgroundImageView
+- (UIImageView *)slopeInterfaceImageView
 {
-    if (self.screenRect.size.width == 320) {
-        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"slope_35_background"]];
-    } else if (self.screenRect.size.width == 480) {
-        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"slope_background"]];
-    } else if (self.screenRect.size.width == 667) {
-        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"slope_background"]];
-    } else if (self.screenRect.size.width == 736) {
-        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"slope_background"]];
+    if (self.screenRect.size.width == 736) {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"slope_if_55"]];
+    } else {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"slope_if"]];
     }
     return nil;
 }

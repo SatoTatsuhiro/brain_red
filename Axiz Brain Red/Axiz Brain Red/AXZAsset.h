@@ -13,7 +13,7 @@
 @property (nonatomic) NSMutableArray *meterInterfaceImages;
 
 @property (nonatomic) UIImageView *bankBackgroundImageView;
-@property (nonatomic) UIImageView *slopeBackgroundImageView;
+@property (nonatomic) UIImageView *slopeInterfaceImageView;
 @property (nonatomic) UIImageView *blueToothBackgroundImageView;
 @property (nonatomic) UIImageView *settingInterfaceImageView;
 @property (nonatomic) UIImageView *bankRiderImageView;
