@@ -24,6 +24,9 @@
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="slope_if_55.png" translatesAutoresizingMaskIntoConstraints="NO" id="d8F-Cg-0Sg">
                     <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                 </imageView>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="rider_slope" translatesAutoresizingMaskIntoConstraints="NO" id="cUX-Ys-hVd">
+                    <rect key="frame" x="84" y="30" width="568" height="568"/>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Oy-mt-ucB">
                     <rect key="frame" x="10" y="10" width="40" height="40"/>
                     <constraints>
@@ -95,9 +98,6 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="rider_slope" translatesAutoresizingMaskIntoConstraints="NO" id="cUX-Ys-hVd">
-                    <rect key="frame" x="84" y="30" width="568" height="568"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>

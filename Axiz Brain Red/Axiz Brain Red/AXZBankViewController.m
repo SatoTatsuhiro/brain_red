@@ -29,17 +29,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self startBankRider];
-    
+
     self.self.revisebank = 0;
     self.asset = [AXZAsset new];
     self.backGraundImage = self.asset.bankBackgroundImageView;
-    self.bankLabel.frame = [UIView bankLabelRect];
+
     self.bankLabel.translatesAutoresizingMaskIntoConstraints = YES;
     self.bankLabel.font = [UILabel bankLabelFont];
-    self.BankRider = self.asset.bankRiderImageView;
+    self.bankLabel.frame = [UIView bankLabelRect];
+    
+    self.BankRider.translatesAutoresizingMaskIntoConstraints = YES;
     self.BankRider.frame = [UIView bankRiderImageViewRect];
+    self.BankRider = self.asset.bankRiderImageView;
+
+    [self startBankRider];
 }
+
 
 - (void)startBankRider
 {
