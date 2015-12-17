@@ -22,7 +22,7 @@
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="df_bk_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="W3l-Nt-Nq5">
                     <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bank_if.png" translatesAutoresizingMaskIntoConstraints="NO" id="JIK-JV-s4W">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bank_if.png" translatesAutoresizingMaskIntoConstraints="NO" id="JIK-JV-s4W">
                     <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0S-4G-fzB">
@@ -77,14 +77,8 @@
                         <action selector="infoAction:" destination="-1" eventType="touchUpInside" id="6kU-qw-lhw"/>
                     </connections>
                 </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOH-q7-Ia7">
-                    <rect key="frame" x="294" y="255" width="193" height="52"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSS-me-XcX">
-                    <rect key="frame" x="518" y="140" width="40" height="40"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSS-me-XcX">
+                    <rect key="frame" x="518" y="139" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Nrf-fh-337"/>
                         <constraint firstAttribute="width" constant="40" id="XbQ-eg-XEE"/>
@@ -96,25 +90,32 @@
                         <action selector="arrowRightAction:" destination="-1" eventType="touchUpInside" id="8mz-kC-Qda"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rider_bank.png" translatesAutoresizingMaskIntoConstraints="NO" id="wvm-zR-wdm">
-                    <rect key="frame" x="0.0" y="0.0" width="568" height="571"/>
-                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOH-q7-Ia7">
+                    <rect key="frame" x="291" y="258" width="193" height="52"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="JIK-JV-s4W" secondAttribute="trailing" id="C50-sy-6EA"/>
                 <constraint firstAttribute="trailing" secondItem="W3l-Nt-Nq5" secondAttribute="trailing" id="I7V-ui-qVx"/>
                 <constraint firstItem="W3l-Nt-Nq5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IVh-Ep-2y5"/>
                 <constraint firstAttribute="trailing" secondItem="9BW-R5-wwn" secondAttribute="trailing" constant="10" id="Ieu-2M-MDg"/>
                 <constraint firstItem="c0S-4G-fzB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="Jdu-Fh-CkR"/>
+                <constraint firstItem="JIK-JV-s4W" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KPf-6Q-7Xf"/>
                 <constraint firstItem="9BW-R5-wwn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="LSW-lG-cO2"/>
                 <constraint firstItem="W3l-Nt-Nq5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="MGF-hk-EAU"/>
                 <constraint firstItem="sK5-Ot-x8y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="ObK-s8-fG1"/>
                 <constraint firstAttribute="trailing" secondItem="WSS-me-XcX" secondAttribute="trailing" constant="10" id="Uke-UA-28f"/>
                 <constraint firstAttribute="bottom" secondItem="W3l-Nt-Nq5" secondAttribute="bottom" id="Uo5-u9-ucL"/>
                 <constraint firstAttribute="trailing" secondItem="W3l-Nt-Nq5" secondAttribute="trailing" id="XWF-2m-fIM"/>
+                <constraint firstAttribute="bottom" secondItem="JIK-JV-s4W" secondAttribute="bottom" id="b0y-wT-RWY"/>
                 <constraint firstItem="W3l-Nt-Nq5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fFp-cF-zNo"/>
                 <constraint firstAttribute="bottom" secondItem="niS-Nf-xdm" secondAttribute="bottom" constant="10" id="fqY-eF-iLU"/>
                 <constraint firstAttribute="centerY" secondItem="WSS-me-XcX" secondAttribute="centerY" id="gFr-Di-cFY"/>
+                <constraint firstItem="JIK-JV-s4W" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="giV-cE-smJ"/>
                 <constraint firstItem="W3l-Nt-Nq5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="h6x-bi-YOu"/>
                 <constraint firstItem="c0S-4G-fzB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="ilg-iM-lye"/>
                 <constraint firstAttribute="bottom" secondItem="W3l-Nt-Nq5" secondAttribute="bottom" id="m87-kl-Nyh"/>
@@ -122,6 +123,7 @@
                 <constraint firstAttribute="bottom" secondItem="sK5-Ot-x8y" secondAttribute="bottom" constant="10" id="t2f-Ls-Oax"/>
             </constraints>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
     <resources>
@@ -131,7 +133,6 @@
         <image name="df_bk_bg.png" width="1136" height="640"/>
         <image name="info.png" width="30" height="52"/>
         <image name="reset.png" width="55" height="55"/>
-        <image name="rider_bank.png" width="970" height="970"/>
         <image name="user.png" width="55" height="55"/>
     </resources>
 </document>
