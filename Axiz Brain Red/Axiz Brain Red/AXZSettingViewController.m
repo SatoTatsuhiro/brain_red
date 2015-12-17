@@ -49,6 +49,12 @@
     self.textField.delegate = self;
     self.machineTextField.delegate = self;
 
+    self.textField.translatesAutoresizingMaskIntoConstraints = YES;
+    self.machineTextField.translatesAutoresizingMaskIntoConstraints = YES;
+    
+    self.textField.frame = [UIView settingUserNameLabelRect];
+    self.machineTextField.frame = [UIView settingUserMachineNameLabelRect];
+
     self.subView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 568, 320)];
     self.subView.hidden = YES;
     self.subView.backgroundColor = [UIColor blackColor];
