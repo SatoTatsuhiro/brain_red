@@ -33,6 +33,9 @@ float ReviseSlope;
     self.slopeLabel.frame = [UIView slopeLabelRect];
     self.slopeLabel.translatesAutoresizingMaskIntoConstraints = YES;
     self.slopeLabel.font = [UILabel slopeLabelFont];
+
+    self.SlopeRider.frame = [UIView slopeRiderImageViewRect];
+    self.SlopeRider = self.asset.bankRiderImageView;
 }
 
 - (void)startSlopeRider

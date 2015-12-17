@@ -32,16 +32,13 @@
     [self startBankRider];
     
     self.self.revisebank = 0;
-
     self.asset = [AXZAsset new];
-
     self.backGraundImage = self.asset.bankBackgroundImageView;
-    
     self.bankLabel.frame = [UIView bankLabelRect];
     self.bankLabel.translatesAutoresizingMaskIntoConstraints = YES;
     self.bankLabel.font = [UILabel bankLabelFont];
-    
-    
+    self.BankRider = self.asset.bankRiderImageView;
+    self.BankRider.frame = [UIView bankRiderImageViewRect];
 }
 
 - (void)startBankRider

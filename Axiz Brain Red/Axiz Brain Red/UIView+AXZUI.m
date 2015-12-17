@@ -161,4 +161,36 @@
     }
     return CGRectMake(0, 0, 0, 0);
 }
+
++ (CGRect)slopeRiderImageViewRect
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+
+    if (screenRect.size.width == 480 && screenRect.size.height == 320) {
+        return CGRectMake(130, 49, 221, 221);
+    } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
+        return CGRectMake(41, 3, 485, 485);
+    } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
+        return CGRectMake(447, 269, 485, 485);
+    } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
+        return CGRectMake(467, 298, 186, 30);
+    }
+    return CGRectMake(0, 0, 0, 0);
+}
+
++ (CGRect)bankRiderImageViewRect
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+
+    if (screenRect.size.width == 480 && screenRect.size.height == 320) {
+        return CGRectMake(130, 49, 221, 221);
+    } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
+        return CGRectMake(41, 3, 485, 485);
+    } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
+        return CGRectMake(447, 269, 485, 485);
+    } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
+        return CGRectMake(467, 298, 186, 30);
+    }
+    return CGRectMake(0, 0, 0, 0);
+}
 @end

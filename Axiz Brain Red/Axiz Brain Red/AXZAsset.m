@@ -200,4 +200,34 @@
     return nil;
 }
 
+- (UIImageView *)bankRiderImageView
+{
+    //TODO: image をセットする
+    if (self.screenRect.size.width == 320) {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x"]];
+    } else if (self.screenRect.size.width == 480) {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x"]];
+    } else if (self.screenRect.size.width == 667) {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x"]];
+    } else if (self.screenRect.size.width == 736) {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x"]];
+    }
+    return nil;
+}
+
+- (UIImageView *)slopeRiderImageView
+{
+    //TODO image をセットする.
+    if (self.screenRect.size.width == 320) {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x"]];
+    } else if (self.screenRect.size.width == 480) {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x"]];
+    } else if (self.screenRect.size.width == 667) {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x"]];
+    } else if (self.screenRect.size.width == 736) {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x"]];
+    }
+    return nil;
+}
+
 @end

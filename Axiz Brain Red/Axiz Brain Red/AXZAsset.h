@@ -16,5 +16,7 @@
 @property (nonatomic) UIImageView *slopeBackgroundImageView;
 @property (nonatomic) UIImageView *blueToothBackgroundImageView;
 @property (nonatomic) UIImageView *settingInterfaceImageView;
+@property (nonatomic) UIImageView *bankRiderImageView;
+@property (nonatomic) UIImageView *slopeRiderImageView;
 
 @end
