@@ -20,14 +20,18 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
 
 - (void)awakeFromNib
 {
+    self.innerCircleImageView.translatesAutoresizingMaskIntoConstraints = YES;
+    self.bankLabel.translatesAutoresizingMaskIntoConstraints = YES;
+    self.slopeLabel.translatesAutoresizingMaskIntoConstraints = YES;
+    self.speedLabel.translatesAutoresizingMaskIntoConstraints = YES;
+    self.speedButton.translatesAutoresizingMaskIntoConstraints = YES;
+
     self.asset = [AXZAsset new];
     [self setImages];
     self.speedButtonType = AXZSpeedButtonTypeKm;
     self.speedLabel.font = [UILabel mainLabelFont];
     self.bankLabel.font = [UILabel mainLabelFont];
     self.slopeLabel.font = [UILabel mainLabelFont];
-
-    self.innerCircleImageView.translatesAutoresizingMaskIntoConstraints = YES;
 }
 
 - (void)setImages
@@ -42,7 +46,7 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
 - (void)layoutSubviews
 {
     self.innerCircleImageView.frame = [UIView mainInnerCircleImageViewRect];
-    self.speedLabel.frame = [UIView mainSpeedTypeButtonRect];
+    self.speedLabel.frame = [UIView mainSpeedLabelRect];
     self.bankLabel.frame = [UIView mainBankLabelRect];
     self.slopeLabel.frame = [UIView mainSlopeLabelRect];
     self.speedButton.frame = [UIView mainSpeedTypeButtonRect];
