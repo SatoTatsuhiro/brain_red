@@ -26,6 +26,7 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
     self.slopeLabel.translatesAutoresizingMaskIntoConstraints = YES;
     self.speedLabel.translatesAutoresizingMaskIntoConstraints = YES;
     self.speedButton.translatesAutoresizingMaskIntoConstraints = YES;
+    self.speedPinImageView.translatesAutoresizingMaskIntoConstraints = YES;
 
     self.asset = [AXZAsset new];
     [self setImages];
@@ -51,6 +52,7 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
     self.bankLabel.frame = [UIView mainBankLabelRect];
     self.slopeLabel.frame = [UIView mainSlopeLabelRect];
     self.speedButton.frame = [UIView mainSpeedTypeButtonRect];
+    self.speedPinImageView.frame = [UIView mainSpeedPinRect];
 }
 
 //=============================================================
