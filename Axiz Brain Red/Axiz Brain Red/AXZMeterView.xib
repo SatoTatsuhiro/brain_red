@@ -20,9 +20,6 @@
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="hari-center.png" translatesAutoresizingMaskIntoConstraints="NO" id="shh-pz-dKf">
                     <rect key="frame" x="218" y="58" width="300" height="300"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="inner_circle_km_red.png" translatesAutoresizingMaskIntoConstraints="NO" id="2bw-Be-zyI">
-                    <rect key="frame" x="203" y="58" width="260" height="260"/>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRz-6A-2gS">
                     <rect key="frame" x="83" y="197" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -120,14 +117,17 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Pl-Zd-kJA">
-                    <rect key="frame" x="295" y="285" width="76" height="38"/>
-                    <state key="normal" image="button_km.png">
+                    <rect key="frame" x="298" y="285" width="70" height="35"/>
+                    <state key="normal" image="km_type1.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="SpeedButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="wBz-Oo-pve"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="inner_circle_km_red.png" translatesAutoresizingMaskIntoConstraints="NO" id="2bw-Be-zyI">
+                    <rect key="frame" x="203" y="58" width="260" height="260"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -171,11 +171,11 @@
         <image name="arrow_left.png" width="24" height="24"/>
         <image name="arrow_right.png" width="24" height="24"/>
         <image name="backtomain.png" width="48" height="48"/>
-        <image name="button_km.png" width="121" height="61"/>
         <image name="df_red_if.png" width="1136" height="640"/>
         <image name="hari-center.png" width="445" height="445"/>
         <image name="info.png" width="30" height="52"/>
         <image name="inner_circle_km_red.png" width="219" height="219"/>
+        <image name="km_type1.png" width="121" height="61"/>
         <image name="reset.png" width="55" height="55"/>
         <image name="user.png" width="55" height="55"/>
         <image name="xspeed_bg.png" width="1136" height="640"/>

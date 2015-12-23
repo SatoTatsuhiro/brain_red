@@ -9,9 +9,9 @@
     if (screenRect.size.width == 480 && screenRect.size.height == 320) {
         return CGRectMake(210, 242, 60, 30);
     } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
-        return CGRectMake(254.5, 242, 60, 30);
+        return CGRectMake(254.5, 238, 60, 30);
     } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
-        return CGRectMake(295, 285, 90, 38);
+        return CGRectMake(298, 278, 70, 35);
     } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
         return CGRectMake(329, 313, 80, 40);
     }

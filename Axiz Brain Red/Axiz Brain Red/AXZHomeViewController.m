@@ -25,6 +25,11 @@
 
 @implementation AXZHomeViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self startAnimation];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -173,6 +178,21 @@
     }]];
     
     [self presentViewController:alert animated:YES completion:nil];
+}
+
+//=============================================================
+#pragma splashAnimation
+//=============================================================
+
+- (void)startAnimation
+{
+    AXZAsset *asset = [AXZAsset new];
+    UIImageView *splashImageView = [[UIImageView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:splashImageView];
+    splashImageView.animationImages = asset.splashImages;
+    splashImageView.animationDuration = 2;
+    splashImageView.animationRepeatCount = 1;
+    [splashImageView startAnimating];
 }
 
 @end

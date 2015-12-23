@@ -58,12 +58,12 @@
 {
     NSMutableArray *kmButtonImages = [[NSMutableArray alloc] init];
     
-    [kmButtonImages addObject:[UIImage imageNamed:@"button_km_red"]];
-    [kmButtonImages addObject:[UIImage imageNamed:@"button_km_red"]];
-    [kmButtonImages addObject:[UIImage imageNamed:@"button_km_red"]];
-    [kmButtonImages addObject:[UIImage imageNamed:@"button_km_red"]];
-    [kmButtonImages addObject:[UIImage imageNamed:@"button_km_red"]];
-    [kmButtonImages addObject:[UIImage imageNamed:@"button_km_red"]];
+    [kmButtonImages addObject:[UIImage imageNamed:@"km_type3_55"]];
+    [kmButtonImages addObject:[UIImage imageNamed:@"km_type1_55"]];
+    [kmButtonImages addObject:[UIImage imageNamed:@"km_type2_55"]];
+    [kmButtonImages addObject:[UIImage imageNamed:@"km_type1_55"]];
+    [kmButtonImages addObject:[UIImage imageNamed:@"km_type2_55"]];
+    [kmButtonImages addObject:[UIImage imageNamed:@"km_type2_55"]];
 
     return kmButtonImages;
 }
@@ -72,12 +72,12 @@
 {
     NSMutableArray *kmButtonHoverImages = [[NSMutableArray alloc] init];
     
-    [kmButtonHoverImages addObject:[UIImage imageNamed:@"button_km_hover_red"]];
-    [kmButtonHoverImages addObject:[UIImage imageNamed:@"button_km_hover_red"]];
-    [kmButtonHoverImages addObject:[UIImage imageNamed:@"button_km_hover_red"]];
-    [kmButtonHoverImages addObject:[UIImage imageNamed:@"button_km_hover_red"]];
-    [kmButtonHoverImages addObject:[UIImage imageNamed:@"button_km_hover_red"]];
-    [kmButtonHoverImages addObject:[UIImage imageNamed:@"button_km_hover_red"]];
+    [kmButtonHoverImages addObject:[UIImage imageNamed:@"km_hover_type3_55"]];
+    [kmButtonHoverImages addObject:[UIImage imageNamed:@"km_hover_type1_55"]];
+    [kmButtonHoverImages addObject:[UIImage imageNamed:@"km_hover_type2_55"]];
+    [kmButtonHoverImages addObject:[UIImage imageNamed:@"km_hover_type1_55"]];
+    [kmButtonHoverImages addObject:[UIImage imageNamed:@"km_hover_type2_55"]];
+    [kmButtonHoverImages addObject:[UIImage imageNamed:@"km_hover_type2_55"]];
 
     return kmButtonHoverImages;
 }
@@ -114,12 +114,12 @@
 {
     NSMutableArray *mphButtonImages = [[NSMutableArray alloc] init];
     
-    [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red"]];
-    [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red"]];
-    [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red"]];
-    [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red"]];
-    [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red"]];
-    [mphButtonImages addObject:[UIImage imageNamed:@"button_mph_red"]];
+    [mphButtonImages addObject:[UIImage imageNamed:@"mph_type3_55"]];
+    [mphButtonImages addObject:[UIImage imageNamed:@"mph_type1_55"]];
+    [mphButtonImages addObject:[UIImage imageNamed:@"mph_type2_55"]];
+    [mphButtonImages addObject:[UIImage imageNamed:@"mph_type1_55"]];
+    [mphButtonImages addObject:[UIImage imageNamed:@"mph_type2_55"]];
+    [mphButtonImages addObject:[UIImage imageNamed:@"mph_type2_55"]];
 
     return mphButtonImages;
 }
@@ -128,14 +128,24 @@
 {
     NSMutableArray *mphButtonHoverImages = [[NSMutableArray alloc] init];
     
-    [mphButtonHoverImages addObject:[UIImage imageNamed:@"button_mph_hover_red"]];
-    [mphButtonHoverImages addObject:[UIImage imageNamed:@"button_mph_hover_red"]];
-    [mphButtonHoverImages addObject:[UIImage imageNamed:@"button_mph_hover_red"]];
-    [mphButtonHoverImages addObject:[UIImage imageNamed:@"button_mph_hover_red"]];
-    [mphButtonHoverImages addObject:[UIImage imageNamed:@"button_mph_hover_red"]];
-    [mphButtonHoverImages addObject:[UIImage imageNamed:@"button_mph_hover_red"]];
+    [mphButtonHoverImages addObject:[UIImage imageNamed:@"mph_hover_type3_55"]];
+    [mphButtonHoverImages addObject:[UIImage imageNamed:@"mph_hover_type1_55"]];
+    [mphButtonHoverImages addObject:[UIImage imageNamed:@"mph_hover_type2_55"]];
+    [mphButtonHoverImages addObject:[UIImage imageNamed:@"mph_hover_type1_55"]];
+    [mphButtonHoverImages addObject:[UIImage imageNamed:@"mph_hover_type2_55"]];
+    [mphButtonHoverImages addObject:[UIImage imageNamed:@"mph_hover_type2_55"]];
 
     return mphButtonHoverImages;
+}
+
+- (NSArray *)splashImages
+{
+    NSMutableArray *images = [[NSMutableArray alloc] init];
+
+    [images addObject:[UIImage imageNamed:@"kiken"]];
+    [images addObject:[UIImage imageNamed:@"red"]];
+
+    return images;
 }
 
 - (UIImageView *)bankBackgroundImageView
@@ -198,32 +208,12 @@
 
 - (UIImageView *)bankRiderImageView
 {
-    //TODO: image をセットする
-    if (self.screenRect.size.width == 320) {
-        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x"]];
-    } else if (self.screenRect.size.width == 480) {
-        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x"]];
-    } else if (self.screenRect.size.width == 667) {
-        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x"]];
-    } else if (self.screenRect.size.width == 736) {
-        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x"]];
-    }
-    return nil;
+    return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x"]];
 }
 
 - (UIImageView *)slopeRiderImageView
 {
-    //TODO image をセットする.
-    if (self.screenRect.size.width == 320) {
-        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x"]];
-    } else if (self.screenRect.size.width == 480) {
-        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x"]];
-    } else if (self.screenRect.size.width == 667) {
-        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x"]];
-    } else if (self.screenRect.size.width == 736) {
-        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x"]];
-    }
-    return nil;
+    return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x"]];
 }
 
 @end
