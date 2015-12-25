@@ -14,7 +14,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="df_bk_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="HFl-AU-QnC">
                     <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="axiz.png" translatesAutoresizingMaskIntoConstraints="NO" id="zkI-Xg-UMt">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="axiz_rdc.png" translatesAutoresizingMaskIntoConstraints="NO" id="zkI-Xg-UMt">
                     <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                 </imageView>
             </subviews>
@@ -36,7 +36,7 @@
         </view>
     </objects>
     <resources>
-        <image name="axiz.png" width="1136" height="640"/>
+        <image name="axiz_rdc.png" width="1136" height="640"/>
         <image name="df_bk_bg.png" width="1136" height="640"/>
     </resources>
 </document>

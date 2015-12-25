@@ -77,7 +77,7 @@
 
 - (void)splashAnimation3:(UIImageView *)splashImageView
 {
-    [UIImageView animateWithDuration:2
+    [UIImageView animateWithDuration:1.5f
                                delay:0
                              options:UIViewAnimationOptionCurveEaseInOut
                           animations:^ {

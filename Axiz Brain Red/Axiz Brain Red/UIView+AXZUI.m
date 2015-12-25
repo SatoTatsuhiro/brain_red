@@ -154,7 +154,7 @@
     if (screenRect.size.width == 480 && screenRect.size.height == 320) {
         return CGRectMake(130, 49, 221, 221);
     } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
-        return CGRectMake(174, 49, 221, 221);
+        return CGRectMake(356, 200, 186, 30);
     } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
         return CGRectMake(447, 240, 186, 30);
     } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
@@ -168,9 +168,9 @@
     CGRect screenRect = [[UIScreen mainScreen] bounds];
 
     if (screenRect.size.width == 480 && screenRect.size.height == 320) {
-        return CGRectMake(130, 49, 221, 221);
+        return CGRectMake(130, 49, 186, 30);
     } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
-        return CGRectMake(174, 49, 221, 221);
+        return CGRectMake(356, 228, 186, 30);
     } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
         return CGRectMake(447, 269, 186, 30);
     } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
