@@ -138,11 +138,11 @@
     if (screenRect.size.width == 480 && screenRect.size.height == 320) {
         return CGRectMake(130, 49, 221, 221);
     } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
-        return CGRectMake(174, 49, 221, 221);
+        return CGRectMake(73, 56, 200, 200);
     } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
-        return CGRectMake(203, 58, 260, 260);
+        return CGRectMake(87, 70, 232, 232);
     } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
-        return CGRectMake(227, 65, 283, 283);
+        return CGRectMake(97, 75, 254, 254);
     }
     return CGRectMake(0, 0, 0, 0);
 }

@@ -31,7 +31,6 @@
 		3BEB5B411B6CF272004C3647 /* AXZSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB5B3F1B6CF272004C3647 /* AXZSettingViewController.xib */; };
 		3BEB5B4A1B6CF50C004C3647 /* AXZBlueToothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB5B481B6CF50C004C3647 /* AXZBlueToothViewController.m */; };
 		3BEB5B4B1B6CF50C004C3647 /* AXZBlueToothViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB5B491B6CF50C004C3647 /* AXZBlueToothViewController.xib */; };
-		3BEB5B4E1B6CF742004C3647 /* noimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB5B4C1B6CF742004C3647 /* noimage@2x.png */; };
 		3BEB5B4F1B6CF742004C3647 /* user_red_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB5B4D1B6CF742004C3647 /* user_red_background@2x.png */; };
 		3BEB5B531B6CF8CA004C3647 /* user_red_35_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB5B521B6CF8CA004C3647 /* user_red_35_background@2x.png */; };
 		3BEB5B551B6CFA18004C3647 /* bluetooth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB5B541B6CFA18004C3647 /* bluetooth@2x.png */; };
@@ -60,6 +59,7 @@
 		9D7BB5D61C2AEEB800532E0A /* mph_type1_55.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BB5CA1C2AEEB800532E0A /* mph_type1_55.png */; };
 		9D7BB5D71C2AEEB800532E0A /* mph_type2_55.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BB5CB1C2AEEB800532E0A /* mph_type2_55.png */; };
 		9D7BB5D81C2AEEB800532E0A /* mph_type3_55.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BB5CC1C2AEEB800532E0A /* mph_type3_55.png */; };
+		9D7BB5DA1C2AF49B00532E0A /* noimage_55.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BB5D91C2AF49B00532E0A /* noimage_55.png */; };
 		9D9625C91C00AD290057DCE8 /* bank_if.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9625C11C00AD290057DCE8 /* bank_if.png */; };
 		9D9625CA1C00AD290057DCE8 /* bank_if_55.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9625C21C00AD290057DCE8 /* bank_if_55.png */; };
 		9D9625CF1C00AD290057DCE8 /* slope_if.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9625C71C00AD290057DCE8 /* slope_if.png */; };
@@ -202,7 +202,6 @@
 		3BEB5B471B6CF50C004C3647 /* AXZBlueToothViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXZBlueToothViewController.h; sourceTree = "<group>"; };
 		3BEB5B481B6CF50C004C3647 /* AXZBlueToothViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXZBlueToothViewController.m; sourceTree = "<group>"; };
 		3BEB5B491B6CF50C004C3647 /* AXZBlueToothViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AXZBlueToothViewController.xib; sourceTree = "<group>"; };
-		3BEB5B4C1B6CF742004C3647 /* noimage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "noimage@2x.png"; path = "png/noimage@2x.png"; sourceTree = "<group>"; };
 		3BEB5B4D1B6CF742004C3647 /* user_red_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "user_red_background@2x.png"; path = "png/user_red_background@2x.png"; sourceTree = "<group>"; };
 		3BEB5B521B6CF8CA004C3647 /* user_red_35_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "user_red_35_background@2x.png"; path = "png/user_red_35_background@2x.png"; sourceTree = "<group>"; };
 		3BEB5B541B6CFA18004C3647 /* bluetooth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bluetooth@2x.png"; path = "png/bluetooth@2x.png"; sourceTree = "<group>"; };
@@ -235,6 +234,7 @@
 		9D7BB5CA1C2AEEB800532E0A /* mph_type1_55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mph_type1_55.png; path = "Axiz Brain Red/png/mph_type1_55.png"; sourceTree = SOURCE_ROOT; };
 		9D7BB5CB1C2AEEB800532E0A /* mph_type2_55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mph_type2_55.png; path = "Axiz Brain Red/png/mph_type2_55.png"; sourceTree = SOURCE_ROOT; };
 		9D7BB5CC1C2AEEB800532E0A /* mph_type3_55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mph_type3_55.png; path = "Axiz Brain Red/png/mph_type3_55.png"; sourceTree = SOURCE_ROOT; };
+		9D7BB5D91C2AF49B00532E0A /* noimage_55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage_55.png; sourceTree = "<group>"; };
 		9D9625C11C00AD290057DCE8 /* bank_if.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bank_if.png; sourceTree = "<group>"; };
 		9D9625C21C00AD290057DCE8 /* bank_if_55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bank_if_55.png; sourceTree = "<group>"; };
 		9D9625C71C00AD290057DCE8 /* slope_if.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slope_if.png; sourceTree = "<group>"; };
@@ -438,6 +438,7 @@
 		3B0198191B6A76160068CF76 /* png */ = {
 			isa = PBXGroup;
 			children = (
+				9D7BB5D91C2AF49B00532E0A /* noimage_55.png */,
 				9D9625C01C00AD290057DCE8 /* BANK-SLOPE */,
 				9DE545031BFADE1B00400819 /* BIKERS */,
 				9DE545071BFADE1B00400819 /* CBR250R */,
@@ -456,7 +457,6 @@
 				9D0684921BB6256A0046A74A /* slope_35_background@2x.png */,
 				9D0684931BB6256A0046A74A /* slope_background@2x.png */,
 				3BEB5B541B6CFA18004C3647 /* bluetooth@2x.png */,
-				3BEB5B4C1B6CF742004C3647 /* noimage@2x.png */,
 				3BEB5B4D1B6CF742004C3647 /* user_red_background@2x.png */,
 				3B0198221B6A7C2F0068CF76 /* backtomain@2x.png */,
 				3BEB5B521B6CF8CA004C3647 /* user_red_35_background@2x.png */,
@@ -811,7 +811,6 @@
 				9DE5458C1BFADE1B00400819 /* km_type1.png in Resources */,
 				3BEB5B4F1B6CF742004C3647 /* user_red_background@2x.png in Resources */,
 				9D7BB5D31C2AEEB800532E0A /* mph_hover_type1_55.png in Resources */,
-				3BEB5B4E1B6CF742004C3647 /* noimage@2x.png in Resources */,
 				9D0684941BB6256A0046A74A /* rider_slope@2x.png in Resources */,
 				9D7BB5D11C2AEEB800532E0A /* km_type2_55.png in Resources */,
 				9DE545781BFADE1B00400819 /* kkk_if.png in Resources */,
@@ -886,6 +885,7 @@
 				9D0684A11BB62F7E0046A74A /* bank_background@2x.png in Resources */,
 				9DE545C31BFADE1B00400819 /* xspeed_if.png in Resources */,
 				9DE545C21BFADE1B00400819 /* xspeed_bg.png in Resources */,
+				9D7BB5DA1C2AF49B00532E0A /* noimage_55.png in Resources */,
 				9D7BB5D71C2AEEB800532E0A /* mph_type2_55.png in Resources */,
 				9DE545751BFADE1B00400819 /* df_red_if.png in Resources */,
 				9DE545881BFADE1B00400819 /* innercircle_mph_type3.png in Resources */,

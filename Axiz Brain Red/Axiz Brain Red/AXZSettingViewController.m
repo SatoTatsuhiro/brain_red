@@ -69,6 +69,7 @@
     UIImageView* userImageView = [[UIImageView alloc]initWithFrame:CGRectMake(120, 0, 320, 300)];
     [self.view addSubview:self.subView];
 
+    self.userImage.translatesAutoresizingMaskIntoConstraints = YES;
     self.userImage.frame = [UIView settingUserImageRect];
     self.textField.frame = [UIView settingUserNameLabelRect];
     self.machineTextField.frame = [UIView settingUserMachineNameLabelRect];
