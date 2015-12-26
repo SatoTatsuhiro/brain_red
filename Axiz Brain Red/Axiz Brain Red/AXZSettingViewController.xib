@@ -67,9 +67,6 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <action selector="settingButtonAction:" destination="-1" eventType="editingDidEnd" id="a6B-HD-Tuc"/>
-                    </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="NoName" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BEW-XQ-cHB">
                     <rect key="frame" x="356" y="228" width="186" height="30"/>

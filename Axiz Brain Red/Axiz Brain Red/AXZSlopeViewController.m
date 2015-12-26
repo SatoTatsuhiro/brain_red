@@ -30,8 +30,8 @@ float ReviseSlope;
 
     self.asset = [AXZAsset new];
     self.backgroundImageView = self.asset.slopeInterfaceImageView;
-    self.slopeLabel.frame = [UIView slopeLabelRect];
     self.slopeLabel.translatesAutoresizingMaskIntoConstraints = YES;
+    self.slopeLabel.frame = [UIView slopeLabelRect];
     self.slopeLabel.font = [UILabel slopeLabelFont];
 
     self.SlopeRider.translatesAutoresizingMaskIntoConstraints = YES;

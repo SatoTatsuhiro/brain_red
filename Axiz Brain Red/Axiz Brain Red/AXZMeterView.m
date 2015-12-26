@@ -84,7 +84,7 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
 
 - (void)updateSpeedPinWithSpeed:(float)speed
 {
-    
+
 }
 //=============================================================
 #pragma UIAction

@@ -228,17 +228,49 @@
 
 - (IBAction)userImageChange:(id)sender
 {
-    UIActionSheet* actionSheet = [[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Display profile image",@"Register profile image", nil];
-    [actionSheet showInView:[[[[UIApplication sharedApplication] keyWindow] subviews] lastObject]];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"title" message:@"message" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *displayProfileImageAction = [UIAlertAction actionWithTitle:@"Display profile image"
+                                                                        style:UIAlertActionStyleDefault
+                                                                      handler:^(UIAlertAction *action) {
+                                                                           self.subView.hidden = NO;
+                                                                      }];
+
+    UIAlertAction *changeIconImageAction = [UIAlertAction actionWithTitle:@"Register profile image"
+                                                                    style:UIAlertActionStyleDefault
+                                                                  handler:^(UIAlertAction *action) {
+                                                                      [self registerUserImageIcon];
+                                                                  }];
+
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [alertController dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [alertController addAction:displayProfileImageAction];
+    [alertController addAction:changeIconImageAction];
+    [alertController addAction:cancelAction];
+
+    [self presentViewController:alertController animated:YES completion:nil];
+
+}
+
+- (void)registerUserImageIcon
+{
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary])
+    {
+        UIImagePickerController *imagePickerController = [[UIImagePickerController alloc]init];
+        [imagePickerController setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+        [imagePickerController setAllowsEditing:YES];
+        [imagePickerController setDelegate:self];
+
+        [self presentViewController:imagePickerController animated:YES completion:nil];
+    }
+    else
+    {
+        NSLog(@"photo library invalid.");
+    }
 }
 
 - (IBAction)closeView:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
-    
-}
-
-- (IBAction)settingButtonAction:(id)sender
-{
     
 }
 
