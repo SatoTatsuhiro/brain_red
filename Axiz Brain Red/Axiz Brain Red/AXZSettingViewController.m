@@ -8,7 +8,6 @@
 
 - (IBAction)userImageChange:(id)sender;
 - (IBAction)closeView:(id)sender;
-- (IBAction)settingButtonAction:(id)sender;
 - (IBAction)BluetoothButtonAction:(id)sender;
 - (IBAction)machineTextFieldAction:(id)sender;
 
