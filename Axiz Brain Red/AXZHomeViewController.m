@@ -113,6 +113,7 @@
     
     for (AXZMeterView *meterView in self.meterViews) {
         [meterView updateSpeedLabelWithSpeed:newLocation.speed];
+        [meterView updateSpeedPinWithSpeed:newLocation.speed];
     }
 }
 
