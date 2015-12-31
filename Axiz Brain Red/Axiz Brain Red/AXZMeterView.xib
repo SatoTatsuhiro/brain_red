@@ -17,6 +17,9 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="df_red_if.png" translatesAutoresizingMaskIntoConstraints="NO" id="yoC-7J-Ps3">
                     <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="inner_circle_km_red.png" translatesAutoresizingMaskIntoConstraints="NO" id="2bw-Be-zyI">
+                    <rect key="frame" x="203" y="58" width="260" height="260"/>
+                </imageView>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="hari-center.png" translatesAutoresizingMaskIntoConstraints="NO" id="shh-pz-dKf">
                     <rect key="frame" x="218" y="58" width="300" height="300"/>
                 </imageView>
@@ -125,9 +128,6 @@
                         <action selector="SpeedButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="wBz-Oo-pve"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="inner_circle_km_red.png" translatesAutoresizingMaskIntoConstraints="NO" id="2bw-Be-zyI">
-                    <rect key="frame" x="203" y="58" width="260" height="260"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
