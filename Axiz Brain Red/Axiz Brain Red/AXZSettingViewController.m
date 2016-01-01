@@ -47,10 +47,24 @@
     [self.view addGestureRecognizer:gestureRecognizer];
 }
 
+- (void)prepareNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:@"UIKeyboardWillShowNotification"
+                                               object:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardDidHide:)
+                                                 name:@"UIKeyboardDidHideNotification"
+                                               object:nil];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self initalize];
+    [self prepareNotifications];
 
     NSData* userImageData = [[NSUserDefaults standardUserDefaults]objectForKey:@"userImage"];
 
@@ -217,6 +231,48 @@
         self.userNameTextField.text = @"NoName";
     }
 }
+
+//=============================================================
+#pragma UITextFieldKeybord
+//=============================================================
+
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    NSDictionary *userInfo = [notification userInfo];
+    CGSize keybordSize = [[userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+
+    CGRect userNameTextFieldFrame = self.userNameTextField.frame;
+    userNameTextFieldFrame.origin.y -= keybordSize.height;
+
+    CGRect machineNameTextFieldFrame = self.machineNameTextField.frame;
+    machineNameTextFieldFrame.origin.y -= keybordSize.height;
+
+    [UIView animateWithDuration:0.3 animations:^{
+        self.userNameTextField.frame = userNameTextFieldFrame;
+        self.machineNameTextField.frame = machineNameTextFieldFrame;
+    }];
+}
+
+- (void)keyboardDidHide:(NSNotification *)notification
+{
+    NSDictionary *userInfo = [notification userInfo];
+    CGSize keybordSize = [[userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+
+    CGRect userNameTextFieldFrame = self.userNameTextField.frame;
+    userNameTextFieldFrame.origin.y += keybordSize.height;
+
+    CGRect machineNameTextFieldFrame = self.machineNameTextField.frame;
+    machineNameTextFieldFrame.origin.y += keybordSize.height;
+
+    [UIView animateWithDuration:0.3 animations:^{
+        self.userNameTextField.frame = userNameTextFieldFrame;
+        self.machineNameTextField.frame = machineNameTextFieldFrame;
+    }];
+}
+
+//=============================================================
+#pragma Setting
+//=============================================================
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
