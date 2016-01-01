@@ -9,10 +9,10 @@
             <connections>
                 <outlet property="backgroundImageView" destination="7U9-7h-tJf" id="tSU-3h-LoP"/>
                 <outlet property="bluetoothButton" destination="2Vk-RD-aUW" id="zU1-7R-Bpk"/>
-                <outlet property="machineTextField" destination="BEW-XQ-cHB" id="eES-cU-M3D"/>
+                <outlet property="machineNameTextField" destination="BEW-XQ-cHB" id="eCG-M3-vO1"/>
                 <outlet property="settingInterfaceImage" destination="Dxf-Ua-TVF" id="L2I-Xm-alB"/>
-                <outlet property="textField" destination="AJl-xC-ugc" id="4HB-c0-evb"/>
                 <outlet property="userImage" destination="n2i-C8-acP" id="TME-c7-yOQ"/>
+                <outlet property="userNameTextField" destination="AJl-xC-ugc" id="lVy-2w-Ci9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,6 +26,7 @@
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_red_if.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dxf-Ua-TVF">
                     <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                    <gestureRecognizers/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2i-C8-acP">
                     <rect key="frame" x="-23" y="22" width="260" height="260"/>
@@ -70,12 +71,10 @@
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="NoName" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BEW-XQ-cHB">
                     <rect key="frame" x="356" y="228" width="186" height="30"/>
+                    <gestureRecognizers/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <action selector="machineTextFieldAction:" destination="-1" eventType="editingDidEnd" id="t7g-qW-Q5j"/>
-                    </connections>
                 </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

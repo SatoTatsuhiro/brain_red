@@ -4,21 +4,14 @@
 #import "UIView+AXZUI.h"
 #import "UILabel+AXZUI.h"
 
-@interface AXZSettingViewController ()<UINavigationControllerDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UITextFieldDelegate>
-
-- (IBAction)userImageChange:(id)sender;
-- (IBAction)closeView:(id)sender;
-- (IBAction)BluetoothButtonAction:(id)sender;
-- (IBAction)machineTextFieldAction:(id)sender;
+@interface AXZSettingViewController ()<UIImagePickerControllerDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIButton *userImage;
 @property UIView* subView;
 @property UIImage* userImageView;
-@property (strong, nonatomic) IBOutlet UITextField *textField;
-@property (strong,nonatomic) NSUserDefaults* textUserDef;
-@property (strong,nonatomic) NSUserDefaults* textMachineDef;
-@property (strong,nonatomic) UIImagePickerController *imagePicker;
-@property (strong, nonatomic) IBOutlet UITextField *machineTextField;
+@property (strong, nonatomic) IBOutlet UITextField *userNameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *machineNameTextField;
+@property (strong, nonatomic) UIImagePickerController *imagePicker;
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (strong, nonatomic) IBOutlet UIButton *bluetoothButton;
 @property (weak, nonatomic) IBOutlet UIImageView *settingInterfaceImage;
@@ -29,38 +22,34 @@
 
 @implementation AXZSettingViewController
 
-- (void)awakeFromNib
+- (void)initalize
 {
-    [super awakeFromNib];
-    self.settingInterfaceImage = self.asset.settingInterfaceImageView;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
     self.asset = [AXZAsset new];
-   
-    NSNotificationCenter *notification = [NSNotificationCenter defaultCenter];
-    [notification addObserver:self selector:@selector(keyboardWiiShow:) name:UIKeyboardWillShowNotification object:nil];
-    [notification addObserver:self selector:@selector(keyboardDismissMode:) name:UIKeyboardWillHideNotification object:nil];
-    
-    self.textField.delegate = self;
-    self.machineTextField.delegate = self;
 
-    self.textField.translatesAutoresizingMaskIntoConstraints = YES;
-    self.machineTextField.translatesAutoresizingMaskIntoConstraints = YES;
-    
-    self.textField.frame = [UIView settingUserNameLabelRect];
-    self.machineTextField.frame = [UIView settingUserMachineNameLabelRect];
+    self.userNameTextField.delegate = self;
+    self.userNameTextField.translatesAutoresizingMaskIntoConstraints = YES;
+    self.userNameTextField.frame = [UIView settingUserNameLabelRect];
+
+    self.machineNameTextField.delegate = self;
+    self.machineNameTextField.translatesAutoresizingMaskIntoConstraints = YES;
+    self.machineNameTextField.frame = [UIView settingUserMachineNameLabelRect];
 
     self.subView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 568, 320)];
     self.subView.hidden = YES;
     self.subView.backgroundColor = [UIColor blackColor];
 
-    
-    NSString* userNameStr = [[NSUserDefaults standardUserDefaults]stringForKey:@"userName"];
-    NSString* userMachine = [[NSUserDefaults standardUserDefaults]stringForKey:@"userMachine"];
+    self.settingInterfaceImage = self.asset.settingInterfaceImageView;
+
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
+    gestureRecognizer.delegate = self;
+    [self.view addGestureRecognizer:gestureRecognizer];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self initalize];
+
     NSData* userImageData = [[NSUserDefaults standardUserDefaults]objectForKey:@"userImage"];
     
     UIButton* closeButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 320, 568)];
@@ -70,20 +59,6 @@
 
     self.userImage.translatesAutoresizingMaskIntoConstraints = YES;
     self.userImage.frame = [UIView settingUserImageRect];
-    self.textField.frame = [UIView settingUserNameLabelRect];
-    self.machineTextField.frame = [UIView settingUserMachineNameLabelRect];
-
-    if (userNameStr != NULL) {
-        self.textField.text = userNameStr;
-    } else {
-        self.textField.text = @"NoName";
-        
-    }
-    if (userMachine != NULL) {
-        self.machineTextField.text = userMachine;
-    } else {
-        self.machineTextField.text = @"NoName";
-    }
 
     if (userImageData != NULL) {
         UIImage* userimage = [UIImage imageWithData:userImageData];
@@ -101,77 +76,12 @@
     [self.subView addSubview:userImageView];
 }
 
--(void)keyboardWiiShow:(NSNotification*)notification
+- (BOOL)textFieldShouldReturn:(UITextField *)targetTextField
 {
-    NSDictionary *dic = [notification userInfo];
-    
-    CGRect keyboardRect         = [[dic objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    NSTimeInterval duration     = [[dic objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    UIViewAnimationCurve curve  = [[dic objectForKey:UIKeyboardAnimationCurveUserInfoKey] integerValue];
-    void (^animations)(void);
-    animations = ^(void) {
-        self.textField.frame = CGRectMake(self.textField.frame.origin.x,
-                                     self.textField.frame.origin.y - keyboardRect.size.width+58,
-                                     self.textField.frame.size.width,
-                                     self.textField.frame.size.height);
-        self.machineTextField.frame = CGRectMake(self.machineTextField.frame.origin.x,
-                                          self.machineTextField.frame.origin.y - keyboardRect.size.width+58,
-                                          self.machineTextField.frame.size.width,
-                                          self.machineTextField.frame.size.height);
-    };
-    
-    [UIView animateWithDuration:duration
-                         delay:0.0f
-                       options:curve
-                    animations:animations
-                    completion:nil];
-    
-}
-
--(void)keyboardDismissMode:(NSNotification*)notification
-{
-    NSDictionary *dic = [notification userInfo];
-    CGRect keyboardRect         = [[dic objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    NSTimeInterval duration     = [[dic objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    UIViewAnimationCurve curve  = [[dic objectForKey:UIKeyboardAnimationCurveUserInfoKey] integerValue];
-    void (^animations)(void);
-    animations = ^(void) {
-        self.textField.frame = CGRectMake(self.textField.frame.origin.x,
-                                          self.textField.frame.origin.y + keyboardRect.size.width-58,
-                                          self.textField.frame.size.width,
-                                          self.textField.frame.size.height);
-        self.machineTextField.frame = CGRectMake(self.machineTextField.frame.origin.x,
-                                                 self.machineTextField.frame.origin.y + keyboardRect.size.width-58,
-                                                 self.machineTextField.frame.size.width,
-                                                 self.machineTextField.frame.size.height);
-    };
-    
-    [UIView animateWithDuration:duration
-                          delay:0.0f
-                        options:curve
-                     animations:animations
-                     completion:nil];
-
-    NSUserDefaults* userNameDef = [NSUserDefaults standardUserDefaults];
-    NSUserDefaults* userMachineDef = [NSUserDefaults standardUserDefaults];
-    [userNameDef setObject:self.textField.text forKey:@"userName"];
-    [userMachineDef setObject:self.machineTextField.text forKey:@"userMachine"];
-    [userNameDef synchronize];
-    [userMachineDef synchronize];
-
-}
-- (BOOL)textFieldShouldReturn:(UITextField *)targetTextField {
-    
     [targetTextField resignFirstResponder];
     return YES;
 }
 
-
--(IBAction)textfieldDoneEditing:(id)sender
-{
-    [sender resignFirstResponder];
-    
-}
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
 	UIImage *originalImage = (UIImage *)[info objectForKey:UIImagePickerControllerOriginalImage];
@@ -198,33 +108,6 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
--(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    switch (buttonIndex) {
-        case 0:
-            self.subView.hidden = NO;
-            break;
-        case 1:
-            if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary])
-            {
-                UIImagePickerController *imagePickerController = [[UIImagePickerController alloc]init];
-                [imagePickerController setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
-                [imagePickerController setAllowsEditing:YES];
-                [imagePickerController setDelegate:self];
-                
-                [self presentViewController:imagePickerController animated:YES completion:nil];
-            }
-            else
-            {
-                NSLog(@"photo library invalid.");
-            }
-            
-            break;
-        default:
-            break;
-    }
-}
-
 - (IBAction)userImageChange:(id)sender
 {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"title" message:@"message" preferredStyle:UIAlertControllerStyleActionSheet];
@@ -248,7 +131,6 @@
     [alertController addAction:cancelAction];
 
     [self presentViewController:alertController animated:YES completion:nil];
-
 }
 
 - (void)registerUserImageIcon
@@ -258,7 +140,6 @@
         UIImagePickerController *imagePickerController = [[UIImagePickerController alloc]init];
         [imagePickerController setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
         [imagePickerController setAllowsEditing:YES];
-        [imagePickerController setDelegate:self];
 
         [self presentViewController:imagePickerController animated:YES completion:nil];
     }
@@ -268,9 +149,9 @@
     }
 }
 
-- (IBAction)closeView:(id)sender {
+- (IBAction)closeView:(id)sender
+{
     [self dismissViewControllerAnimated:YES completion:nil];
-    
 }
 
 - (IBAction)BluetoothButtonAction:(id)sender
@@ -279,36 +160,58 @@
     [self presentViewController:bluetoothView animated:YES completion:nil];
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle
+-(void)closeAction
 {
-    return UIStatusBarStyleLightContent;
-}
-
--(BOOL)shouldAutorotate
-{
-    return YES;
-}
-
--(void)closeAction{
     self.subView.hidden = YES;
-    
-}
-- (IBAction)machineTextFieldAction:(id)sender{
-    
 }
 
--(void)viewWillDisappear:(BOOL)animated
+//=============================================================
+#pragma UIGestureRecognizerDelegate
+//=============================================================
+
+- (void)tapped:(UIGestureRecognizer *)sender
 {
-        NSNotificationCenter *center;
-        center = [NSNotificationCenter defaultCenter];
-        [center
-         removeObserver:self
-         name:UIKeyboardWillShowNotification
-         object:nil];
-        [center
-         removeObserver:self
-         name:UIKeyboardWillHideNotification
-         object:nil];
+    if (self.userNameTextField.isFirstResponder) {
+        [self.userNameTextField resignFirstResponder];
+    } else if (self.machineNameTextField.isFirstResponder) {
+        [self.machineNameTextField resignFirstResponder];
+    }
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    if (self.userNameTextField.isFirstResponder || self.machineNameTextField.isFirstResponder) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+//=============================================================
+#pragma UITextFieldDelegate
+//=============================================================
+
+- (void)updateMachineNameTextField
+{
+    NSString* machineName = [[NSUserDefaults standardUserDefaults]stringForKey:@"userMachine"];
+
+    if (machineName != NULL) {
+        self.machineNameTextField.text = machineName;
+    } else {
+        self.machineNameTextField.text = @"NoName";
+    }
+
+}
+
+- (void)updateUserNameTextField
+{
+    NSString *userName = [[NSUserDefaults standardUserDefaults]stringForKey:@"userName"];
+
+    if (userName != NULL) {
+        self.userNameTextField.text = userName;
+    } else {
+        self.userNameTextField.text = @"NoName";
+    }
 }
 
 @end
