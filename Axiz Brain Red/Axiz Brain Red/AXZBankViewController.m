@@ -97,4 +97,10 @@
 {
     return UIStatusBarStyleLightContent;
 }
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskLandscapeLeft;
+}
+
 @end

@@ -176,5 +176,9 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskLandscapeLeft;
+}
 
 @end

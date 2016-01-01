@@ -97,5 +97,10 @@ float ReviseSlope;
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskLandscapeLeft;
+}
 @end
 

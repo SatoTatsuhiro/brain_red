@@ -4,7 +4,7 @@
 #import "UIView+AXZUI.h"
 #import "UILabel+AXZUI.h"
 
-@interface AXZSettingViewController ()<UIImagePickerControllerDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate>
+@interface AXZSettingViewController ()<UIImagePickerControllerDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIButton *userImage;
 @property UIView* subView;
@@ -29,10 +29,12 @@
     self.userNameTextField.delegate = self;
     self.userNameTextField.translatesAutoresizingMaskIntoConstraints = YES;
     self.userNameTextField.frame = [UIView settingUserNameLabelRect];
+    [self updateUserNameTextField];
 
     self.machineNameTextField.delegate = self;
     self.machineNameTextField.translatesAutoresizingMaskIntoConstraints = YES;
     self.machineNameTextField.frame = [UIView settingUserMachineNameLabelRect];
+    [self updateMachineNameTextField];
 
     self.subView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 568, 320)];
     self.subView.hidden = YES;
@@ -51,9 +53,7 @@
     [self initalize];
 
     NSData* userImageData = [[NSUserDefaults standardUserDefaults]objectForKey:@"userImage"];
-    
-    UIButton* closeButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 320, 568)];
-    [closeButton addTarget:self action:@selector(closeAction) forControlEvents:UIControlEventTouchUpInside];
+
     UIImageView* userImageView = [[UIImageView alloc]initWithFrame:CGRectMake(120, 0, 320, 300)];
     [self.view addSubview:self.subView];
 
@@ -71,15 +71,8 @@
     }
     self.subView.hidden = YES;
     self.subView.backgroundColor = [UIColor blackColor];
-    [self.subView addSubview:closeButton];
     [self.view addSubview:self.subView];
     [self.subView addSubview:userImageView];
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)targetTextField
-{
-    [targetTextField resignFirstResponder];
-    return YES;
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
@@ -108,13 +101,31 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)registerUserImageIcon
+{
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+        self.imagePicker = [[UIImagePickerController alloc]init];
+        self.imagePicker.delegate = self;
+        [self.imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+        [self.imagePicker setAllowsEditing:YES];
+
+        [self presentViewController:self.imagePicker animated:YES completion:nil];
+    } else {
+        NSLog(@"photo library invalid.");
+    }
+}
+
+//=============================================================
+#pragma UserImageIcon
+//=============================================================
+
 - (IBAction)userImageChange:(id)sender
 {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"title" message:@"message" preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *displayProfileImageAction = [UIAlertAction actionWithTitle:@"Display profile image"
                                                                         style:UIAlertActionStyleDefault
                                                                       handler:^(UIAlertAction *action) {
-                                                                           self.subView.hidden = NO;
+                                                                          self.subView.hidden = NO;
                                                                       }];
 
     UIAlertAction *changeIconImageAction = [UIAlertAction actionWithTitle:@"Register profile image"
@@ -133,21 +144,9 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
-- (void)registerUserImageIcon
-{
-    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary])
-    {
-        UIImagePickerController *imagePickerController = [[UIImagePickerController alloc]init];
-        [imagePickerController setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
-        [imagePickerController setAllowsEditing:YES];
-
-        [self presentViewController:imagePickerController animated:YES completion:nil];
-    }
-    else
-    {
-        NSLog(@"photo library invalid.");
-    }
-}
+//=============================================================
+#pragma Action
+//=============================================================
 
 - (IBAction)closeView:(id)sender
 {
@@ -160,11 +159,6 @@
     [self presentViewController:bluetoothView animated:YES completion:nil];
 }
 
--(void)closeAction
-{
-    self.subView.hidden = YES;
-}
-
 //=============================================================
 #pragma UIGestureRecognizerDelegate
 //=============================================================
@@ -175,12 +169,14 @@
         [self.userNameTextField resignFirstResponder];
     } else if (self.machineNameTextField.isFirstResponder) {
         [self.machineNameTextField resignFirstResponder];
+    } else {
+        self.subView.hidden = YES;
     }
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
 {
-    if (self.userNameTextField.isFirstResponder || self.machineNameTextField.isFirstResponder) {
+    if (self.userNameTextField.isFirstResponder || self.machineNameTextField.isFirstResponder || self.subView.hidden == NO) {
         return YES;
     } else {
         return NO;
@@ -191,27 +187,40 @@
 #pragma UITextFieldDelegate
 //=============================================================
 
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if (textField == self.userNameTextField) {
+        [[NSUserDefaults standardUserDefaults] setObject:textField.text forKey:@"userNameTextKey"];
+    } else if (textField == self.machineNameTextField) {
+        [[NSUserDefaults standardUserDefaults] setObject:textField.text forKey:@"machineNameTextKey"];
+    }
+}
+
 - (void)updateMachineNameTextField
 {
-    NSString* machineName = [[NSUserDefaults standardUserDefaults]stringForKey:@"userMachine"];
+    NSString* machineName = [[NSUserDefaults standardUserDefaults]stringForKey:@"machineNameTextKey"];
 
     if (machineName != NULL) {
         self.machineNameTextField.text = machineName;
     } else {
         self.machineNameTextField.text = @"NoName";
     }
-
 }
 
 - (void)updateUserNameTextField
 {
-    NSString *userName = [[NSUserDefaults standardUserDefaults]stringForKey:@"userName"];
+    NSString *userName = [[NSUserDefaults standardUserDefaults]stringForKey:@"userNameTextKey"];
 
     if (userName != NULL) {
         self.userNameTextField.text = userName;
     } else {
         self.userNameTextField.text = @"NoName";
     }
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskLandscapeLeft;
 }
 
 @end
