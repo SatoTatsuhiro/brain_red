@@ -65,11 +65,11 @@
 		9D7BB5E41C2D90A500532E0A /* kiken_rdc.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BB5DE1C2D90A500532E0A /* kiken_rdc.png */; };
 		9D7BB5E51C2D90A500532E0A /* red_55.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BB5DF1C2D90A500532E0A /* red_55.png */; };
 		9D7BB5E61C2D90A500532E0A /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BB5E01C2D90A500532E0A /* red.png */; };
-		9D7BB5E81C2D914B00532E0A /* AXZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BB5E71C2D914B00532E0A /* AXZHomeViewController.m */; };
 		9D9625C91C00AD290057DCE8 /* bank_if.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9625C11C00AD290057DCE8 /* bank_if.png */; };
 		9D9625CA1C00AD290057DCE8 /* bank_if_55.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9625C21C00AD290057DCE8 /* bank_if_55.png */; };
 		9D9625CF1C00AD290057DCE8 /* slope_if.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9625C71C00AD290057DCE8 /* slope_if.png */; };
 		9D9625D01C00AD290057DCE8 /* slope_if_55.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9625C81C00AD290057DCE8 /* slope_if_55.png */; };
+		9DBAEB311C37C3720064ECBB /* AXZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAEB301C37C3720064ECBB /* AXZHomeViewController.m */; };
 		9DDBBC141C22C36A000B9A21 /* rider_slope.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DDBBC131C22C36A000B9A21 /* rider_slope.png */; };
 		9DDBBC161C22D1E0000B9A21 /* hari-center.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DDBBC151C22D1E0000B9A21 /* hari-center.png */; };
 		9DDBBC1A1C22E144000B9A21 /* rider_bank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DDBBC191C22E144000B9A21 /* rider_bank@2x.png */; };
@@ -234,11 +234,11 @@
 		9D7BB5DE1C2D90A500532E0A /* kiken_rdc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kiken_rdc.png; path = "Axiz Brain Red/png/SPLASH 2/kiken_rdc.png"; sourceTree = SOURCE_ROOT; };
 		9D7BB5DF1C2D90A500532E0A /* red_55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red_55.png; path = "Axiz Brain Red/png/SPLASH 2/red_55.png"; sourceTree = SOURCE_ROOT; };
 		9D7BB5E01C2D90A500532E0A /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red.png; path = "Axiz Brain Red/png/SPLASH 2/red.png"; sourceTree = SOURCE_ROOT; };
-		9D7BB5E71C2D914B00532E0A /* AXZHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXZHomeViewController.m; sourceTree = SOURCE_ROOT; };
 		9D9625C11C00AD290057DCE8 /* bank_if.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bank_if.png; sourceTree = "<group>"; };
 		9D9625C21C00AD290057DCE8 /* bank_if_55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bank_if_55.png; sourceTree = "<group>"; };
 		9D9625C71C00AD290057DCE8 /* slope_if.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slope_if.png; sourceTree = "<group>"; };
 		9D9625C81C00AD290057DCE8 /* slope_if_55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slope_if_55.png; sourceTree = "<group>"; };
+		9DBAEB301C37C3720064ECBB /* AXZHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXZHomeViewController.m; sourceTree = "<group>"; };
 		9DDBBC131C22C36A000B9A21 /* rider_slope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rider_slope.png; path = "Axiz Brain Red/png/rider_slope.png"; sourceTree = SOURCE_ROOT; };
 		9DDBBC151C22D1E0000B9A21 /* hari-center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hari-center.png"; path = "png/hari-center.png"; sourceTree = "<group>"; };
 		9DDBBC191C22E144000B9A21 /* rider_bank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rider_bank@2x.png"; path = "Axiz Brain Red/png/rider_bank@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -366,7 +366,7 @@
 				3B0198051B6A723C0068CF76 /* AXZMeterView.m */,
 				3B0198071B6A727A0068CF76 /* AXZMeterView.xib */,
 				3B0197E51B6A714A0068CF76 /* AXZHomeViewController.h */,
-				9D7BB5E71C2D914B00532E0A /* AXZHomeViewController.m */,
+				9DBAEB301C37C3720064ECBB /* AXZHomeViewController.m */,
 				3B01982C1B6A993D0068CF76 /* AXZAsset.h */,
 				3B01982D1B6A993D0068CF76 /* AXZAsset.m */,
 				9D0684AC1BB850140046A74A /* UIView+AXZUI.h */,
@@ -887,7 +887,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B0198061B6A723C0068CF76 /* AXZMeterView.m in Sources */,
-				9D7BB5E81C2D914B00532E0A /* AXZHomeViewController.m in Sources */,
+				9DBAEB311C37C3720064ECBB /* AXZHomeViewController.m in Sources */,
 				3BEB5B4A1B6CF50C004C3647 /* AXZBlueToothViewController.m in Sources */,
 				3BEB5B401B6CF272004C3647 /* AXZSettingViewController.m in Sources */,
 				3B01982E1B6A993D0068CF76 /* AXZAsset.m in Sources */,
