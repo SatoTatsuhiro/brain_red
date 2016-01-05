@@ -47,8 +47,8 @@
         [meterInterfaceImages addObject:[UIImage imageNamed:@"xspeed_if_55"]];
         [meterInterfaceImages addObject:[UIImage imageNamed:@"bikers_if_55"]];
         [meterInterfaceImages addObject:[UIImage imageNamed:@"kkk_if_55"]];
-        [meterInterfaceImages addObject:[UIImage imageNamed:@"mmw_if"]];
-        [meterInterfaceImages addObject:[UIImage imageNamed:@"mmw_if"]];
+        [meterInterfaceImages addObject:[UIImage imageNamed:@"mmw_if_55"]];
+        [meterInterfaceImages addObject:[UIImage imageNamed:@"mmw_if_55"]];
     }
 
     return meterInterfaceImages;

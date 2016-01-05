@@ -41,7 +41,7 @@
     if (screenRect.size.width == 480 && screenRect.size.height == 320) {
         return CGRectMake(130, 49, 42, 21);
     } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
-        return CGRectMake(263, 205, 42, 21);
+        return CGRectMake(264, 203, 42, 21);
     } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
         return CGRectMake(312, 241, 42, 21);
     } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
@@ -57,7 +57,7 @@
     if (screenRect.size.width == 480 && screenRect.size.height == 320) {
         return CGRectMake(130, 49, 42, 21);
     } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
-        return CGRectMake(92, 197, 42, 21);
+        return CGRectMake(93, 193, 42, 21);
     } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
         return CGRectMake(112, 233, 42, 21);
     } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
@@ -73,7 +73,7 @@
     if (screenRect.size.width == 480 && screenRect.size.height == 320) {
         return CGRectMake(130, 49, 42, 21);
     } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
-        return CGRectMake(434, 195, 42, 21);
+        return CGRectMake(434, 193, 42, 21);
     } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
         return CGRectMake(514, 233, 42, 21);
     } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
