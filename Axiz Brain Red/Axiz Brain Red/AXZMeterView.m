@@ -41,9 +41,7 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
     self.slopeLabel.frame = [UIView mainSlopeLabelRect];
     self.speedButton.frame = [UIView mainSpeedTypeButtonRect];
     self.speedPinImageView.frame = [UIView mainSpeedPinRect];
-
     self.speedPinImageView.transform = CGAffineTransformMakeRotation(180);
-
 }
 
 - (void)setImages
@@ -85,7 +83,10 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
 - (void)updateSpeedPinWithSpeed:(float)speed
 {
     float speedRadian = speed * M_PI / 180;
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:3];
     self.speedPinImageView.transform = CGAffineTransformMakeRotation(speedRadian -(2 * M_PI /3));
+    [UIView commitAnimations];
 }
 //=============================================================
 #pragma UIAction
