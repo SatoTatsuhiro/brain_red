@@ -86,12 +86,12 @@
 {
     NSMutableArray *innerCircleImages = [[NSMutableArray alloc] init];
     
-    [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_km_red"]];
-    [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_km_red"]];
-    [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_km_red"]];
-    [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_km_red"]];
-    [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_km_red"]];
-    [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_km_red"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type3"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type1"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type2"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type1"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type2"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type2"]];
 
     return innerCircleImages;
 }
@@ -100,12 +100,12 @@
 {
     NSMutableArray *innerCircleImages = [[NSMutableArray alloc] init];
 
-    [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_mph_red"]];
-    [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_mph_red"]];
-    [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_mph_red"]];
-    [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_mph_red"]];
-    [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_mph_red"]];
-    [innerCircleImages addObject:[UIImage imageNamed:@"inner_circle_mph_red"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type3"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type1"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type2"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type1"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type2"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type2"]];
 
     return innerCircleImages;
 }
