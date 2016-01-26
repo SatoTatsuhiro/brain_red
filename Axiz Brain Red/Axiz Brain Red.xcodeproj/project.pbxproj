@@ -34,6 +34,7 @@
 		3BEB5B531B6CF8CA004C3647 /* user_red_35_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB5B521B6CF8CA004C3647 /* user_red_35_background@2x.png */; };
 		3BEB5B551B6CFA18004C3647 /* bluetooth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB5B541B6CFA18004C3647 /* bluetooth@2x.png */; };
 		9D008F971C57A270007B08B4 /* rider_bank_55.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D008F961C57A270007B08B4 /* rider_bank_55.png */; };
+		9D008F991C57AB22007B08B4 /* rider_slope_55.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D008F981C57AB22007B08B4 /* rider_slope_55.png */; };
 		9D06848F1BB61BFC0046A74A /* AXZSlopeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D06848B1BB61BFC0046A74A /* AXZSlopeViewController.m */; };
 		9D0684901BB61BFC0046A74A /* AXZSlopeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D06848C1BB61BFC0046A74A /* AXZSlopeViewController.xib */; };
 		9D0684941BB6256A0046A74A /* rider_slope@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D0684911BB6256A0046A74A /* rider_slope@2x.png */; };
@@ -200,6 +201,7 @@
 		3BEB5B521B6CF8CA004C3647 /* user_red_35_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "user_red_35_background@2x.png"; path = "png/user_red_35_background@2x.png"; sourceTree = "<group>"; };
 		3BEB5B541B6CFA18004C3647 /* bluetooth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bluetooth@2x.png"; path = "png/bluetooth@2x.png"; sourceTree = "<group>"; };
 		9D008F961C57A270007B08B4 /* rider_bank_55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rider_bank_55.png; path = "Axiz Brain Red/png/rider_bank_55.png"; sourceTree = SOURCE_ROOT; };
+		9D008F981C57AB22007B08B4 /* rider_slope_55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rider_slope_55.png; path = "Axiz Brain Red/png/rider_slope_55.png"; sourceTree = SOURCE_ROOT; };
 		9D06848A1BB61BFC0046A74A /* AXZSlopeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXZSlopeViewController.h; sourceTree = "<group>"; };
 		9D06848B1BB61BFC0046A74A /* AXZSlopeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXZSlopeViewController.m; sourceTree = "<group>"; };
 		9D06848C1BB61BFC0046A74A /* AXZSlopeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AXZSlopeViewController.xib; sourceTree = "<group>"; };
@@ -477,6 +479,7 @@
 				9D7BB5DD1C2D90A500532E0A /* kiken_rdc_55.png */,
 				9D7BB5DE1C2D90A500532E0A /* kiken_rdc.png */,
 				9D7BB5DF1C2D90A500532E0A /* red_55.png */,
+				9D008F981C57AB22007B08B4 /* rider_slope_55.png */,
 				9D7BB5E01C2D90A500532E0A /* red.png */,
 			);
 			name = "BANK-SLOPE";
@@ -848,6 +851,7 @@
 				3B0198231B6A7C2F0068CF76 /* backtomain@2x.png in Resources */,
 				9D9625CA1C00AD290057DCE8 /* bank_if_55.png in Resources */,
 				9DE5457C1BFADE1B00400819 /* motochamp_bg.png in Resources */,
+				9D008F991C57AB22007B08B4 /* rider_slope_55.png in Resources */,
 				9DE545C81BFAE2D800400819 /* df_bk_bg.png in Resources */,
 				9DE545861BFADE1B00400819 /* innercircle_mph_type1.png in Resources */,
 				9D0684901BB61BFC0046A74A /* AXZSlopeViewController.xib in Resources */,

@@ -218,7 +218,12 @@
 
 - (UIImageView *)slopeRiderImageView
 {
-    return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x"]];
+    if (self.screenRect.size.width == 736 && self.screenRect.size.height == 414) {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x.png"]];
+    } else {
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope_55.png"]];
+    }
+    return nil;
 }
 
 @end
