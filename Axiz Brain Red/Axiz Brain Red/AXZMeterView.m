@@ -41,7 +41,7 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
     self.slopeLabel.frame = [UIView mainSlopeLabelRect];
     self.speedButton.frame = [UIView mainSpeedTypeButtonRect];
     self.speedPinImageView.frame = [UIView mainSpeedPinRect];
-    self.speedPinImageView.transform = CGAffineTransformMakeRotation(180);
+    self.speedPinImageView.transform = CGAffineTransformMakeRotation(4.2    );
 }
 
 - (void)setImages

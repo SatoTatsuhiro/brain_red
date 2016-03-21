@@ -148,7 +148,7 @@
                                                                       [self registerUserImageIcon];
                                                                   }];
 
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
         [alertController dismissViewControllerAnimated:YES completion:nil];
     }];
     [alertController addAction:displayProfileImageAction];

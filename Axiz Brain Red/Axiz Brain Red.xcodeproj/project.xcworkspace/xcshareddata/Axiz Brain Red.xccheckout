@@ -7,21 +7,21 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>6EF13819-03E8-4F18-9FE2-5CA329233CC7</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Axiz Brain Red</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>0C4A2F770414156679E3E0D0FE286FF4D16022DD</key>
-		<string>github.com:SatoTatsuhiro/brain_red.git</string>
+		<string>https://github.com/SatoTatsuhiro/brain_red.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Axiz Brain Red/Axiz Brain Red.xcodeproj/project.xcworkspace</string>
+	<string>Axiz Brain Red/Axiz Brain Red.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0C4A2F770414156679E3E0D0FE286FF4D16022DD</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>github.com:SatoTatsuhiro/brain_red.git</string>
+	<string>https://github.com/SatoTatsuhiro/brain_red.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
