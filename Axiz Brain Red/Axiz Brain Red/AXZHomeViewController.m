@@ -9,7 +9,7 @@
 #import "AXZBankViewController.h"
 #import "AXZCbrMeterView.h"
 
-#define PAGE_COUNT 7
+#define PAGE_COUNT 8
 
 @interface AXZHomeViewController () <AXZMeterViewDelegate, AXZCbrMeterViewDelegate, CLLocationManagerDelegate>
 

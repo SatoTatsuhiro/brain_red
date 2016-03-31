@@ -27,6 +27,7 @@
     [backgroundImages addObject:[UIImage imageNamed:@"kkk_bg"]];
     [backgroundImages addObject:[UIImage imageNamed:@"motomoto_bg"]];
     [backgroundImages addObject:[UIImage imageNamed:@"motochamp_bg"]];
+    [backgroundImages addObject:[UIImage imageNamed:@"webike_bg"]];
 
     return backgroundImages;
 }
@@ -42,11 +43,14 @@
         [meterInterfaceImages addObject:[UIImage imageNamed:@"kkk_if"]];
         [meterInterfaceImages addObject:[UIImage imageNamed:@"mmw_if"]];
         [meterInterfaceImages addObject:[UIImage imageNamed:@"mmw_if"]];
+        [meterInterfaceImages addObject:[UIImage imageNamed:@"mmw_if"]];
+
     } else {
         [meterInterfaceImages addObject:[UIImage imageNamed:@"df_red_if_55"]];
         [meterInterfaceImages addObject:[UIImage imageNamed:@"xspeed_if_55"]];
         [meterInterfaceImages addObject:[UIImage imageNamed:@"bikers_if_55"]];
         [meterInterfaceImages addObject:[UIImage imageNamed:@"kkk_if_55"]];
+        [meterInterfaceImages addObject:[UIImage imageNamed:@"mmw_if_55"]];
         [meterInterfaceImages addObject:[UIImage imageNamed:@"mmw_if_55"]];
         [meterInterfaceImages addObject:[UIImage imageNamed:@"mmw_if_55"]];
     }
@@ -64,6 +68,7 @@
     [kmButtonImages addObject:[UIImage imageNamed:@"km_type1_55"]];
     [kmButtonImages addObject:[UIImage imageNamed:@"km_type2_55"]];
     [kmButtonImages addObject:[UIImage imageNamed:@"km_type2_55"]];
+    [kmButtonImages addObject:[UIImage imageNamed:@"km_type2_55"]];
 
     return kmButtonImages;
 }
@@ -76,6 +81,7 @@
     [kmButtonHoverImages addObject:[UIImage imageNamed:@"km_hover_type1_55"]];
     [kmButtonHoverImages addObject:[UIImage imageNamed:@"km_hover_type2_55"]];
     [kmButtonHoverImages addObject:[UIImage imageNamed:@"km_hover_type1_55"]];
+    [kmButtonHoverImages addObject:[UIImage imageNamed:@"km_hover_type2_55"]];
     [kmButtonHoverImages addObject:[UIImage imageNamed:@"km_hover_type2_55"]];
     [kmButtonHoverImages addObject:[UIImage imageNamed:@"km_hover_type2_55"]];
 
@@ -92,6 +98,8 @@
     [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type1"]];
     [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type2"]];
     [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type2"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type2"]];
+
 
     return innerCircleImages;
 }
@@ -104,6 +112,7 @@
     [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_mph_type1"]];
     [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_mph_type2"]];
     [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_mph_type1"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_mph_type2"]];
     [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_mph_type2"]];
     [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_mph_type2"]];
 
@@ -120,6 +129,7 @@
     [mphButtonImages addObject:[UIImage imageNamed:@"mph_type1_55"]];
     [mphButtonImages addObject:[UIImage imageNamed:@"mph_type2_55"]];
     [mphButtonImages addObject:[UIImage imageNamed:@"mph_type2_55"]];
+    [mphButtonImages addObject:[UIImage imageNamed:@"mph_type2_55"]];
 
     return mphButtonImages;
 }
@@ -134,6 +144,8 @@
     [mphButtonHoverImages addObject:[UIImage imageNamed:@"mph_hover_type1_55"]];
     [mphButtonHoverImages addObject:[UIImage imageNamed:@"mph_hover_type2_55"]];
     [mphButtonHoverImages addObject:[UIImage imageNamed:@"mph_hover_type2_55"]];
+    [mphButtonHoverImages addObject:[UIImage imageNamed:@"mph_hover_type2_55"]];
+
 
     return mphButtonHoverImages;
 }
