@@ -5,6 +5,4 @@
 
 @property CMMotionManager *SlopeRiderManager;
 
-@property (weak, nonatomic) IBOutlet UIImageView *SlopeRider;
-
 @end

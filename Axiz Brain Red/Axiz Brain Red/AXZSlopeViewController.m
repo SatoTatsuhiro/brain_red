@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *slopeLabel;
 @property (strong,nonatomic) CMAttitude *currentAttitude;
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property (strong, nonatomic) UIImageView *SlopeRider;
 @property (nonatomic) AXZAsset *asset;
 
 @end
@@ -35,9 +36,12 @@ float ReviseSlope;
     self.slopeLabel.frame = [UIView slopeLabelRect];
     self.slopeLabel.font = [UILabel slopeLabelFont];
 
+    self.SlopeRider = self.asset.slopeRiderImageView;
     self.SlopeRider.translatesAutoresizingMaskIntoConstraints = YES;
     self.SlopeRider.frame = [UIView slopeRiderImageViewRect];
-    self.SlopeRider = self.asset.bankRiderImageView;
+    [self.view addSubview:self.SlopeRider];
+    
+    [self.view bringSubviewToFront:self.slopeLabel];
 }
 
 - (void)startSlopeRider

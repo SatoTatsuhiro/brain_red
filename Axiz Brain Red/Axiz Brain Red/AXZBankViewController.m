@@ -44,6 +44,8 @@
     self.bankLabel.font = [UILabel bankLabelFont];
     self.bankLabel.frame = [UIView bankLabelRect];
     
+    [self.view bringSubviewToFront:self.bankLabel];
+    
     [self startBankRider];
 }
 
