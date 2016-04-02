@@ -26,25 +26,29 @@
 
 @implementation AXZBankViewController
 
-- (void)viewDidLoad
+- (instancetype)init
 {
-    [super viewDidLoad];
-
     self.self.revisebank = 0;
     self.asset = [AXZAsset new];
     self.backGraundImage = self.asset.bankBackgroundImageView;
-
-    self.bankLabel.translatesAutoresizingMaskIntoConstraints = YES;
-    self.bankLabel.font = [UILabel bankLabelFont];
-    self.bankLabel.frame = [UIView bankLabelRect];
     
     self.BankRider.translatesAutoresizingMaskIntoConstraints = YES;
     self.BankRider.frame = [UIView bankRiderImageViewRect];
     self.BankRider = self.asset.bankRiderImageView;
-
-    [self startBankRider];
+    
+    return self;
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.bankLabel.translatesAutoresizingMaskIntoConstraints = YES;
+    self.bankLabel.font = [UILabel bankLabelFont];
+    self.bankLabel.frame = [UIView bankLabelRect];
+    
+    [self startBankRider];
+}
 
 - (void)startBankRider
 {
@@ -61,9 +65,16 @@
         
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:0.1];
-        _BankRider.transform = CGAffineTransformMakeRotation(-self.Bank);
+        self.BankRider.transform = CGAffineTransformMakeRotation(-1*self.Bank);
         [UIView commitAnimations];
+
         self.bankLabel.text = [NSString stringWithFormat:@"%d°",-pitchDegree];
+        
+        if (pitchDegree >= 45 || pitchDegree <= -45) {
+            self.bankLabel.textColor = [UIColor redColor];
+        } else {
+            self.bankLabel.textColor = [UIColor whiteColor];
+        }
     }];
 }
 

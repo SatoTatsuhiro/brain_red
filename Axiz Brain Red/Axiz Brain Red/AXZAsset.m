@@ -25,9 +25,9 @@
     [backgroundImages addObject:[UIImage imageNamed:@"xspeed_bg"]];
     [backgroundImages addObject:[UIImage imageNamed:@"bikers_bg"]];
     [backgroundImages addObject:[UIImage imageNamed:@"kkk_bg"]];
-    [backgroundImages addObject:[UIImage imageNamed:@"motomoto_bg"]];
-    [backgroundImages addObject:[UIImage imageNamed:@"motochamp_bg"]];
-    [backgroundImages addObject:[UIImage imageNamed:@"webike_bg"]];
+    [backgroundImages addObject:[UIImage imageNamed:@"motomoto_bg.jpg"]];
+    [backgroundImages addObject:[UIImage imageNamed:@"motochamp_bg.jpg"]];
+    [backgroundImages addObject:[UIImage imageNamed:@"webike_bg.jpg"]];
 
     return backgroundImages;
 }
@@ -221,9 +221,9 @@
 - (UIImageView *)bankRiderImageView
 {
     if (self.screenRect.size.width == 736 && self.screenRect.size.height == 414) {
-        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_bank@2x.png"]];
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_bank@2x"]];
     } else {
-        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_bank_55.png"]];
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_bank_55"]];
     }
     return nil;
 }
@@ -231,9 +231,9 @@
 - (UIImageView *)slopeRiderImageView
 {
     if (self.screenRect.size.width == 736 && self.screenRect.size.height == 414) {
-        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x.png"]];
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope@2x"]];
     } else {
-        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope_55.png"]];
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_slope_55"]];
     }
     return nil;
 }

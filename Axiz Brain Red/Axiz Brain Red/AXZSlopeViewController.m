@@ -22,6 +22,7 @@ float ReviseSlope;
 
 @implementation AXZSlopeViewController
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
