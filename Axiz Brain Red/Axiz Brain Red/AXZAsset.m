@@ -223,7 +223,7 @@
     if (self.screenRect.size.width == 736 && self.screenRect.size.height == 414) {
         return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_bank@2x"]];
     } else {
-        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_bank_55"]];
+        return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rider_bank"]];
     }
     return nil;
 }

@@ -3,6 +3,6 @@
 
 @interface AXZBankViewController : UIViewController
 
-@property CMMotionManager *BankRiderManager;
+@property CMMotionManager *bankRiderManager;
 
 @end

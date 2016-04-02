@@ -19,29 +19,26 @@
 @property (strong, nonatomic) IBOutlet UIButton *infoButton;
 @property (strong, nonatomic) IBOutlet UIButton *backToMainButton;
 @property (nonatomic) float revisebank;
-@property (weak, nonatomic) IBOutlet UIImageView *BankRider;
+@property (strong, nonatomic) UIImageView *bankRider;
 @property (nonatomic) AXZAsset *asset;
 
 @end
 
 @implementation AXZBankViewController
 
-- (instancetype)init
+- (void)viewDidLoad
 {
+    [super viewDidLoad];
+    
     self.self.revisebank = 0;
     self.asset = [AXZAsset new];
     self.backGraundImage = self.asset.bankBackgroundImageView;
     
-    self.BankRider.translatesAutoresizingMaskIntoConstraints = YES;
-    self.BankRider.frame = [UIView bankRiderImageViewRect];
-    self.BankRider = self.asset.bankRiderImageView;
+    _bankRider = self.asset.bankRiderImageView;
     
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
+    self.bankRider.translatesAutoresizingMaskIntoConstraints = YES;
+    self.bankRider.frame = [UIView bankRiderImageViewRect];
+    [self.view addSubview:self.bankRider];
     
     self.bankLabel.translatesAutoresizingMaskIntoConstraints = YES;
     self.bankLabel.font = [UILabel bankLabelFont];
@@ -52,11 +49,11 @@
 
 - (void)startBankRider
 {
-    self.BankRiderManager = [[CMMotionManager alloc] init];
-    self.BankRiderManager.deviceMotionUpdateInterval = 1.0/60.0;
+    self.bankRiderManager = [[CMMotionManager alloc] init];
+    self.bankRiderManager.deviceMotionUpdateInterval = 1.0/60.0;
     
     NSOperationQueue * queue = [NSOperationQueue mainQueue];
-    [self.BankRiderManager startDeviceMotionUpdatesToQueue:queue withHandler:^(CMDeviceMotion *motion, NSError *error) {
+    [self.bankRiderManager startDeviceMotionUpdatesToQueue:queue withHandler:^(CMDeviceMotion *motion, NSError *error) {
         
         self.currentAttitude = motion.attitude;
 
@@ -65,7 +62,7 @@
         
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:0.1];
-        self.BankRider.transform = CGAffineTransformMakeRotation(-1*self.Bank);
+        self.bankRider.transform = CGAffineTransformMakeRotation(-1*self.Bank);
         [UIView commitAnimations];
 
         self.bankLabel.text = [NSString stringWithFormat:@"%d°",-pitchDegree];

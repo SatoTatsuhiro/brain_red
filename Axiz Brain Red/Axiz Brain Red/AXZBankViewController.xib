@@ -7,7 +7,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AXZBankViewController">
             <connections>
-                <outlet property="BankRider" destination="zuK-Fk-dgY" id="uyA-xg-RXq"/>
                 <outlet property="backGraundImage" destination="W3l-Nt-Nq5" id="4wi-t3-AVk"/>
                 <outlet property="backToMainButton" destination="niS-Nf-xdm" id="xvN-YQ-H9n"/>
                 <outlet property="bankLabel" destination="gOH-q7-Ia7" id="BVx-Fu-JsC"/>
@@ -97,9 +96,6 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="rider_bank.png" translatesAutoresizingMaskIntoConstraints="NO" id="zuK-Fk-dgY">
-                    <rect key="frame" x="56" y="26" width="455" height="455"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -137,7 +133,6 @@
         <image name="df_bk_bg.png" width="1136" height="640"/>
         <image name="info.png" width="30" height="52"/>
         <image name="reset.png" width="55" height="55"/>
-        <image name="rider_bank.png" width="485" height="485"/>
         <image name="user.png" width="55" height="55"/>
     </resources>
 </document>
