@@ -93,9 +93,9 @@
     NSMutableArray *innerCircleImages = [[NSMutableArray alloc] init];
     
     [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type3"]];
-    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type1"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type3"]];
     [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type2"]];
-    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type1"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type3"]];
     [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type2"]];
     [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type2"]];
     [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_km_type2"]];
@@ -109,9 +109,9 @@
     NSMutableArray *innerCircleImages = [[NSMutableArray alloc] init];
 
     [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_mph_type3"]];
-    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_mph_type1"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_mph_type3"]];
     [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_mph_type2"]];
-    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_mph_type1"]];
+    [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_mph_type3"]];
     [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_mph_type2"]];
     [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_mph_type2"]];
     [innerCircleImages addObject:[UIImage imageNamed:@"innercircle_mph_type2"]];
