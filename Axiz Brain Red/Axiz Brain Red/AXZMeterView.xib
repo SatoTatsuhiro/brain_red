@@ -116,6 +116,9 @@
                         <action selector="arrowRightAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Mdo-bB-DVg"/>
                     </connections>
                 </button>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="hari-center.png" translatesAutoresizingMaskIntoConstraints="NO" id="shh-pz-dKf">
+                    <rect key="frame" x="218" y="58" width="300" height="300"/>
+                </imageView>
                 <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Pl-Zd-kJA">
                     <rect key="frame" x="298" y="285" width="70" height="35"/>
                     <state key="normal" image="km_type1.png">
@@ -125,9 +128,6 @@
                         <action selector="SpeedButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="wBz-Oo-pve"/>
                     </connections>
                 </button>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="hari-center.png" translatesAutoresizingMaskIntoConstraints="NO" id="shh-pz-dKf">
-                    <rect key="frame" x="218" y="58" width="300" height="300"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
