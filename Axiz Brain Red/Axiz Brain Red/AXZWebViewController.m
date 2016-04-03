@@ -21,7 +21,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    NSURLRequest* req = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.axiz-brain.com/"]];
+    NSURLRequest* req = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.axiz-brain.com/"]];
     [self.WebView loadRequest:req];
 }
 
