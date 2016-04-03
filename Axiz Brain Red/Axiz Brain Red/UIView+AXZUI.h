@@ -8,6 +8,11 @@
 + (CGRect)mainSpeedLabelRect;
 + (CGRect)mainBankLabelRect;
 + (CGRect)mainSlopeLabelRect;
++ (CGRect)cbrSpeedPinRect;
++ (CGRect)cbrEnginePinRect;
++ (CGRect)cbrSpeedLabelRect;
++ (CGRect)cbrBankLabelRect;
++ (CGRect)cbrSlopeLabelRect;
 + (CGRect)bankLabelRect;
 + (CGRect)slopeLabelRect;
 + (CGRect)settingUserImageRect;

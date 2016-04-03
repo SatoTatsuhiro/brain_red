@@ -1,4 +1,6 @@
 #import "AXZCbrMeterView.h"
+#import "UIView+AXZUI.h"
+#import "UILabel+AXZUI.h"
 
 @interface AXZCbrMeterView ()
 
@@ -16,10 +18,25 @@
 - (void)awakeFromNib
 {
     self.speedPinImageView.translatesAutoresizingMaskIntoConstraints = YES;
+    self.speedPinImageView.frame = [UIView cbrSpeedPinRect];
+    
     self.engineRotationPinImageView.translatesAutoresizingMaskIntoConstraints = YES;
+    self.engineRotationPinImageView.frame = [UIView cbrEnginePinRect];
     
     self.speedPinImageView.transform = CGAffineTransformMakeRotation(3.13);
     self.engineRotationPinImageView.transform = CGAffineTransformMakeRotation(3.13);
+    
+    self.speedLabel.translatesAutoresizingMaskIntoConstraints = YES;
+    self.speedLabel.frame = [UIView cbrSpeedLabelRect];
+    self.speedLabel.font = [UILabel cbrLabelsFont];
+    
+    self.bankLabel.translatesAutoresizingMaskIntoConstraints = YES;
+    self.bankLabel.frame = [UIView cbrBankLabelRect];
+    self.bankLabel.font = [UILabel cbrLabelsFont];
+    
+    self.slopeLabel.translatesAutoresizingMaskIntoConstraints = YES;
+    self.slopeLabel.frame = [UIView cbrSlopeLabelRect];
+    self.slopeLabel.font = [UILabel cbrLabelsFont];
 }
 
 //=============================================================

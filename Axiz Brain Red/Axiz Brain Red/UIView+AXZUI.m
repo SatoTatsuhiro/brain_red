@@ -2,6 +2,10 @@
 
 @implementation UIView (UIView_AXZUI)
 
+//=============================================================
+#pragma AXZMeterView
+//=============================================================
+
 + (CGRect)mainSpeedTypeButtonRect
 {
     CGRect screenRect = [[UIScreen mainScreen] bounds];
@@ -99,6 +103,95 @@
     return CGRectMake(0, 0, 0, 0);
 }
 
++ (CGRect)cbrSpeedPinRect
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    
+    if (screenRect.size.width == 480 && screenRect.size.height == 320) {
+        return CGRectMake(78, 146, 130, 130);
+    } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
+        return CGRectMake(78, 146, 130, 130);
+    } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
+        return CGRectMake(95, 178, 145, 145);
+    } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
+        return CGRectMake(0, 0, 0, 0);
+    }
+    
+    return CGRectMake(0, 0, 0, 0);
+}
+
++ (CGRect)cbrEnginePinRect
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    
+    if (screenRect.size.width == 480 && screenRect.size.height == 320) {
+        return CGRectMake(236, 44, 130, 130);
+    } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
+        return CGRectMake(236, 44, 130, 130);
+    } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
+        return CGRectMake(281, 56, 145, 145);
+    } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
+        return CGRectMake(0, 0, 0, 0);
+    }
+    
+    return CGRectMake(0, 0, 0, 0);
+}
+
++ (CGRect)cbrSpeedLabelRect
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    
+    if (screenRect.size.width == 480 && screenRect.size.height == 320) {
+        return CGRectMake(98, 54, 42, 21);
+    } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
+        return CGRectMake(98, 54, 42, 21);
+    } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
+        return CGRectMake(115, 68, 42, 21);
+    } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
+        return CGRectMake(133, 77, 42, 21);
+    }
+    
+    return CGRectMake(0, 0, 0, 0);
+}
+
++ (CGRect)cbrBankLabelRect
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    
+    if (screenRect.size.width == 480 && screenRect.size.height == 320) {
+        return CGRectMake(98, 79, 42, 21);
+    } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
+        return CGRectMake(98, 79, 42, 21);
+    } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
+        return CGRectMake(115, 96, 42, 21);
+    } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
+        return CGRectMake(133, 106, 42, 21);
+    }
+    
+    return CGRectMake(0, 0, 0, 0);
+}
+
++ (CGRect)cbrSlopeLabelRect
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    
+    if (screenRect.size.width == 480 && screenRect.size.height == 320) {
+        return CGRectMake(98, 103, 42, 21);
+    } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
+        return CGRectMake(98, 103, 42, 21);
+    } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
+        return CGRectMake(115, 123, 42, 21);
+    } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
+        return CGRectMake(133, 136, 42, 21);
+    }
+    
+    return CGRectMake(0, 0, 0, 0);
+}
+
+//=============================================================
+#pragma AXZBankViewController
+//=============================================================
+
 + (CGRect)bankLabelRect
 {
     CGRect screenRect = [[UIScreen mainScreen] bounds];
@@ -115,21 +208,25 @@
     return CGRectMake(0, 0, 0, 0);
 }
 
-+ (CGRect)slopeLabelRect
++ (CGRect)bankRiderImageViewRect
 {
     CGRect screenRect = [[UIScreen mainScreen] bounds];
-
+    
     if (screenRect.size.width == 480 && screenRect.size.height == 320) {
-        return CGRectMake(130, 49, 221, 221);
+        return CGRectMake(56, 26, 455, 455);
     } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
-        return CGRectMake(339, 262, 97, 49);
+        return CGRectMake(56, 26, 455, 455);
     } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
-        return CGRectMake(408, 312, 97, 49);
+        return CGRectMake(66, 31, 535, 535);
     } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
-        return CGRectMake(444, 348, 97, 49);
+        return CGRectMake(68, 31, 600, 600);
     }
     return CGRectMake(0, 0, 0, 0);
 }
+
+//=============================================================
+#pragma AXZSettingViewController
+//=============================================================
 
 + (CGRect)settingUserImageRect
 {
@@ -179,6 +276,10 @@
     return CGRectMake(0, 0, 0, 0);
 }
 
+//=============================================================
+#pragma AXZSlopeViewController
+//=============================================================
+
 + (CGRect)slopeRiderImageViewRect
 {
     CGRect screenRect = [[UIScreen mainScreen] bounds];
@@ -195,19 +296,20 @@
     return CGRectMake(0, 0, 0, 0);
 }
 
-+ (CGRect)bankRiderImageViewRect
++ (CGRect)slopeLabelRect
 {
     CGRect screenRect = [[UIScreen mainScreen] bounds];
-
+    
     if (screenRect.size.width == 480 && screenRect.size.height == 320) {
-        return CGRectMake(56, 26, 455, 455);
+        return CGRectMake(130, 49, 221, 221);
     } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
-        return CGRectMake(56, 26, 455, 455);
+        return CGRectMake(339, 262, 97, 49);
     } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
-        return CGRectMake(66, 31, 535, 535);
+        return CGRectMake(408, 312, 97, 49);
     } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
-        return CGRectMake(68, 31, 600, 600);
+        return CGRectMake(444, 348, 97, 49);
     }
     return CGRectMake(0, 0, 0, 0);
 }
+
 @end
