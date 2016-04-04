@@ -118,8 +118,13 @@
     CLLocation *newLocation = locations[locations.count - 1];
     
     for (AXZMeterView *meterView in self.meterViews) {
-        [meterView updateSpeedLabelWithSpeed:newLocation.speed];
-        [meterView updateSpeedPinWithSpeed:newLocation.speed * 3.6];
+        if (newLocation.speed < 5) {
+            [meterView updateSpeedLabelWithSpeed:0];
+            [meterView updateSpeedPinWithSpeed:0];
+        } else {
+            [meterView updateSpeedLabelWithSpeed:newLocation.speed];
+            [meterView updateSpeedPinWithSpeed:newLocation.speed * 3.6];
+        }
     }
 }
 
