@@ -142,13 +142,13 @@
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     
     if (screenRect.size.width == 480 && screenRect.size.height == 320) {
-        return CGRectMake(98, 54, 42, 21);
+        return CGRectMake(89, 54, 60, 21);
     } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
-        return CGRectMake(98, 54, 42, 21);
+        return CGRectMake(89, 54, 60, 21);
     } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
-        return CGRectMake(115, 68, 42, 21);
+        return CGRectMake(106, 68, 60, 21);
     } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
-        return CGRectMake(133, 77, 42, 21);
+        return CGRectMake(124, 77, 60, 21);
     }
     
     return CGRectMake(0, 0, 0, 0);
@@ -159,13 +159,13 @@
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     
     if (screenRect.size.width == 480 && screenRect.size.height == 320) {
-        return CGRectMake(98, 79, 42, 21);
+        return CGRectMake(89, 79, 60, 21);
     } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
-        return CGRectMake(98, 79, 42, 21);
+        return CGRectMake(89, 79, 60, 21);
     } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
-        return CGRectMake(115, 96, 42, 21);
+        return CGRectMake(106, 96, 60, 21);
     } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
-        return CGRectMake(133, 106, 42, 21);
+        return CGRectMake(124, 106, 60, 21);
     }
     
     return CGRectMake(0, 0, 0, 0);
@@ -176,13 +176,13 @@
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     
     if (screenRect.size.width == 480 && screenRect.size.height == 320) {
-        return CGRectMake(98, 103, 42, 21);
+        return CGRectMake(89, 103, 60, 21);
     } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
-        return CGRectMake(98, 103, 42, 21);
+        return CGRectMake(89, 103, 60, 21);
     } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
-        return CGRectMake(115, 123, 42, 21);
+        return CGRectMake(106, 123, 60, 21);
     } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
-        return CGRectMake(133, 136, 42, 21);
+        return CGRectMake(124, 136, 60, 21);
     }
     
     return CGRectMake(0, 0, 0, 0);

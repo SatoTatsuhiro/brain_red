@@ -66,9 +66,12 @@
         [UIView setAnimationDuration:0.1];
         self.bankRider.transform = CGAffineTransformMakeRotation(-1*self.Bank);
         [UIView commitAnimations];
-
-        self.bankLabel.text = [NSString stringWithFormat:@"%d°",-pitchDegree];
         
+        if (-pitchDegree > 0) {
+            self.bankLabel.text = [NSString stringWithFormat:@"%d°",-pitchDegree];
+        } else {
+            self.bankLabel.text = [NSString stringWithFormat:@"%d°",pitchDegree];
+        }
         if (pitchDegree >= 45 || pitchDegree <= -45) {
             self.bankLabel.textColor = [UIColor redColor];
         } else {

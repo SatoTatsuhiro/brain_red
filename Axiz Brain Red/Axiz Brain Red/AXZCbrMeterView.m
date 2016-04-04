@@ -30,6 +30,12 @@
     self.speedLabel.frame = [UIView cbrSpeedLabelRect];
     self.speedLabel.font = [UILabel cbrLabelsFont];
     
+    UILabel *kmLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.speedLabel.frame.origin.x + 50, self.speedLabel.frame.origin.y + 3, self.speedLabel.frame.size.width, self.speedLabel.frame.size.height)];
+    kmLabel.font = [UIFont systemFontOfSize:17];
+    kmLabel.text = @"km/h";
+    kmLabel.textColor = [UIColor whiteColor];
+    [self addSubview:kmLabel];
+    
     self.bankLabel.translatesAutoresizingMaskIntoConstraints = YES;
     self.bankLabel.frame = [UIView cbrBankLabelRect];
     self.bankLabel.font = [UILabel cbrLabelsFont];
@@ -50,12 +56,20 @@
 
 - (void)updateBankLabelWithBank:(float)bank
 {
-    self.bankLabel.text = [NSString stringWithFormat:@"%.0f°",bank];
+    if (bank > 0) {
+        self.bankLabel.text = [NSString stringWithFormat:@"+%.0f°",bank];
+    } else {
+        self.bankLabel.text = [NSString stringWithFormat:@"%.0f°",bank];
+    }
 }
 
 - (void)updateSlopeLabelWithSpeed:(float)slope
 {
-    self.slopeLabel.text = [NSString stringWithFormat:@"%.0f°",slope];
+    if (slope > 0) {
+        self.slopeLabel.text = [NSString stringWithFormat:@"+%.0f°",slope];
+    } else {
+        self.slopeLabel.text = [NSString stringWithFormat:@"%.0f°",slope];
+    }
 }
 
 //=============================================================
