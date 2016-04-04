@@ -276,6 +276,22 @@
     return CGRectMake(0, 0, 0, 0);
 }
 
++ (float)settingUserIconImageRadian
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    
+    if (screenRect.size.width == 480 && screenRect.size.height == 320) {
+        return 100;
+    } else if (screenRect.size.width == 568 && screenRect.size.height == 320) {
+        return 100;
+    } else if (screenRect.size.width == 667 && screenRect.size.height == 375) {
+        return 113;
+    } else if (screenRect.size.width == 736 && screenRect.size.height == 414) {
+        return 125;
+    }
+    return 0;
+}
+
 //=============================================================
 #pragma AXZSlopeViewController
 //=============================================================

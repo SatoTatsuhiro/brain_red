@@ -75,7 +75,7 @@
         [self.userImage setImage:userimage forState:UIControlStateNormal];
         CALayer* layer = [self.userImage layer];
         [layer setMasksToBounds:YES];
-        [layer setCornerRadius:100];
+        [layer setCornerRadius:[UIView settingUserIconImageRadian]];
         self.userImageView.image = userimage;
         self.userImageView.backgroundColor = [UIColor whiteColor];
         
@@ -132,7 +132,8 @@
 
 - (IBAction)userImageChange:(id)sender
 {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"title" message:@"message" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NULL message:NULL preferredStyle:UIAlertControllerStyleActionSheet];
+    
     UIAlertAction *displayProfileImageAction = [UIAlertAction actionWithTitle:@"Display profile image"
                                                                         style:UIAlertActionStyleDefault
                                                                       handler:^(UIAlertAction *action) {

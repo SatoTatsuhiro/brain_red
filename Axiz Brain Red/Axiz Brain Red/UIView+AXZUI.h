@@ -21,5 +21,6 @@
 + (CGRect)slopeRiderImageViewRect;
 + (CGRect)bankRiderImageViewRect;
 + (CGRect)mainSpeedPinRect;
++ (float)settingUserIconImageRadian;
 
 @end
