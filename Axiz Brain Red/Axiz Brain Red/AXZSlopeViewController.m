@@ -67,7 +67,20 @@ float ReviseSlope;
         } else {
             self.slopeLabel.textColor = [UIColor whiteColor];
         }
-        self.slopeLabel.text = [NSString stringWithFormat:@"%d°",SlopeDgree];
+        
+        if (SlopeDgree > 90) {
+            SlopeDgree = 90;
+        } else if (SlopeDgree < -90) {
+            SlopeDgree = -90;
+        }
+        
+        if (SlopeDgree > 0) {
+            self.slopeLabel.text = [NSString stringWithFormat:@"+%d°",SlopeDgree];
+        } else if (SlopeDgree < 0) {
+            self.slopeLabel.text = [NSString stringWithFormat:@"%d°",SlopeDgree];
+        } else {
+            self.slopeLabel.text = [NSString stringWithFormat:@"0°"];
+        }
     }];
 }
 
