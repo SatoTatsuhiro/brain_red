@@ -68,12 +68,35 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
 
 - (void)updateBankLabelWithBank:(float)bank
 {
-    self.bankLabel.text = [NSString stringWithFormat:@"%.0f°",bank];
+    if (-bank > 90) {
+        bank = -90;
+    } else if (-bank < -90) {
+        bank = 90;
+    }
+    
+    if (-bank > 0) {
+        self.bankLabel.text = [NSString stringWithFormat:@"+%.0f°",-bank];
+    } else if (-bank < 0){
+        self.bankLabel.text = [NSString stringWithFormat:@"%.0f°",-bank];
+    } else {
+        self.bankLabel.text = [NSString stringWithFormat:@"0°"];
+    }
 }
 
 - (void)updateSlopeLabelWithSpeed:(float)slope
 {
-    self.slopeLabel.text = [NSString stringWithFormat:@"%.0f°",slope];
+    if (slope > 90) {
+        slope = 90;
+    } else if (slope < -90) {
+        slope = -90;
+    }
+    if (slope > 0) {
+        self.slopeLabel.text = [NSString stringWithFormat:@"+%.0f°",slope];
+    } else if (slope < 0) {
+        self.slopeLabel.text = [NSString stringWithFormat:@"%.0f°",slope];
+    } else {
+        self.slopeLabel.text = [NSString stringWithFormat:@"0°"];
+    }
 }
 
 //=============================================================
