@@ -59,8 +59,9 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
 
 - (void)updateSpeedLabelWithSpeed:(float)speed
 {
+    NSLog(@"%f", speed);
     if (self.speedButtonType == AXZSpeedButtonTypeKm) {
-        self.speedLabel.text = [NSString stringWithFormat:@"%.0f",speed * 3.6];
+        self.speedLabel.text = [NSString stringWithFormat:@"%.0f",speed * 1.61];
     } else {
         self.speedLabel.text = [NSString stringWithFormat:@"%.0f",speed];
     }
@@ -105,7 +106,7 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
 
 - (void)updateSpeedPinWithSpeed:(float)speed
 {
-    float speedRadian = speed * M_PI / 180;
+    float speedRadian = speed * M_PI / 360;
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:3];
     self.speedPinImageView.transform = CGAffineTransformMakeRotation(speedRadian -(2 * M_PI /3));
