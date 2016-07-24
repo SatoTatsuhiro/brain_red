@@ -51,7 +51,7 @@
 
 - (void)updateSpeedLabelWithSpeed:(float)speed
 {
-    self.speedLabel.text = [NSString stringWithFormat:@"%.0f",speed * 1.61];
+    self.speedLabel.text = [NSString stringWithFormat:@"%.0f",speed * 3.6];
 }
 
 - (void)updateBankLabelWithBank:(float)bank
