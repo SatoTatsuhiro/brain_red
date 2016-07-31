@@ -74,7 +74,13 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
     } else if (-bank < -90) {
         bank = 90;
     }
-    
+
+    if (bank > 45 || bank < -45) {
+        [self.bankLabel setTextColor:[UIColor redColor]];
+    } else {
+        [self.bankLabel setTextColor:[UIColor whiteColor]];
+    }
+
     if (-bank > 0) {
         self.bankLabel.text = [NSString stringWithFormat:@"+%.0f°",-bank];
     } else if (-bank < 0){
@@ -91,6 +97,13 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
     } else if (slope < -90) {
         slope = -90;
     }
+
+    if (slope > 45 || slope < -45) {
+        [self.slopeLabel setTextColor:[UIColor redColor]];
+    } else {
+        [self.slopeLabel setTextColor:[UIColor whiteColor]];
+    }
+
     if (slope > 0) {
         self.slopeLabel.text = [NSString stringWithFormat:@"+%.0f°",slope];
     } else if (slope < 0) {
