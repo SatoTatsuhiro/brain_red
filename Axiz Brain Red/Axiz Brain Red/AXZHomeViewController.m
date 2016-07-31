@@ -123,7 +123,7 @@
             [meterView updateSpeedPinWithSpeed:0];
         } else {
             [meterView updateSpeedLabelWithSpeed:newLocation.speed];
-            [meterView updateSpeedPinWithSpeed:newLocation.speed * 3.6];
+            [meterView updateSpeedPinWithSpeed:newLocation.speed * 1.6];
         }
     }
 }
