@@ -122,8 +122,9 @@
             [meterView updateSpeedLabelWithSpeed:0];
             [meterView updateSpeedPinWithSpeed:0];
         } else {
+            NSLog(@"%f", newLocation.speed);
             [meterView updateSpeedLabelWithSpeed:newLocation.speed];
-            [meterView updateSpeedPinWithSpeed:newLocation.speed * 1.6];
+            [meterView updateSpeedPinWithSpeed:newLocation.speed * 3.6];
         }
     }
 }

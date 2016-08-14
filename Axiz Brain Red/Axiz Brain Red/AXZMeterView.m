@@ -59,11 +59,10 @@ typedef NS_ENUM(NSInteger, AXZSpeedButtonType) {
 
 - (void)updateSpeedLabelWithSpeed:(float)speed
 {
-    NSLog(@"%f", speed);
     if (self.speedButtonType == AXZSpeedButtonTypeKm) {
-        self.speedLabel.text = [NSString stringWithFormat:@"%.0f",speed * 1.6];
+        self.speedLabel.text = [NSString stringWithFormat:@"%.0f",speed * 3.6];
     } else {
-        self.speedLabel.text = [NSString stringWithFormat:@"%.0f",speed];
+        self.speedLabel.text = [NSString stringWithFormat:@"%.0f",speed * 2.4];
     }
 }
 
