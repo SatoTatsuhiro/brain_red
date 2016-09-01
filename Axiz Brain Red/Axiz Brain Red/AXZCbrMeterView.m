@@ -22,7 +22,7 @@
     
     self.engineRotationPinImageView.translatesAutoresizingMaskIntoConstraints = YES;
     self.engineRotationPinImageView.frame = [UIView cbrEnginePinRect];
-    
+
     self.speedPinImageView.transform = CGAffineTransformMakeRotation(3.13);
     self.engineRotationPinImageView.transform = CGAffineTransformMakeRotation(3.13);
     
@@ -51,7 +51,7 @@
 
 - (void)updateSpeedLabelWithSpeed:(float)speed
 {
-    self.speedLabel.text = [NSString stringWithFormat:@"%.0f",speed * 1.6];
+    self.speedLabel.text = [NSString stringWithFormat:@"%.0f",speed * 3.6];
 }
 
 - (void)updateBankLabelWithBank:(float)bank
@@ -90,11 +90,11 @@
 
 - (void)updateSpeedPinWithSpeed:(float)speed
 {
-    float speedRadian = speed * M_PI / 180;
+    float speedRadian = speed * M_PI / 140;
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:3];
-    self.speedPinImageView.transform = CGAffineTransformMakeRotation(speedRadian - (2 * M_PI /2));
-    self.engineRotationPinImageView.transform = CGAffineTransformMakeRotation(speedRadian -(2 * M_PI /2));
+    self.speedPinImageView.transform = CGAffineTransformMakeRotation(speedRadian - (3 * M_PI /3));
+    self.engineRotationPinImageView.transform = CGAffineTransformMakeRotation(speedRadian -(3 * M_PI /3));
     [UIView commitAnimations];
 }
 
